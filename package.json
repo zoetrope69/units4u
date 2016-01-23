@@ -1,0 +1,19 @@
+{
+  "name": "units4u",
+  "version": "0.1.0",
+  "description": "a university unit recommender system for the web research unit",
+  "main": "app/main.js",
+  "scripts": {
+    "lint": "eslint -c .eslintrc app",
+    "test": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaccolley/units4u"
+  },
+  "author": "Zac Colley <hi@zaccolley.com> (http://zaccolley.com/)",
+  "bugs": {
+    "url": "https://github.com/zaccolley/units4u/issues"
+  },
+  "homepage": "https://github.com/zaccolley/units4u"
+}
