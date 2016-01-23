@@ -7,6 +7,8 @@ a university unit recommender system for the web research unit
 
 most of this project will be using node so you'll need to install any dependencies. we're using eslint to lint the project.
 
+make sure you're using a **node version 4 or above** for es6 (es2015) features
+
 1. `npm install -g eslint`
 2. `npm install`
 3. Install neo4j
