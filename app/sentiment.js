@@ -18,7 +18,7 @@ console.log('---------');
 testSentiment(sentiment2);
 console.log('\n');
 
-function testSentiment(sentimentFunction) {
+function testSentiment (sentimentFunction) {
   let successAmount = 0;
   let neutralAmount = 0;
   let failAmount = 0;
