@@ -1,5 +1,3 @@
-require('dotenv').config(); // pull in environment variables from .env
-
 const neo4j = require('neo4j');
 const db = new neo4j.GraphDatabase({
   url: 'http://localhost:7474',

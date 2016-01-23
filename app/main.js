@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config(); // pull in environment variables from .env
 
 const db = require('./db');
 
