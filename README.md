@@ -1,6 +1,8 @@
 # units4u
 a university unit recommender system for the web research unit
 
+[![Build Status](https://travis-ci.org/zaccolley/units4u.svg?branch=master)](https://travis-ci.org/zaccolley/units4u)
+
 # install
 
 most of this project will be using node so you'll need to install any dependencies. we're using eslint to lint the project.
