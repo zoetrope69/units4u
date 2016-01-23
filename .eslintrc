@@ -1,5 +1,7 @@
 {
   "ecmaFeatures": {
+    "modules": true,
+    "module":  true,
     "blockBindings": true,
     "defaultParams": true,
     "templateStrings": true
@@ -155,16 +157,13 @@
     "key-spacing": 2,
     "lines-around-comment": 0,
     "max-depth": 2,
-    "max-len": 2,
     "max-nested-callbacks": 2,
     "max-params": 2,
     "max-statements": 2,
     "new-cap": 0,
     "new-parens": 0,
     "newline-after-var": 0,
-    "object-curly-spacing": 2,
     "object-shorthand": 0,
-    "one-var": 2,
     "operator-assignment": 2,
     "operator-linebreak": 0,
     "padded-blocks": 0,
