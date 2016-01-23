@@ -19,6 +19,8 @@
   "homepage": "https://github.com/zaccolley/units4u",
   "dependencies": {
     "dotenv": "^2.0.0",
-    "neo4j": "^2.0.0-RC2"
+    "neo4j": "^2.0.0-RC2",
+    "sentiment": "^1.0.5",
+    "speakeasy-nlp": "^0.2.2"
   }
 }
