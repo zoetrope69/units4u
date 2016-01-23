@@ -9,6 +9,17 @@ most of this project will be using node so you'll need to install any dependenci
 
 1. `npm install -g eslint`
 2. `npm install`
+3. Install neo4j
+
+## neo4j
+
+you'll need to [download and install neo4j](http://neo4j.com/download/). copy the `.env-sample file` to `.env` and add your username and password neo4j.
+
+run the `app/dbSeed.js` file to seed some initial MerlinMade:tm: data
+
+# run
+
+1. `npm start`
 
 # code styleguide
 

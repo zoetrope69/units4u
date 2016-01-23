@@ -4,6 +4,7 @@
   "description": "a university unit recommender system for the web research unit",
   "main": "app/main.js",
   "scripts": {
+    "start": "node app/main.js",
     "lint": "eslint -c .eslintrc app",
     "test": "npm run lint"
   },
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/zaccolley/units4u/issues"
   },
-  "homepage": "https://github.com/zaccolley/units4u"
+  "homepage": "https://github.com/zaccolley/units4u",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "neo4j": "^2.0.0-RC2"
+  }
 }
