@@ -1,3 +1,5 @@
+require('dotenv').config(); // pull in environment variables from .env
+
 const db = require('./db');
 
 const query = `
@@ -23,7 +25,7 @@ const query = `
 db.cypher({ query }, (err) => {
 
   if (err) {
-    return console.log(err.message.errors);
+    return console.log(err);
   }
 
   console.log('Database seeded...');
