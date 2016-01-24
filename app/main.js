@@ -20,3 +20,7 @@ db.cypher({ query }, (err, results) => {
   console.log(result['unit.title']);
 
 });
+
+const sentiment = require('speakeasy-nlp').sentiment.analyze;
+
+console.log(sentiment('cool dog man'));
