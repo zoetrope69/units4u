@@ -2,8 +2,10 @@
 require('dotenv').config(); // pull in environment variables from .env
 
 const db = require('./db');
-
 const jobs = require('./jobs');
+const sentiment = require('speakeasy-nlp').sentiment.analyze;
+
+// neo4j (graphdb) stuff
 
 const query = `
   MATCH (p:Person)-[s:STUDIED]->(unit)
@@ -22,6 +24,12 @@ db.cypher({ query }, (err, results) => {
   console.log(result['unit.title']);
 
 });
+
+// sentiment analysis
+
+console.log(sentiment('cool dog man'));
+
+// jobs get
 
 jobs.search({
   amount: 1000,

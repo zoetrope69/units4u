@@ -5,8 +5,8 @@
   "main": "app/main.js",
   "scripts": {
     "start": "node app/main.js",
-    "lint": "eslint -c .eslintrc app",
-    "test": "npm run lint"
+    "lint": "eslint -c .eslintrc app experiments",
+    "test": "npm run lint && mocha test/ --reporter landing"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
     "url": "https://github.com/zaccolley/units4u/issues"
   },
   "homepage": "https://github.com/zaccolley/units4u",
+  "engine": "node >= 4.0.0",
   "dependencies": {
     "dotenv": "^2.0.0",
     "eslint": "^1.10.3",
@@ -25,5 +26,7 @@
     "sentiment": "^1.0.5",
     "speakeasy-nlp": "^0.2.2"
   },
-  "engine": "node >= 4.0.0"
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
 }

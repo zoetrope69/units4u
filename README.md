@@ -36,6 +36,10 @@ our linter will also pick up things like this as well
 
 linting is done with eslint, you can install it your ide. running `npm run lint` will run the linter command line.
 
+# /experiments
+
+section for experiment with our different tech and algorithms
+
 # /resources
 
 currently we're using this folder to dump data that'll we'll process in the future
