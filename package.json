@@ -20,6 +20,8 @@
   "engine": "node >= 4.0.0",
   "dependencies": {
     "dotenv": "^2.0.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
     "neo4j": "^2.0.0-RC2",
     "sentiment": "^1.0.5",
     "speakeasy-nlp": "^0.2.2"
