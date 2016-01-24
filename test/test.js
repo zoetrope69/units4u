@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers, no-undef, no-unused-vars */
 
 const should = require('chai').should();
-const foo = 'bard';
+const foo = 'bar';
 const beverages = { tea: ['chai', 'matcha', 'oolong'] };
 
 describe('foo', () => {
