@@ -15,8 +15,8 @@ const UnitMethods = function (db) {
   }
 
   return {
-    addUnit: addUnit,
-    findUnit: findUnit
+    addUnit,
+    findUnit
   }
 
 };

@@ -20,9 +20,9 @@ const UserMethods = function (db) {
   }
 
   return {
-    addUser: addUser,
-    getUser: getUser,
-    addReview: addReview
+    addUser,
+    getUser,
+    addReview
   }
 
 };

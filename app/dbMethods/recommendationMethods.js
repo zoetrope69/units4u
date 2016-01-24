@@ -19,7 +19,7 @@ const RecommendationMethods = function (db) {
   }
 
   return {
-    findRecommendations: findRecommendations
+    findRecommendations
   }
 };
 
