@@ -1,0 +1,36 @@
+{
+  "reviews": [
+    {"unit":"MATH20122","summary": "Classic chalk and talk lecture style, while the tutorials are more like Q&A sessions, that is will talk to students one-to-one, talking through problems on the board if many students are having issues."},
+    {"unit":"MATH20122","summary": "The course material is often abstract and difficult, and as with most pure courses relies on knowledge of definitions and the ability to reconstruct proofs. However provided you know the definitions, by the middle of the semester everything will fall into place."},
+    {"unit":"MATH20122","summary": "To aid this, there is a coursework test early on in the semester which tests definitions and examples from the early parts of the course, giving you motivation to actually learn the material!"},
+    {"unit":"MATH20122","summary": "The lecturer has an infectious level of enthusiasm, which makes you want to engage with the course material."},
+    {"unit":"MATH20122","summary": "Having said that, do not take this course purely because you like Nige (from MATH10101). It is arguably one of the most divisive course units in terms of difficulty, and requires work at home to keep up."},
+    {"unit":"MATH20132","summary": "Again, as a pure course, there are a lot of definitions and results (with proofs). However, these proofs often follow straight from the definition, there are very few tricks involved."},
+    {"unit":"MATH20132","summary": "The applications of these results is the more important aspect of the course, and it is this which makes it vital for several higher level courses."},
+    {"unit":"MATH20132","summary": "The start of the course goes well alongside Metric Spaces and towards the end there is large overlap with Introduction to Geometry (see below), but it is not necessary to take all three, just helpful!"},
+    {"unit":"MATH20132","summary": "Keeping up with problem sheets is vital, often it is the case that if you know how to do the examles the underlying theory becomes quite simple."},
+    {"unit":"MATH20132","summary": "Little else can be said of the course until the new lecturer has stamped their mark on it. If it continues in the spirit of previous years, it is the applications that are tested more than the base theory, with very few proofs ever actually asked for in the exam."},
+    {"unit":"MATH20142","summary": "The material is well explained, although sometimes the delivery can be dry."},
+    {"unit":"MATH20142","summary": "There are more applications in this course than in (joint honours) real analysis, avoiding the complications of some of the more tricky results."},
+    {"unit":"MATH20142","summary": "The course still contains a fair number of proofs, however do not be put off by this as complex analysis is a hugely useful tool."},
+    {"unit":"MATH20142","summary": "All about the theory of complex numbers, for example, what does it mean to say we can differentiate a complex function?"},
+    {"unit":"MATH20142","summary": "Builds up to some interesting uses, calculating integrals that are virtually impossible to do by standard methods being one of them."},
+    {"unit":"MATH20212","summary": "The lecturer is highly thought of by all students, always willing to help and shows great passion for the subject."},
+    {"unit":"MATH20212","summary": "The lectures are chalk and talk, and follow closely to the lecture notes. However, some useful examples and little hints are only mentioned in lectures, so attendance is vital."},
+    {"unit":"MATH20212","summary": "The tutorials have their own problem sheet, designed to get students familiar with the basics before they try the regular problem sheets. Dr. Walker is always willing to answer questions one-to-one if it’s wanted."},
+    {"unit":"MATH20212","summary": "As is traditional with pure course units, there are a lot of definitions and proofs, however the latter stem quite naturally from the former."},
+    {"unit":"MATH20212","summary": "The exams are fair, very rarely do you get a question you can’t answer, it just depends how familiar you are with the material."},
+    {"unit":"MATH20222","summary": "The lecturer has received mixed reviews, but his passion for the course is undisputed, and he tries to make sure students understand the material as opposed to just memorising equations. He even tries to learn every students name, which is a nice touch."},
+    {"unit":"MATH20222","summary": "Chalk and talk lecture style, however sometimes the lecturer will jump from board to board, so it is important to listen and try to understand what is going on."},
+    {"unit":"MATH20222","summary": "Material builds on linear algebra, showing it from a new viewpoint, and the lecturer will spend a few weeks on seemingly easy things. As a result of this, the latter parts of the course may seem rushed, but this can easily be accounted for by working through the examples sheets."},
+    {"unit":"MATH20222","summary": "Tutorials involve going through problems, and sometimes the lecturer will ask students to answer problems on the board, though he doesn’t force you to if you don’t want to"},
+    {"unit":"MATH20222","summary": "The coursework is designed to be challenging, to see how well you can apply the course to various abstract situations. Having said that, the exams are very fair and he gives out a few hints regarding the types of questions that might be asked."},
+    {"unit":"MATH20222","summary": "Despite being a pure course, being able to do the examples is the most important thing, very few proofs are ever asked, since it is the applications of theoretical results that is interesting. For example, from a certain point of view a cone and a plane are the same, and the sphere is not."},
+    {"unit":"MATH20502","summary": "Good, approachable lecturer, however course materials usually not available online."},
+    {"unit":"MATH20502","summary": "This course is tricky, many results are derived from principles and these can leave you feeling lost for a few weeks at the beginning. However, once you get to grips with the methods the work becomes a lot easier."},
+    {"unit":"MATH20502","summary": "Puts a lot of previous material, such as partial differentiation and complex numbers, to practical use. Also introduces a few techniques and ideas that prove useful for higher level applied maths."},
+    {"unit":"MATH20502","summary": "There are some long derivations to learn, but these can be deduced with relative ease if you know the material."},
+    {"unit":"MATH20502","summary": "Coursework test is marked harshly if students don’t display understanding and just plug in results, but the exam is fair if you have revised properly."}
+  ]
+
+}
