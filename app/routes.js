@@ -5,7 +5,7 @@ function setup (app, methods) {
   app.put('/api/units', methods.units.addUnit);
   app.get('/api/units/:unitcode', methods.units.findUnit);
 
-  app.put('/api/users/:username', methods.users.addUser);
+  app.put('/api/users/', methods.users.addUser);
   app.get('/api/users/:username', methods.users.getUser);
   app.put('/api/users/:username/review', methods.users.addReview);
 
