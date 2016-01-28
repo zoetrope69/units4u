@@ -40,3 +40,18 @@ console.log(sentiment('cool dog man'));
 // example spelling suggestion
 const correctSpelling = require('./spelling');
 correctSpelling('nice', (suggestion) => console.log(suggestion));
+
+// example jobs get
+const jobs = require('./jobs')
+jobs.search({
+  amount: 1000,
+  country: 'gb',
+  location: 'London, UK',
+  keywords: ['php', 'developer', 'html', 'css']
+}, (err, results) => {
+  if (err) {
+    return console.log(err);
+  }
+
+  console.log(results);
+});
