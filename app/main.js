@@ -7,7 +7,10 @@ const express = require('express'),
   UserMethods = require('./dbMethods/userMethods'),
   UnitMethods = require('./dbMethods/unitMethods'),
   RecommendationMethods = require('./dbMethods/recommendationMethods'),
-  db = require('./db');
+  db = require('./db'),
+
+  jobs = require('./jobs'),
+  sentiment = require('speakeasy-nlp').sentiment.analyze;
 
 const app = express(),
   port = process.env.EXPRESS_PORT;
@@ -33,6 +36,21 @@ exports.app = app;
 
 start();
 
-const sentiment = require('speakeasy-nlp').sentiment.analyze;
+// sentiment analysis
 
 console.log(sentiment('cool dog man'));
+
+// jobs get
+
+jobs.search({
+  amount: 1000,
+  country: 'gb',
+  location: 'London, UK',
+  keywords: ['php', 'developer', 'html', 'css']
+}, (err, results) => {
+  if (err) {
+    return console.log(err);
+  }
+
+  console.log(results);
+});
