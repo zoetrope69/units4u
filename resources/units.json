@@ -1,0 +1,17 @@
+{
+  "units": [
+    {"id": "MATH20122", "name": "Metric Spaces", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20132", "name": "Calculus of Several Variables", "summary": "", "coursework": 50, "exam": 50},
+    {"id": "MATH20142", "name": "Complex Analysis", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20212", "name": "Algebraic Structures 2", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20222", "name": "Introduction to Geometry", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20502", "name": "Fluid Mechanics", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20512", "name": "Classical Mechanics", "summary": "", "coursework": 30, "exam": 70},
+    {"id": "MATH20712", "name": "Random Models", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20722", "name": "Foundations of Modern Probability", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20802", "name": "Statistical Methods", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20812", "name": "Practical Statistics", "summary": "", "coursework": 100, "exam": 0},
+    {"id": "MATH20902", "name": "Discrete Mathematics", "summary": "", "coursework": 20, "exam": 80},
+    {"id": "MATH20602", "name": "Numerical Analysis", "summary": "", "coursework": 70, "exam": 30}
+  ]
+}
