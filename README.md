@@ -12,10 +12,11 @@ make sure you're using a **node version 4 or above** for es6 (es2015) features
 1. `npm install -g eslint`
 2. `npm install`
 3. Install neo4j
+4. copy the `.env-sample file` to `.env` and add details (username and password for neo4j, [indeed api publisher api key](http://www.indeed.co.uk/publisher)).
 
 ## neo4j
 
-you'll need to [download and install neo4j (community edition)](http://neo4j.com/download/). copy the `.env-sample file` to `.env` and add your username and password neo4j.
+you'll need to [download and install neo4j (community edition)](http://neo4j.com/download/).
 
 run the `app/dbSeed.js` file to seed some initial MerlinMade:tm: data
 
