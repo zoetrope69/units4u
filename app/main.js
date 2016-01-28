@@ -33,6 +33,10 @@ exports.app = app;
 
 start();
 
+// example sentiment analysis usage
 const sentiment = require('speakeasy-nlp').sentiment.analyze;
-
 console.log(sentiment('cool dog man'));
+
+// example spelling suggestion
+const correctSpelling = require('./spelling');
+correctSpelling('nice', (suggestion) => console.log(suggestion));
