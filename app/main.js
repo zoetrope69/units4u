@@ -1,29 +1,40 @@
 'use strict';
 require('dotenv').config(); // pull in environment variables from .env
 
-const db = require('./db');
-const jobs = require('./jobs');
-const sentiment = require('speakeasy-nlp').sentiment.analyze;
+const express = require('express'),
+  errorHandler = require('errorhandler'),
+  routes = require('./routes'),
+  UserMethods = require('./dbMethods/userMethods'),
+  UnitMethods = require('./dbMethods/unitMethods'),
+  RecommendationMethods = require('./dbMethods/recommendationMethods'),
+  db = require('./db'),
 
-// neo4j (graphdb) stuff
+  jobs = require('./jobs'),
+  sentiment = require('speakeasy-nlp').sentiment.analyze;
 
-const query = `
-  MATCH (p:Person)-[s:STUDIED]->(unit)
-  WHERE "javascript" in p.interests
-  AND s.sentiment > 0.5 RETURN unit.title
-`;
+const app = express(),
+  port = process.env.EXPRESS_PORT;
 
-db.cypher({ query }, (err, results) => {
+if (process.env.NODE_ENV === 'development') {
+  app.use(errorHandler({ dumpExceptions: true, showStack: true }));
+}
 
-  if (err) {
-    return console.log(err.message.errors);
-  }
+const methods = {
+  users: new UserMethods(db),
+  units: new UnitMethods(db),
+  recommendations: new RecommendationMethods(db)
+}
 
-  const result = results[0];
+function start () {
+  routes.setup(app, methods);
+  app.listen(port);
+  console.log(`Express server listening on port ${port} in ${app.settings.env} mode.`);
+}
 
-  console.log(result['unit.title']);
+exports.start = start;
+exports.app = app;
 
-});
+start();
 
 // sentiment analysis
 
