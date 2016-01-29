@@ -37,7 +37,7 @@ const UserMethods = function (db) {
     })
   }
 
-  function addUser(userData, callback) {
+  function addUser (userData, callback) {
     const query = `
       CREATE (n:Person {name:  ${'\'' + userData.name + '\''} , interests: ${'\'' + userData.interests + '\''}}) RETURN n
     `;
@@ -65,7 +65,7 @@ const UserMethods = function (db) {
     });
   }
 
-  function getUser(username, callback) {
+  function getUser (username, callback) {
     const query = `
         MATCH (n:Person { name: ${'\'' + username + '\''} }) RETURN n
     `;
@@ -75,13 +75,13 @@ const UserMethods = function (db) {
   /**
    * Add review & studied relationships to DB.
    */
-  function addReviewAPI(req, res) {
+  function addReviewAPI (req, res) {
     if (!req.params.username) {
       res.status(errorCodes.request.code);
       return res.send(errorCodes.request.message);
     }
     const userData = req.body;
-    addReview(req.params.username, userData.unit, userData.review, (err, results) => {
+    addReview(req.params.username, userData.unit, userData.review, (err) => {
       if (err) {
         console.log(err);
         res.status(errorCodes.server.code);
