@@ -18,16 +18,13 @@ const UserMethods = function (db) {
   *   "interests": ["web", "html", "css", "javascript", "Oracle Databases?"]
   * }
   **/
-  function addUser (req, res) {
+  function addUserAPI (req, res) {
     const userData = req.body;
     if (!userData.hasOwnProperty('name') || !userData.name.length > 0) {
       res.status(errorCodes.server.code);
       return res.send(errorCodes.server.message);
     }
-    const query = `
-      CREATE (n:Person {name:  ${'\'' + userData.name + '\''} , interests: ${'\'' + userData.interests + '\''}}) RETURN n
-    `;
-    db.cypher({ query }, (err, results) => {
+    addUser(userData, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
@@ -37,22 +34,25 @@ const UserMethods = function (db) {
       res.send({
         'id': result.n._id
       });
-    });
+    })
+  }
+
+  function addUser(userData, callback) {
+    const query = `
+      CREATE (n:Person {name:  ${'\'' + userData.name + '\''} , interests: ${'\'' + userData.interests + '\''}}) RETURN n
+    `;
+    db.cypher({ query }, callback);
   }
 
   /**
    * Find user & interests.
    */
-  function getUser (req, res) {
+  function getUserAPI (req, res) {
     if (!req.params.username) {
       res.status(errorCodes.request.code);
       return res.send(errorCodes.request.message);
     }
-    const username = req.params.username,
-      query = `
-        MATCH (n:Person { name: ${'\'' + username + '\''} }) RETURN n
-    `;
-    db.cypher({ query }, (err, results) => {
+    getUser(req.params.username, (err, results) => {
       if (err) {
         return console.log(err.message.errors);
       }
@@ -65,18 +65,50 @@ const UserMethods = function (db) {
     });
   }
 
+  function getUser(username, callback) {
+    const query = `
+        MATCH (n:Person { name: ${'\'' + username + '\''} }) RETURN n
+    `;
+    db.cypher({ query }, callback);
+  }
+
   /**
    * Add review & studied relationships to DB.
    */
-  function addReview (req, res) {
-    console.log(req);
-    res.send('add a review to a specified user');
+  function addReviewAPI(req, res) {
+    if (!req.params.username) {
+      res.status(errorCodes.request.code);
+      return res.send(errorCodes.request.message);
+    }
+    const userData = req.body;
+    addReview(req.params.username, userData.unit, userData.review, (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(errorCodes.server.code);
+        return res.send(errorCodes.server.message);
+      }
+      res.send('ok');
+    });
+
+  }
+
+  function addReview (username, unit, review, callback) {
+    // Need a user and a unit ID.
+    // (Keanu)-[:REVIEWED {sentiment:0.8, keywords:['maths', 'hard', 'fun']}]->(COSINE)
+    const query = `
+      MATCH (a:Person { name: ${'\'' + username + '\''} }), (u:Unit { title: ${'\'' + unit + '\''} })
+      CREATE (a)-[:REVIEWED {sentiment: ${review.sentiment}, keywords: ${JSON.stringify(review.keywords)}} ]->(n)
+    `
+    db.cypher({ query }, callback);
   }
 
   return {
     addUser,
+    addUserAPI,
     getUser,
-    addReview
+    getUserAPI,
+    addReview,
+    addReviewAPI
   }
 
 };
