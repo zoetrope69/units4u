@@ -7,12 +7,12 @@ const UnitMethods = function (db) {
   const errorCodes = require('../lib/ErrorCodes');
 
   function addUnitAPI (req, res) {
-    const userData = req.body;
-    if (!userData.hasOwnProperty('name') || !userData.name.length > 0) {
+    const unitData = req.body;
+    if (!unitData.hasOwnProperty('unitcode') || !unitData.unitcode.length > 0) {
       res.status(errorCodes.server.code);
       return res.send(errorCodes.server.message);
     }
-    addUser(userData, (err, results) => {
+    addUnit(unitData, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
@@ -26,10 +26,7 @@ const UnitMethods = function (db) {
   }
 
   function addUnit (unit, callback) {
-    const query = `
-      CREATE (n:Person {name:  ${'\'' + unit.code + '\''} , interests: ${'\'' + unit.name + '\''}}) RETURN n
-    `;
-    db.cypher({ query }, callback);
+    // add unit stuff
   }
 
   function findUnitAPI (req, res) {
@@ -50,9 +47,9 @@ const UnitMethods = function (db) {
     });
   }
 
-  function findUnit(unit) {
+  function findUnit (unitcode, callback) {
     const query = `
-        MATCH (n:Person { title: ${'\'' + username + '\''} }) RETURN n
+        MATCH (n:Unit { unitcode: ${'\'' + unitcode + '\''} }) RETURN n
     `;
     db.cypher({ query }, callback);
   }

@@ -39,7 +39,7 @@ const UserMethods = function (db) {
 
   function addUser (userData, callback) {
     const query = `
-      CREATE (n:Person {name:  '${userData.name}', interests: ${'\'' + userData.interests + '\''}}) RETURN n
+      CREATE (n:Person {name:  '${userData.name}' , interests: '${userData.interests}'}) RETURN n
     `;
     db.cypher({ query }, callback);
   }
@@ -54,20 +54,20 @@ const UserMethods = function (db) {
     }
     getUser(req.params.username, (err, results) => {
       if (err) {
-        return console.log(err.message.errors);
+        return console.log('error:', err.message.errors);
       }
       const result = results[0];
       // Return ID number and a time reference.
       res.send({
-        '_id': result.n._id,
-        'interests': result.n.properties.interests
+        'id': result.p._id,
+        'interests': result.p.properties.interests
       });
     });
   }
 
-  function getUser (unitcode, callback) {
+  function getUser (username, callback) {
     const query = `
-        MATCH (u:Unit { title: ${'\'' + unitcode + '\''} }) RETURN n
+        MATCH (p:Person { name: ${'\'' + username + '\''} }) RETURN p
     `;
     db.cypher({ query }, callback);
   }

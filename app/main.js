@@ -41,8 +41,8 @@ const sentiment = require('speakeasy-nlp').sentiment.analyze;
 console.log(sentiment('cool dog man'));
 
 // example spelling suggestion
-const correctSpelling = require('./spelling');
-correctSpelling('nice', (suggestion) => console.log(suggestion));
+// const correctSpelling = require('./spelling');
+// correctSpelling('nice', (suggestion) => console.log(suggestion));
 
 // example jobs get
 const jobs = require('./jobs')
