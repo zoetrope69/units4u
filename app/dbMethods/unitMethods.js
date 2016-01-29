@@ -26,7 +26,7 @@ const UnitMethods = function (db) {
   }
 
   function addUnit (unit, callback) {
-    const query = `CREATE (${unit.id}:Unit {title:'${unit.name}', summary: '${unit.summary}', coursework: ${unit.coursework}, exam: ${unit.exam}})`;
+    const query = `CREATE (${unit.id}:Unit {code: '${unit.id}', title:'${unit.name}', summary: '${unit.summary}', coursework: ${unit.coursework}, exam: ${unit.exam}})`;
     db.cypher({ query }, callback);
   }
 
