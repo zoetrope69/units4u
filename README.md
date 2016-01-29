@@ -18,7 +18,7 @@ make sure you're using a **node version 4 or above** for es6 (es2015) features
 
 you'll need to [download and install neo4j (community edition)](http://neo4j.com/download/).
 
-run the `app/dbSeed.js` file to seed some initial MerlinMade:tm: data
+run the `app/generateUnits.js` and `app/generateStudents.js` files to seed some data
 
 # run
 
