@@ -7,10 +7,7 @@ const express = require('express'),
   UserMethods = require('./dbMethods/userMethods'),
   UnitMethods = require('./dbMethods/unitMethods'),
   RecommendationMethods = require('./dbMethods/recommendationMethods'),
-  db = require('./db'),
-
-  jobs = require('./jobs'),
-  sentiment = require('speakeasy-nlp').sentiment.analyze;
+  db = require('./db');
 
 const app = express(),
   port = process.env.EXPRESS_PORT;
@@ -36,12 +33,16 @@ exports.app = app;
 
 start();
 
-// sentiment analysis
-
+// example sentiment analysis usage
+const sentiment = require('speakeasy-nlp').sentiment.analyze;
 console.log(sentiment('cool dog man'));
 
-// jobs get
+// example spelling suggestion
+const correctSpelling = require('./spelling');
+correctSpelling('nice', (suggestion) => console.log(suggestion));
 
+// example jobs get
+const jobs = require('./jobs')
 jobs.search({
   amount: 1000,
   country: 'gb',
