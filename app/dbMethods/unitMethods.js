@@ -4,19 +4,61 @@
 
 const UnitMethods = function (db) {
 
-  function addUnit (req, res) {
-    console.log(req);
-    res.send('add a unit to the db');
+  const errorCodes = require('../lib/ErrorCodes');
+
+  function addUnitAPI (req, res) {
+    const unitData = req.body;
+    if (!unitData.hasOwnProperty('unitcode') || !unitData.unitcode.length > 0) {
+      res.status(errorCodes.server.code);
+      return res.send(errorCodes.server.message);
+    }
+    addUnit(unitData, (err, results) => {
+      if (err) {
+        res.status(errorCodes.server.code)
+        return res.send(errorCodes.server.message + ': ' + err.message.errors);
+      }
+      const result = results[0];
+      // Return ID number and an important time
+      res.send({
+        'id': result.n._id
+      });
+    })
   }
 
-  function findUnit (req, res) {
-    console.log(req);
-    res.send('find a unit, keywords, and avg sentiments');
+  function addUnit (unit, callback) {
+    // add unit stuff
+  }
+
+  function findUnitAPI (req, res) {
+    if (!req.params.unitcode) {
+      res.status(errorCodes.request.code);
+      return res.send(errorCodes.request.message);
+    }
+    findUnit(req.params.unitcode, (err, results) => {
+      if (err) {
+        res.status(errorCodes.server.code)
+        return res.send(errorCodes.server.message + ': ' + err.message.errors);
+      }
+      const result = results[0];
+      // Return ID number and an important time
+      res.send({
+        'unit': result.n
+      });
+    });
+  }
+
+  function findUnit (unitcode, callback) {
+    const query = `
+        MATCH (n:Unit { unitcode: ${'\'' + unitcode + '\''} }) RETURN n
+    `;
+    db.cypher({ query }, callback);
   }
 
   return {
     addUnit,
-    findUnit
+    addUnitAPI,
+    findUnit,
+    findUnitAPI
   }
 
 };

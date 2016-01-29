@@ -19,6 +19,7 @@
   "homepage": "https://github.com/zaccolley/units4u",
   "engine": "node >= 4.0.0",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "casual": "^1.5.1",
     "dotenv": "^2.0.0",
     "errorhandler": "^1.4.3",

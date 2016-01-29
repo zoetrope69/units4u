@@ -1,0 +1,10 @@
+{
+  "server": {
+    "code": 500,
+    "message": "Internal Server Error"
+  },
+  "request": {
+    "code": 400,
+    "message": "Bad Request"
+  }
+}
