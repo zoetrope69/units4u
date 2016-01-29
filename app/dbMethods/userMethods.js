@@ -39,7 +39,7 @@ const UserMethods = function (db) {
 
   function addUser (userData, callback) {
     const query = `
-      CREATE (n:Person {name:  ${'\'' + userData.name + '\''} , interests: ${'\'' + userData.interests + '\''}}) RETURN n
+      CREATE (n:Person {name:  '${userData.name}', interests: ${'\'' + userData.interests + '\''}}) RETURN n
     `;
     db.cypher({ query }, callback);
   }
@@ -65,15 +65,23 @@ const UserMethods = function (db) {
     });
   }
 
-  function getUser (username, callback) {
+  function getUser (unitcode, callback) {
     const query = `
-        MATCH (n:Person { name: ${'\'' + username + '\''} }) RETURN n
+        MATCH (u:Unit { title: ${'\'' + unitcode + '\''} }) RETURN n
     `;
     db.cypher({ query }, callback);
   }
 
   /**
    * Add review & studied relationships to DB.
+   *
+   * {
+   *   "review": {
+   *       "sentiment": 0.5,
+   *       "keywords": ["difficult", "java"]
+   *   },
+   *   "unit": "WEBSCRP"
+   * }
    */
   function addReviewAPI (req, res) {
     if (!req.params.username) {

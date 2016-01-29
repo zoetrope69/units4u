@@ -2,8 +2,8 @@
 
 function setup (app, methods) {
 
-  app.put('/api/units', methods.units.addUnit);
-  app.get('/api/units/:unitcode', methods.units.findUnit);
+  app.put('/api/units', methods.units.addUnitAPI);
+  app.get('/api/units/:unitcode', methods.units.findUnitAPI);
 
   app.put('/api/users/', methods.users.addUserAPI);
   app.get('/api/users/:username', methods.users.getUserAPI);
