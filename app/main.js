@@ -4,6 +4,7 @@ require('dotenv').config(); // pull in environment variables from .env
 const express = require('express'),
   errorHandler = require('errorhandler'),
   routes = require('./routes'),
+  bodyParser = require('body-parser'),
   UserMethods = require('./dbMethods/userMethods'),
   UnitMethods = require('./dbMethods/unitMethods'),
   RecommendationMethods = require('./dbMethods/recommendationMethods'),
@@ -15,6 +16,8 @@ const app = express(),
 if (process.env.NODE_ENV === 'development') {
   app.use(errorHandler({ dumpExceptions: true, showStack: true }));
 }
+
+app.use(bodyParser.json()) // parse application/json
 
 const methods = {
   users: new UserMethods(db),
