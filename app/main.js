@@ -39,7 +39,7 @@ console.log(sentiment('cool dog man'));
 
 // example spelling suggestion
 const correctSpelling = require('./spelling');
-correctSpelling('nice', (suggestion) => console.log(suggestion));
+correctSpelling('noice', (suggestion) => console.log('suggestion', suggestion));
 
 // example jobs get
 const jobs = require('./jobs')
