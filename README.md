@@ -20,9 +20,12 @@ you'll need to [download and install neo4j (community edition)](http://neo4j.com
 
 run the `app/generateUnits.js` and `app/generateStudents.js` files to seed some data
 
+to drop the database you can use the cipher command: `match (n) detach delete n`
+
 # run
 
-1. `npm start`
+1. `neo4j start` - start neo4j
+2. `npm start`
 
 # code styleguide
 
