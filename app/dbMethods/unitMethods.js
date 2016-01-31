@@ -30,12 +30,12 @@ const UnitMethods = function (db) {
     db.cypher({ query }, callback);
   }
 
-  function findUnitAPI (req, res) {
+  function getUnitAPI (req, res) {
     if (!req.params.unitcode) {
       res.status(errorCodes.request.code);
       return res.send(errorCodes.request.message);
     }
-    findUnit(req.params.unitcode, (err, results) => {
+    getUnit(req.params.unitcode, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
@@ -58,8 +58,8 @@ const UnitMethods = function (db) {
   return {
     addUnit,
     addUnitAPI,
-    findUnit,
-    findUnitAPI
+    getUnit,
+    getUnitAPI
   }
 
 };
