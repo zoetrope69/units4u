@@ -1,5 +1,4 @@
 'use strict';
-require('dotenv').config();
 const casual = require('casual');
 const reviews = require('../resources/reviews.json').reviews;
 const sentiment = require('speakeasy-nlp').sentiment.analyze;
@@ -13,13 +12,26 @@ function randomNumber (min, max) {
 const amountOfUniYears = 2;
 const amountOfUnitsInaYear = 3;
 
+let benHarrisHasBeenCreated = false;
 
-for (let i = 0; i < reviews.length; i+=(amountOfUniYears * amountOfUnitsInaYear)) {
+function removeReview (i) {
+  const index = reviews.indexOf(i);
 
+  if (index > -1) { // eslint-disable-line no-magic-numbers
+    reviews.splice(index, 1);
+  }
+}
+
+function seedStudent () {
   const student = {
     name: casual.full_name,
     year: 2
   };
+
+  if (!benHarrisHasBeenCreated) {
+    student.name = 'Ben Harris';
+    benHarrisHasBeenCreated = true;
+  }
 
   const studentUnits = [];
   const studentReviews = [];
@@ -36,8 +48,10 @@ for (let i = 0; i < reviews.length; i+=(amountOfUniYears * amountOfUnitsInaYear)
       const minGrade = 40;
       const maxGrade = 90;
       review.grade = randomNumber(minGrade, maxGrade);
-      studentReviews.push(review); // uhhh push it, PUSH IT REAL GOOD
-      studentUnits.push('"'+review.id+'"');
+
+      studentReviews.push(review);
+      studentUnits.push(review.unit);
+      removeReview(review.id);
 
       --unitAmount;
     }
@@ -46,7 +60,7 @@ for (let i = 0; i < reviews.length; i+=(amountOfUniYears * amountOfUnitsInaYear)
       const studentUnit = studentReviews[i];
 
       // if we dont already have this unit
-      if (studentUnit.id !== review.id) {
+      if (studentUnit.unit !== review.unit) {
 
         review.sentiment = sentiment(review.summary).comparative;
 
@@ -55,7 +69,8 @@ for (let i = 0; i < reviews.length; i+=(amountOfUniYears * amountOfUnitsInaYear)
         review.grade = randomNumber(minGrade, maxGrade);
 
         studentReviews.push(review); // add it to their units
-        studentUnits.push('"'+review.id+'"');
+        studentUnits.push(review.unit);
+        removeReview(review.id);
 
         // reduce the amount of units we need and break out to the enxt loop
         --unitAmount;
@@ -68,26 +83,54 @@ for (let i = 0; i < reviews.length; i+=(amountOfUniYears * amountOfUnitsInaYear)
   student.reviews = studentReviews;
   student.units = studentUnits;
 
-  console.log(student);
+  return(student);
+}
 
-  userMethods.addUser(student, (err, res) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(res);
-    }
-  });
+const amountOfStudents = Math.ceil(reviews.length / (amountOfUniYears * amountOfUnitsInaYear));
 
-  for (let j = 0; j < student.reviews.length; j++) {
-    userMethods.addReview(student.name, student.reviews[j], (err, res) => {
+const seedStudents = (callback) => {
+
+  let usersCount = amountOfStudents;
+  let reviewsTotal = 0;
+
+  for (let i = 0; i < amountOfStudents; i++) {
+
+    const student = seedStudent();
+
+    userMethods.addUser(student, (err, res) => {
       if (err) {
         console.log(err);
       } else {
-        console.log(res);
+        console.log(`Added user ${student.name}`,res);
       }
+
+      let reviewsCount = student.reviews.length;
+      reviewsTotal += reviewsCount;
+
+      for (let j = 0; j < student.reviews.length; j++) {
+        const review = student.reviews[j];
+        userMethods.addReview(student.name, review, (err, res) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(`Added review for ${review.unit} by ${student.name} `, res);
+          }
+
+          reviewsCount--;
+
+          if (reviewsCount <= 0) {
+            usersCount--;
+
+            if (usersCount <= 0) {
+              callback();
+            }
+          }
+        });
+      }
+
     });
   }
+
 }
 
-// create grade from sentiment
-// add user and review to database
+module.exports = seedStudents;

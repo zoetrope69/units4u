@@ -48,10 +48,8 @@ const UnitMethods = function (db) {
     });
   }
 
-  function findUnit (unitcode, callback) {
-    const query = `
-        MATCH (n:Unit { unitcode: ${'\'' + unitcode + '\''} }) RETURN n
-    `;
+  function getUnit (code, callback) {
+    const query = `MATCH (n:Unit { code: "${code}" }) RETURN n`;
     db.cypher({ query }, callback);
   }
 

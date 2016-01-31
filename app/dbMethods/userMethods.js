@@ -37,8 +37,15 @@ const UserMethods = function (db) {
     })
   }
 
-  function addUser (userData, callback) {
-    const query = `CREATE (:Person {name: '${userData.name}' , year: ${userData.year}, units: [${userData.units}]})`;
+  function addUser (user, callback) {
+    const query = `
+      CREATE (:Person {
+        name: "${user.name}",
+        year: ${user.year},
+        units: ["${user.units.join('", "')}"]
+      })
+    `;
+
     db.cypher({ query }, callback);
   }
 
@@ -63,10 +70,8 @@ const UserMethods = function (db) {
     });
   }
 
-  function getUser (username, callback) {
-    const query = `
-        MATCH (p:Person { name: ${'\'' + username + '\''} }) RETURN p
-    `;
+  function getUser (name, callback) {
+    const query = `MATCH (p:Person { name: "${name}" }) RETURN p`;
     db.cypher({ query }, callback);
   }
 
@@ -102,9 +107,9 @@ const UserMethods = function (db) {
     // Need a user and a unit ID.
     // (Keanu)-[:REVIEWED {sentiment:0.8, keywords:['maths', 'hard', 'fun']}]->(COSINE)
     const query = `
-      MATCH (a:Person { name: '${name}' }), (u:Unit { code: '${review.id}' })
-      CREATE (a)-[:REVIEWED {sentiment: ${review.sentiment}, summary: '${review.summary}', grade: ${review.grade}} ]->(u)
-    `
+      MATCH (a:Person { name: "${name}" }), (u:Unit { code: "${review.unit}" })
+      CREATE (a)-[:REVIEWED {sentiment: ${review.sentiment}, summary: "${review.summary}", grade: ${review.grade}} ]->(u)
+    `;
     db.cypher({ query }, callback);
   }
 
