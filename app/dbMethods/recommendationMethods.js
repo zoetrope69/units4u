@@ -1,7 +1,7 @@
 'use strict'
 
 const RecommendationMethods = function (db) {
-  function findRecommendations (req, res) {
+  function getRecommendations (req, res) {
     const query = `
       MATCH (p:Person)-[r:REVIEWED]->(unit)
       WHERE "javascript" in p.interests
@@ -19,7 +19,7 @@ const RecommendationMethods = function (db) {
   }
 
   return {
-    findRecommendations
+    getRecommendations
   }
 };
 

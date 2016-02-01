@@ -50,7 +50,7 @@ const UserMethods = function (db) {
   }
 
   /**
-   * Find user & interests.
+   * Get user & interests.
    */
   function getUserAPI (req, res) {
     if (!req.params.username) {
