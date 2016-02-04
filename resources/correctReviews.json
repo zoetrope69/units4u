@@ -1,0 +1,514 @@
+{
+	"reviews": [
+		{
+			"id": 1,
+			"unit": "MATH20122",
+			"summary": "classic chalk and talk lecture style while the tutorials are more like Q&A sessions that is will talk to students one-to-one, talking through problems on the board if many students are having issues"
+		},
+		{
+			"id": 4,
+			"unit": "MATH20122",
+			"summary": "the lecturer has an infectious level of enthusiasm which makes you want to engage with the course material"
+		},
+		{
+			"id": 3,
+			"unit": "MATH20122",
+			"summary": "to aid this there is a coursework test early on in the semester which tests definitions and examples from the early parts of the course giving you motivation to actually learn the material"
+		},
+		{
+			"id": 2,
+			"unit": "MATH20122",
+			"summary": "the course material is often abstract and difficult and as with most pure courses relies on knowledge of definitions and the ability to reconstruct proofs however provided you know the definitions by the middle of the semester everything will fall into place"
+		},
+		{
+			"id": 7,
+			"unit": "MATH20132",
+			"summary": "the applications of these results is the more important aspect of the course and it is this which makes it vital for several higher level courses"
+		},
+		{
+			"id": 5,
+			"unit": "MATH20122",
+			"summary": "having said that do not take this course purely because you like Nige from MATH10101). it is arguably one of the most divisive course units in terms of difficulty and requires work at home to keep up"
+		},
+		{
+			"id": 8,
+			"unit": "MATH20132",
+			"summary": "the start of the course goes well alongside metric paces and towards the end there is large overlap with introduction to geometry see below), but it is not necessary to take all three just helpful"
+		},
+		{
+			"id": 11,
+			"unit": "MATH20142",
+			"summary": "the material is well explained although sometimes the delivery can be dry"
+		},
+		{
+			"id": 6,
+			"unit": "MATH20132",
+			"summary": "Again, as a pure course there are a lot of definitions and results with proofs). However, these proofs often follow straight from the definition there are very few tricks involved"
+		},
+		{
+			"id": 10,
+			"unit": "MATH20132",
+			"summary": "little else can be said of the course until the new lecturer has stamped their mark on it of it continues in the spirit of previous years it is the applications that are tested more than the base theory with very few proofs ever actually asked for in the exam"
+		},
+		{
+			"id": 12,
+			"unit": "MATH20142",
+			"summary": "there are more applications in this course than in joint honours real analysis avoiding the complications of some of the more tricky results"
+		},
+		{
+			"id": 9,
+			"unit": "MATH20132",
+			"summary": "keeping up with problem sheets is vital often it is the case that if you know how to do the examples the underlying theory becomes quite simple"
+		},
+		{
+			"id": 13,
+			"unit": "MATH20142",
+			"summary": "the course still contains a fair number of proofs however do not be put off by this as complex analysis is a hugely useful tools"
+		},
+		{
+			"id": 15,
+			"unit": "MATH20142",
+			"summary": "builds up to some interesting uses calculating integrals that are virtually impossible to do by standard methods being one of them"
+		},
+		{
+			"id": 17,
+			"unit": "MATH20212",
+			"summary": "the lectures are chalk and talk and follow closely to the lecture notes However, some useful examples and little hints are only mentioned in lectures so attendance is vital"
+		},
+		{
+			"id": 18,
+			"unit": "MATH20212",
+			"summary": "the tutorials have their own problem sheet designed to get students familiar with the basics before they try the regular problem sheets Dr. walker is always willing to answer questions one-to-one if its wanted"
+		},
+		{
+			"id": 16,
+			"unit": "MATH20212",
+			"summary": "the lecturer is highly thought of by all students always willing to help and shows great passion for the subject"
+		},
+		{
+			"id": 20,
+			"unit": "MATH20212",
+			"summary": "the exams are fair very rarely do you get a question you cant answer it just depends how familiar you are with the material"
+		},
+		{
+			"id": 19,
+			"unit": "MATH20212",
+			"summary": "is is traditional with pure course units there are a lot of definitions and proofs however the latter stem quite naturally from the former"
+		},
+		{
+			"id": 14,
+			"unit": "MATH20142",
+			"summary": "all about the theory of complex numbers for example what does it mean to say we can differentiate a complex function"
+		},
+		{
+			"id": 23,
+			"unit": "MATH20222",
+			"summary": "material builds on linear algebra showing it from a new viewpoint and the lecturer will spend a few weeks on seemingly easy things is a result of this the latter parts of the course may seem rushed but this can easily be accounted for by working through the examples sheets"
+		},
+		{
+			"id": 22,
+			"unit": "MATH20222",
+			"summary": "chalk and talk lecture style however sometimes the lecturer will jump from board to board so it is important to listen and try to understand what is going on"
+		},
+		{
+			"id": 26,
+			"unit": "MATH20222",
+			"summary": "despite being a pure course being able to do the examples is the most important things very few proofs are ever asked since it is the applications of theoretical results that is interesting for example from a certain point of view a cone and a plane are the same and the sphere is not"
+		},
+		{
+			"id": 25,
+			"unit": "MATH20222",
+			"summary": "the coursework is designed to be challenging to see how well you can apply the course to various abstract situations having said that the exams are very fair and he gives out a few hints regarding the types of questions that might be asked"
+		},
+		{
+			"id": 24,
+			"unit": "MATH20222",
+			"summary": "tutorials involve going through problems and sometimes the lecturer will ask students to answer problems on the board though he doesn’t force you to if you donut want to"
+		},
+		{
+			"id": 21,
+			"unit": "MATH20222",
+			"summary": "the lecturer has received mixed reviews but his passion for the course is undisputed and he tries to make sure students understand the material as opposed to just memorizing equations he even tries to learn every students name which is a nice touch"
+		},
+		{
+			"id": 28,
+			"unit": "MATH20502",
+			"summary": "his course is tricky many results are derived from principles and these can leave you feeling lost for a few weeks at the beginning However, once you get to grips with the methods the work becomes a lot easier"
+		},
+		{
+			"id": 27,
+			"unit": "MATH20502",
+			"summary": "Good, approachable lecturer however course materials usually not available online."
+		},
+		{
+			"id": 29,
+			"unit": "MATH20502",
+			"summary": "huts a lot of previous material such as partial differentiation and complex numbers to practical use also introduces a few techniques and ideas that prove useful for higher level applied maths"
+		},
+		{
+			"id": 30,
+			"unit": "MATH20502",
+			"summary": "there are some long derivations to learn but these can be deduced with relative ease if you know the material"
+		},
+		{
+			"id": 31,
+			"unit": "MATH20502",
+			"summary": "Coursework test is marked harshly if students donut display understanding and just plug in results but the exam is fair if you have revised properly"
+		},
+		{
+			"id": 32,
+			"unit": "MATH20512",
+			"summary": "some credit this as the most difficult level two course however others have found it easy depending on if you like mechanics or not"
+		},
+		{
+			"id": 34,
+			"unit": "MATH20512",
+			"summary": "there is not a lot of theory in this course but each bit of theory comes with a collection of applications which it is vital to get to grips with"
+		},
+		{
+			"id": 35,
+			"unit": "MATH20512",
+			"summary": "lecturer is approachable and good at teaching knows where students tend to make mistakes"
+		},
+		{
+			"id": 33,
+			"unit": "MATH20512",
+			"summary": "a background in physics or at least some familiarity with A-level for equivalent mechanics while not strictly required is useful when it comes to visualizing the problems"
+		},
+		{
+			"id": 37,
+			"unit": "MATH20712",
+			"summary": "lots of proofs which are all examinable. However, most of these can be logically derived by using methods covered in the course"
+		},
+		{
+			"id": 36,
+			"unit": "MATH20512",
+			"summary": "examples classes are not the most useful unless you have any specific problems you want addressing"
+		},
+		{
+			"id": 39,
+			"unit": "MATH20712",
+			"summary": "starts off relatively easy recapping some of the important aspects of probability a from the first semester but the workload increases after about week two"
+		},
+		{
+			"id": 40,
+			"unit": "MATH20712",
+			"summary": "the exams are relatively straightforward very rarely will you see something unfamiliar which makes revision a lot easier"
+		},
+		{
+			"id": 41,
+			"unit": "MATH20712",
+			"summary": "over some interesting problems to do with population dynamics extinction and expansion and the amblers ruin Problem."
+		},
+		{
+			"id": 38,
+			"unit": "MATH20712",
+			"summary": "plenty of formulae to memorise, but this is simple given you need their derivations"
+		},
+		{
+			"id": 42,
+			"unit": "MATH20722",
+			"summary": "often viewed as more of a course in pure mathematics as opposed to probability due to the style in which it is given"
+		},
+		{
+			"id": 43,
+			"unit": "MATH20722",
+			"summary": "the methods here are useful for those who want to do higher level probability courses though taking this course is not strictly necessary for a lot of these"
+		},
+		{
+			"id": 44,
+			"unit": "MATH20722",
+			"summary": "the course is seen as a chance for some diversity for those who wish to take mainly probability and statistic courses"
+		},
+		{
+			"id": 45,
+			"unit": "MATH20722",
+			"summary": "lecturer willing to help even outside of the designated lecture schedule"
+		},
+		{
+			"id": 46,
+			"unit": "MATH20722",
+			"summary": "attendance is key as there are no online notes except for some reference notes from several years ago"
+		},
+		{
+			"id": 48,
+			"unit": "MATH20802",
+			"summary": "it is necessary to learn a few ‘tricks’ for each section of the course in particular to help solve some of the problems on the sheets and in the exam"
+		},
+		{
+			"id": 47,
+			"unit": "MATH20802",
+			"summary": "it the beginning of the course the lecturer hands out summary lecture notes and a list of examples however you will not pass the course if you only use those notes and there are no solutions to the examples except those that are also on problem sheets)."
+		},
+		{
+			"id": 51,
+			"unit": "MATH20802",
+			"summary": "the midterms are usually very hard the average mark two years ago was 9/20. however the lecturer mails students a few weeks before the exam to say what topics are covered"
+		},
+		{
+			"id": 49,
+			"unit": "MATH20802",
+			"summary": "a few proofs are needed but these are only available in lectures and not included in the summary notes"
+		},
+		{
+			"id": 50,
+			"unit": "MATH20802",
+			"summary": "there is relatively little contents the focus is more on the methods and ideas involved which make this a prerequisite for a lot of courses see above)."
+		},
+		{
+			"id": 53,
+			"unit": "MATH20812",
+			"summary": "the coursework elements are generally quite straightforward and the content itself isn’t too difficult however attending the lab sessions is vital in order to secure a good mark"
+		},
+		{
+			"id": 52,
+			"unit": "MATH20812",
+			"summary": "his course is based around using computers in particular using R, the statistical data software"
+		},
+		{
+			"id": 54,
+			"unit": "MATH20812",
+			"summary": "it has been known to be able to get bonus marks for extra work for example answering extra problems or going above and beyond what is expected"
+		},
+		{
+			"id": 55,
+			"unit": "MATH20812",
+			"summary": "perhaps most importantly you learn how to write reports a transferable skill that is vital in some career paths"
+		},
+		{
+			"id": 58,
+			"unit": "MATH20902",
+			"summary": "the problem sheets are very long and the problems themselves take a long time the lecturer narrows the problems down to a list that will be the same/similar to those on the exam but learning the methods is the vital part"
+		},
+		{
+			"id": 59,
+			"unit": "MATH20902",
+			"summary": "most problems in this course revolve around graph theory and does provide some interesting applications the lecturer often recommends papers and books to read on the subject"
+		},
+		{
+			"id": 57,
+			"unit": "MATH20902",
+			"summary": "the lecturer is friendly and approachable though his lecture style divides opinion sometimes on the board and other times using slides"
+		},
+		{
+			"id": 60,
+			"unit": "MATH20902",
+			"summary": "despite not being a prerequisite for anything elements of this course come up in many areas of mathematics in particular anyone who would like to study real-life systems with interactions (computer, biological etc is advised to give this course serious consideration"
+		},
+		{
+			"id": 61,
+			"unit": "MATH20602",
+			"summary": "lecturer is approachable friendly and responds to mails quickly"
+		},
+		{
+			"id": 62,
+			"unit": "MATH20602",
+			"summary": "the course revolves around studying the methods by which we can approximate solutions to problems that would be very difficult to solve by hand sometimes MATLAB is used to demonstrate the ideas presented but you will not be required to use this yourself"
+		},
+		{
+			"id": 63,
+			"unit": "MATH20602",
+			"summary": "it is helpful to think of this course as a combination of pure and applied mathematics is a result a broad spectrum of problems are covered for example solution stability basic matrix properties and integration methods"
+		},
+		{
+			"id": 64,
+			"unit": "MATH20602",
+			"summary": "there are a fair few proofs coming from the pure aspect of this course some of which are fairly technical however towards the end of semester the lecturer tells you which are certainly non examinable."
+		},
+		{
+			"id": 65,
+			"unit": "MATH20602",
+			"summary": "the midterm test and final exam are both fair provided you know and have engaged with the material and haven’t just tried to learn how to pass the exam"
+		},
+		{
+			"id": 67,
+			"unit": "MATH20602",
+			"summary": "the midterm test and final exam are both fair provided you know and have engaged with the material and haven’t just tried to learn how to pass the exam"
+		},
+		{
+			"id": 70,
+			"unit": "MATH20302",
+			"summary": "it has been commented that the online notes do not sufficiently cover the course so make sure if you have to miss a lecture that you will be able to acquires notes from elsewhere"
+		},
+		{
+			"id": 72,
+			"unit": "MATH20302",
+			"summary": "the course is all to do with how we construct proofs proving logical sentences and the such as the ability to show that a statement is true or false is a powerful weapon one not available in almost all other subjects"
+		},
+		{
+			"id": 71,
+			"unit": "MATH20302",
+			"summary": "a fairly straightforward course in the sense that if you stay on top of the material the increasing level of complexity as the semester goes on will not prove much of a stumbling block"
+		},
+		{
+			"id": 69,
+			"unit": "MATH20302",
+			"summary": "the course is very proof heavy though most are not examinable. However, the applications of the results makes up the course so a good knowledge of the theory is vital"
+		},
+		{
+			"id": 68,
+			"unit": "MATH20302",
+			"summary": "the lecturer is popular among students very helpful and understands the points on which students struggle"
+		},
+		{
+			"id": 73,
+			"unit": "MATH20912",
+			"summary": "lectures are mainly powerpoint slides with a few diagrams and side notes written on the board"
+		},
+		{
+			"id": 75,
+			"unit": "MATH20912",
+			"summary": "generally this is considered as an applied course so a main complaint is that whilst there are lots of formulae you often donut get to see where it comes from or why it works just that it works"
+		},
+		{
+			"id": 76,
+			"unit": "MATH20912",
+			"summary": "tutorials are described as helpful as they fill in any gaps from lectures and help with understanding of examples"
+		},
+		{
+			"id": 80,
+			"unit": "MATH20622",
+			"summary": "the coursework is very long and quite difficult to get going with but you are allowed to use outside materials to help provided they are referenced appropriately)."
+		},
+		{
+			"id": 79,
+			"unit": "MATH20622",
+			"summary": "to prior knowledge of programming is required however if you have ever done it before or have an interest in it then the course is made immeasurably easier"
+		},
+		{
+			"id": 81,
+			"unit": "MATH20622",
+			"summary": "is a result of being a coursework only course unite students taking this course have one exam less in the summer terms however was with the level three computing course do not take this as an easy few marks it will be time consuming so being able to juggle this with your other course units is important"
+		},
+		{
+			"id": 82,
+			"unit": "MATH20522",
+			"summary": "a course designed to show how mathematics is used in industry and other disciplines useful for those who wish to go into these sorts of fields in the future"
+		},
+		{
+			"id": 83,
+			"unit": "MATH20522",
+			"summary": "students do have to do presentations on their work however this is good practice for many career choicest and its also a chance to try something that you donut get to do very often in mathematics"
+		},
+		{
+			"id": 86,
+			"unit": "MATH31011",
+			"summary": "the lecturer is very good widely respected and always approachable"
+		},
+		{
+			"id": 78,
+			"unit": "MATH20622",
+			"summary": "a course designed to teach the basics of computer programming while the main tool is Python, most of the skills learned are transferable to the other commonly used programs"
+		},
+		{
+			"id": 84,
+			"unit": "MATH20522",
+			"summary": "there are fewer actual lectures in this course than others instead they are replaced by group work sessions and the study of specific problems"
+		},
+		{
+			"id": 85,
+			"unit": "MATH31011",
+			"summary": "usually a small course however the material has been described as interesting if quite challenging"
+		},
+		{
+			"id": 87,
+			"unit": "MATH31011",
+			"summary": "all materials are made available online, and the lecture notes in particular are high quality"
+		},
+		{
+			"id": 90,
+			"unit": "MATH31051",
+			"summary": "classic chalk and talk lecture style and the course follows a definition-theorem-proof method akin to metric Spaces. the lecturer knows which proofs students donut like and really helps explain these in details"
+		},
+		{
+			"id": 94,
+			"unit": "MATH31051",
+			"summary": "available as a 15-credit version the extra material is three sections of notes posted online after any relevant material is covered in lectures"
+		},
+		{
+			"id": 92,
+			"unit": "MATH31051",
+			"summary": "problem sheets consist of examples as well as some smaller proofs to make sure students know what they’re doing the lecture notes are very good and contain all the relevant details however there are some very useful insights given in the lectures"
+		},
+		{
+			"id": 89,
+			"unit": "MATH31011",
+			"summary": "his course can be taken as a 15-credit version the extra material consists of three sections running parallel to topics covered in the course"
+		},
+		{
+			"id": 98,
+			"unit": "MATH31061",
+			"summary": "the lecturer is fast at replying to emails, and will use examples classes to help students get through some of the trickier problems in addition he posts which material is relevant a few weeks before the exam"
+		},
+		{
+			"id": 97,
+			"unit": "MATH31061",
+			"summary": "there is a large amount of content in the course which does cause a rush towards the end which doesn’t help some of the more abstract ideas sink in"
+		},
+		{
+			"id": 74,
+			"unit": "MATH20912",
+			"summary": "the lecturer is friendly and approachable though is often busy so its important to ask problems during class when appropriate"
+		},
+		{
+			"id": 88,
+			"unit": "MATH31011",
+			"summary": "there is some overlap with essential PDE’s (MATH36041) and martingales with applications to finance (MATH37001)."
+		},
+		{
+			"id": 96,
+			"unit": "MATH31061",
+			"summary": "while there are some proofs which need be learned much of the course is based around recurring examples protective space spheres etc"
+		},
+		{
+			"id": 99,
+			"unit": "MATH31061",
+			"summary": "available as a 15-credit version the extra material is covered in lectures and appears in the regular notes but a lot of this is proving results that the 10-credit version assumes"
+		},
+		{
+			"id": 100,
+			"unit": "MATH32001",
+			"summary": "his course follows on from the material in algebraic structures a and 2, lots of familiar concepts to online notes example sheets and solutions given out in lectures"
+		},
+		{
+			"id": 101,
+			"unit": "MATH32001",
+			"summary": "chalk and talk lecture style a lot of proofs as is common in pure mathematics"
+		},
+		{
+			"id": 91,
+			"unit": "MATH31051",
+			"summary": "the style of the examples and proofs are similar to those in metric Spaces, however it is not necessary to have done that course that is if you know the definitions often the results can be retrieved in a few steps"
+		},
+		{
+			"id": 95,
+			"unit": "MATH31061",
+			"summary": "a different type course to those seen before lots of definitions while the material is covered from both an analytic and topological perspective"
+		},
+		{
+			"id": 102,
+			"unit": "MATH32001",
+			"summary": "challenging but not difficult course remembering definitions and proofs bodes well for the final exam"
+		},
+		{
+			"id": 77,
+			"unit": "MATH20912",
+			"summary": "his course is not strictly necessary to do higher level finance course units however it does provide a good foothold into the terminology and notions behind more complicated aspects of financial mathematics"
+		},
+		{
+			"id": 103,
+			"unit": "MATH32001",
+			"summary": "available as a 15-credit version extra material is a large booklet of notes mostly definitions and proofs with examples at the very end it is advisable to go through this as the course goes along as there is perhaps too much content to leave it until the last minutes"
+		},
+		{
+			"id": 56,
+			"unit": "MATH20902",
+			"summary": "his course is an interesting and different brand of mathematics to any of the above but is similar in principle to any decision maths course units from A-Level for equivalent). however donut assume its easy just because you did it in school"
+		},
+		{
+			"id": 93,
+			"unit": "MATH31051",
+			"summary": "the exams and coursework are fair and the lecturer is more than happy to address problems on a one-to-one basis"
+		}
+	]
+}
