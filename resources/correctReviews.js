@@ -23,7 +23,7 @@ const correctReviews = (callback) => {
     }
 
     console.log(newReviews);
-    fs.writeFile(__dirname + '/correctReviews.json', JSON.stringify({ reviews: newReviews }, null, '\t'), (err) => {
+    fs.writeFile(__dirname + '/correctedReviews.json', JSON.stringify({ reviews: newReviews }, null, '\t'), (err) => {
       if (err) {
         return console.log(err);
       }
