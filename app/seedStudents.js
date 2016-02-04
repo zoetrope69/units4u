@@ -1,6 +1,6 @@
 'use strict';
 const casual = require('casual');
-const reviews = require('../resources/reviews.json').reviews;
+const reviews = require('../resources/correctedReviews.json').reviews;
 const sentiment = require('speakeasy-nlp').sentiment.analyze;
 const db = require('./db');
 const userMethods = require('./dbMethods/userMethods')(db);
