@@ -181,6 +181,7 @@ main {
 }
 
 footer {
+  float: left;
   margin-top: 5em;
 
   color: #ABABAB;
