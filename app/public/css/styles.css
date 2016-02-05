@@ -4,10 +4,6 @@
   75% { transform: translateY(.1em); }
 }
 
-@keyframes rainbowSpin {
-  to { -webkit-filter: hue-rotate(360deg); }
-}
-
 /* resets */
 *::before,
 *,
@@ -20,6 +16,7 @@
 }
 
 body {
+  overflow: scroll; /* force scroll bar */
   font-family: sans-serif;
 }
 
