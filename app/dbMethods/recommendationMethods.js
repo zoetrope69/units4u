@@ -24,8 +24,8 @@ const RecommendationMethods = function (db) {
       WHERE Unit.summary =~ '(?i).*${keyword}.*'
         OR Unit.title =~ '(?i).*${keyword}.*'
         OR r.summary =~ '(?i).*${keyword}.*'
-      RETURN Unit, r
-        ORDER BY r.sentiment DESC
+      RETURN DISTINCT Unit, r
+        ORDER BY r.sentiment desc, Unit.title
     `;
 
     db.cypher({ query }, (err, recommendations) => {
