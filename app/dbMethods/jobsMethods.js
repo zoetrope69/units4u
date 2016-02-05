@@ -1,10 +1,27 @@
-require('dotenv').config(); // pull in environment variables from .env
-
+'use strict'
 const request = require('request');
 
-module.exports = {
+const JobsMethods = function () {
 
-  search: function (options, callback) {
+  const errorCodes = require('../lib/ErrorCodes');
+
+  function getJobsAPI (req, res) {
+    const keyword = req.query.keyword || ''; // default to empty string
+    const location = req.query.location || ''; // default to empty string
+    const amount = req.query.amount;
+    getJobs({ keywords: [keyword], location, amount }, (err, results) => {
+      if (err) {
+        res.status(errorCodes.server.code)
+        return res.send(errorCodes.server.message + ': ' + err);
+      }
+      // Return jobs
+      res.send({
+        'jobs': results
+      });
+    });
+  }
+
+  function getJobs (options, callback) {
 
     options.keywords = options.keywords || [];
     options.location = options.location || '';
@@ -55,7 +72,7 @@ module.exports = {
         return {
           id: job.jobkey[0],
           title: job.jobtitle,
-          description
+          summary: description
         };
       });
 
@@ -64,4 +81,11 @@ module.exports = {
 
   }
 
+  return {
+    getJobsAPI,
+    getJobs
+  };
+
 };
+
+module.exports = JobsMethods;

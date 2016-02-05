@@ -13,6 +13,8 @@ function setup (app, methods) {
 
   app.get('/api/recommendation', methods.recommendations.getRecommendationsAPI);
 
+  app.get('/api/jobs', methods.jobs.getJobsAPI);
+
   // client
 
   app.get('/', (req, res) => res.render('home', { EXPRESS_PORT: process.env.EXPRESS_PORT }));

@@ -36,23 +36,24 @@ main {
 
 .column:last-child {
   padding-left: 2em;
-  padding-top: 1.5em;
 }
 
-.column > h1 {
+.column h1 {
   margin-bottom: .25em;
-  text-align: center;
-}
 
-.column > h1 {
+  text-align: center;
   color: #4E4E4E;
 }
 
-.column > h2 {
+.column h2 {
   color: #5A5A5A;
 }
 
-.column > p{
+.column h3 {
+  color: #616161;
+}
+
+.column p{
   line-height: 1.5em;
   color: grey;
 }
@@ -169,7 +170,7 @@ main {
   font-weight: 300;
 }
 
-.review__sentiment {
+h3.review__sentiment {
   color: inherit;
   font-weight: bolder;
   margin-top: 0;

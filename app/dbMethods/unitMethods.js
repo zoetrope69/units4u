@@ -2,8 +2,8 @@
 
 /* eslint no-unused-vars: 1 */
 
-const UnitMethods = function (db) {
 
+const UnitMethods = function (db) {
   const errorCodes = require('../lib/ErrorCodes');
 
   function addUnitAPI (req, res) {

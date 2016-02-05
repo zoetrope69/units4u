@@ -1,15 +1,18 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
-const loadRecommendation = (keyword) => new Promise((resolve, reject) => {
+const loadData = (keyword) => new Promise((resolve, reject) => {
   keyword = keyword || ''; // default to an empty string
 
-  const uri = `http://localhost:${EXPRESS_PORT}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
-  fetch(uri)
-    .then((response) => response.json())
-    .then((result) => resolve(result))
-    .catch((err) => reject(err));
+  const promises = [];
 
+  const reccommendationUri = `http://localhost:${EXPRESS_PORT}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
+  promises.push(fetch(reccommendationUri).then((response) => response.json()));
+
+  const jobsUri = `http://localhost:${EXPRESS_PORT}/api/jobs?keyword=${keyword}&location=portsmouth&amount=3`; // eslint-disable-line no-undef
+  promises.push(fetch(jobsUri).then((response) => response.json()));
+
+  Promise.all(promises).then(resolve, reject);
 });
 
 const displayRecommendations = (result) => {
@@ -17,13 +20,16 @@ const displayRecommendations = (result) => {
     return console.log(result.err);
   }
 
+  const recommendations = result[0].recommendations;
+  const jobs = result[1].jobs;
+
   const outputEl = document.querySelector('.output');
 
   // clear output
   outputEl.innerHTML = '';
 
   // if no recommendations
-  if (result.recommendations.length < 1) {
+  if (recommendations.length < 1) {
     return outputEl.innerHTML = `
       <p class="no-recommendations">
         No recommendations&hellip;
@@ -31,7 +37,7 @@ const displayRecommendations = (result) => {
     `;
   }
 
-  const recommendation = result.recommendations[0];
+  const recommendation = recommendations[0];
   const keyword = recommendation.keyword;
 
   const unit = recommendation.unit;
@@ -53,12 +59,9 @@ const displayRecommendations = (result) => {
   let output = '';
 
   output += `
-    <div class="column">
-      <h1>${unit.title} (<small>${unit.code}</small>)</h1>
-      <p>${unit.summary}</p>
-    </div>
-
-    <div class="column">
+  <div class="column">
+    <h1>${unit.title} (<small>${unit.code}</small>)</h1>
+    <p>${unit.summary}</p>
 
     <div class="weighting">
   `;
@@ -81,6 +84,9 @@ const displayRecommendations = (result) => {
 
   output += `
     </div>
+  </div>
+
+  <div class="column">
 
     <h2>Reviews</h2>
   `;
@@ -101,7 +107,11 @@ const displayRecommendations = (result) => {
         <img src="images/${review.score}.png" />
       </div>
       <blockquote class="review__summary">
-        <p class="review__sentiment">Sentiment: ${Math.round(review.sentiment * 1000) / 1000} <small>(${review.score})</small></p>
+        <h3 class="review__sentiment">
+          Sentiment: ${Math.round(review.sentiment * 1000) / 1000}
+          <small>(${review.score})</small>
+          Grade: ${review.grade}
+        </h3>
         ${review.summary}
       </blockquote>
     </div>
@@ -110,7 +120,28 @@ const displayRecommendations = (result) => {
   }
 
   output += `
+    <h2>Jobs</h2>
+  `;
+
+  if (jobs.length < 1) {
+    output += `<p>No jobs</p>`;
+  }
+
+  for (let i = 0; i < jobs.length; i++) {
+
+    const job = jobs[i];
+
+    output += `
+    <div class="jobs">
+      <h3>${job.title}</h3>
+      <p>${job.summary}</p>
     </div>
+    `;
+
+  }
+
+  output += `
+  </div>
   `;
 
   outputEl.innerHTML = output;
@@ -119,7 +150,7 @@ const displayRecommendations = (result) => {
 const handleKeywordInput = (event) => {
   const keyword = event.target.value.trim() || defaultKeyword; // default to keyword
 
-  loadRecommendation(keyword)
+  loadData(keyword)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 };
@@ -127,7 +158,7 @@ const handleKeywordInput = (event) => {
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
 
-  loadRecommendation(defaultKeyword)
+  loadData(defaultKeyword)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 

@@ -9,6 +9,7 @@ const express = require('express'),
   UserMethods = require('./dbMethods/userMethods'),
   UnitMethods = require('./dbMethods/unitMethods'),
   RecommendationMethods = require('./dbMethods/recommendationMethods'),
+  JobsMethods = require('./dbMethods/jobsMethods'),
   db = require('./db');
 
 const app = express(),
@@ -35,7 +36,8 @@ app.set('view engine', 'hbs');
 const methods = {
   users: new UserMethods(db),
   units: new UnitMethods(db),
-  recommendations: new RecommendationMethods(db)
+  recommendations: new RecommendationMethods(db),
+  jobs: new JobsMethods()
 }
 
 function start () {
