@@ -16,7 +16,7 @@
 }
 
 body {
-  overflow: scroll; /* force scroll bar */
+  overflow-y: scroll; /* force scroll bar */
   font-family: sans-serif;
 }
 
