@@ -120,7 +120,6 @@
     "no-var": 2,
     "no-warning-comments": 2,
     "no-with": 0,
-    "no-magic-numbers": 2,
     "array-bracket-spacing": 2,
     "arrow-parens": 2,
     "arrow-spacing": 2,

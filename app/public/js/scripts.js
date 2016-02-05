@@ -93,7 +93,7 @@ const displayRecommendations = (result) => {
 
     const review = reviews[i];
     const greenHue = 100;
-    const colourCalc = (greenHue / 2) + (greenHue * review.score) / 4; // eslint-disable-line no-magic-numbers
+    const colourCalc = (greenHue / 2) + (greenHue * review.score) / 4;
 
     output += `
     <div class="review" style="color: hsl(${colourCalc}, 48%, 48%)">
