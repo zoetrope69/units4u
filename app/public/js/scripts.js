@@ -1,3 +1,4 @@
+'use strict';
 const defaultKeyword = 'geometry';
 
 const loadRecommendation = (keyword) => new Promise((resolve, reject) => {
@@ -43,23 +44,42 @@ const displayRecommendations = (result) => {
   unit.title = unit.title.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
   review.summary = review.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
 
-  // append results
-  outputEl.innerHTML = `
+  // output to page
+
+  let output = '';
+
+  output += `
     <h2>${unit.title} (<small>${unit.code}</small>)</h2>
     <p>${unit.summary}</p>
+
     <div class="weighting">
+  `;
+
+  if (unit.coursework) {
+    output += `
       <div class="weighting__area weighting__area--coursework" style="width: ${unit.coursework}%">
         C/W: ${unit.coursework}%
       </div>
+    `;
+  }
+
+  if (unit.exam) {
+    output += `
       <div class="weighting__area weighting__area--exam" style="width:${unit.exam}%">
         Exam: ${unit.exam}%
       </div>
+    `;
+  }
+
+  output += `
     </div>
 
     <h3>Review</h3>
     <blockquote>${review.summary}</blockquote>
     <p>Sentiment: ${review.sentiment} <small>(${score})</small></p>
   `;
+
+  outputEl.innerHTML = output;
 }
 
 const handleKeywordInput = (event) => {
