@@ -101,7 +101,7 @@ const displayRecommendations = (result) => {
         <img src="images/${review.score}.png" />
       </div>
       <blockquote class="review__summary">
-        <p class="review__sentiment">Sentiment: ${review.sentiment} <small>(${review.score})</small></p>
+        <p class="review__sentiment">Sentiment: ${Math.round(review.sentiment * 1000) / 1000} <small>(${review.score})</small></p>
         ${review.summary}
       </blockquote>
     </div>
