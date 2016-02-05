@@ -9,7 +9,7 @@ function setup (app, methods) {
   app.get('/api/users/:username', methods.users.getUserAPI);
   app.put('/api/users/:username/review', methods.users.addReviewAPI);
 
-  app.get('/api/recommendation', methods.recommendations.getRecommendations);
+  app.get('/api/recommendation', methods.recommendations.getRecommendationsAPI);
 
 }
 
