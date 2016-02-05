@@ -42,6 +42,30 @@ const RecommendationMethods = function (db) {
         };
       });
 
+      if (recommendations.length > 0) {
+
+        const newRecommendations = [];
+
+        newRecommendations.push(recommendations[0]);
+
+        for (let i = 1; i < recommendations.length; i++) {
+          const recommendation = recommendations[i];
+
+          for (let j = 0; j < newRecommendations.length; j++) {
+            const newRecommendation = newRecommendations[j];
+
+            if (newRecommendation.unit.code === recommendation.unit.code) {
+              newRecommendations[j].reviews = newRecommendations[j].reviews.concat(recommendations[i].reviews);
+              break;
+            }
+          }
+
+        }
+
+        recommendations = newRecommendations;
+
+      }
+
       callback(null, recommendations);
     });
   }
