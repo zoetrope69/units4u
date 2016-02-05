@@ -76,6 +76,7 @@ const displayRecommendations = (result) => {
 
     <h3>Review</h3>
     <blockquote>${review.summary}</blockquote>
+    <img src="images/${score}.png" />
     <p>Sentiment: ${review.sentiment} <small>(${score})</small></p>
   `;
 
