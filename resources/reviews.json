@@ -101,6 +101,10 @@
     {"id": 100, "unit": "MATH32001","summary": "This course follows on from the material in Algebraic Structures 1 and 2, lots of familiar concepts. No online notes, example sheets and solutions given out in lectures."},
     {"id": 101, "unit": "MATH32001","summary": "Chalk and talk lecture style, a lot of proofs as is common in pure mathematics."},
     {"id": 102, "unit": "MATH32001","summary": "Challenging but not difficult course, remembering definitions and proofs bodes well for the final exam."},
-    {"id": 103, "unit": "MATH32001","summary": "Available as a 15-credit version, extra material is a large booklet of notes, mostly definitions and proofs with examples at the very end. It is advisable to go through this as the course goes along, as there is perhaps too much content to leave it until the last minute."}
+    {"id": 103, "unit": "MATH32001","summary": "Available as a 15-credit version, extra material is a large booklet of notes, mostly definitions and proofs with examples at the very end. It is advisable to go through this as the course goes along, as there is perhaps too much content to leave it until the last minute."},
+    {"id": 104, "unit": "MATH32031","summary": "A popular lecturer among his students, prefers chalk and talk to any other style, though reverts to projector slides if the room doesn’t have boards."},
+    {"id": 105, "unit": "MATH32031","summary": "An application of linear algebra, but taught in a similar style to a pure course unit. A unique course in the sense that it is abstract yet applied."},
+    {"id": 106, "unit": "MATH32031","summary": "Examination tests knowledge on concepts of the course, as well as routine computation questions. The online test can be taken multiple times and is open book."},
+    {"id": 107, "unit": "MATH32031","summary": "The online notes are good and make revision very easy to organise."}
   ]
 }
