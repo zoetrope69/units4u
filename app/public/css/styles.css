@@ -1,0 +1,141 @@
+@keyframes outputIn {
+  from { opacity: .5; }
+  25% { transform: translateY(-.1em); }
+  75% { transform: translateY(.1em); }
+}
+
+@keyframes rainbowSpin {
+  to { -webkit-filter: hue-rotate(360deg); }
+}
+
+/* resets */
+*::before,
+*,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  animation: outputIn .33s ease-out forwards;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+main > h1 {
+  margin-bottom: .25em;
+  text-align: center;
+}
+
+.students {
+  padding: 0;
+  margin: 0 0 1em;
+
+  list-style: none;
+  text-align: center;
+}
+
+.students > li {
+  display: inline-block;
+
+  color: #9C9C9C;
+}
+
+.students > li::after { content: ', '; }
+
+.keyword__instructions {
+  width: 100%;
+  margin: 2em 0 .25em;
+
+  font-weight: bolder;
+  text-align: center;
+  color: #2E388C;
+}
+
+.keyword__input {
+  width: 100%;
+  padding: .25em;
+
+  font-size: 2em;
+
+  text-align: center;
+  border: 2px solid #D8D8D8;
+  border-radius: 5px;
+  color: #2E388C;
+
+  transition: border-color .33s ease-out;
+}
+
+.keyword__input:focus {
+  border-color: #2E388C;
+  outline: none;
+}
+
+.output h3 {
+  color: #5A5A5A;
+}
+
+.output p{
+  line-height: 1.5em;
+  color: grey;
+}
+
+.output mark {
+  background: rgba(63, 81, 181, .35);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, .35);
+}
+
+.output .no-recommendations {
+  text-align: center;
+  font-size: 3em;
+  color: #D6D6D6;
+}
+
+blockquote {
+  padding-left: 1em;
+  margin-left: 1em;
+
+  color: #3F51B5;
+  border-left: 5px solid #A6ACCE;
+}
+
+.weighting {
+  overflow: hidden; /* clearfix */
+
+  border-radius: 3px;
+}
+
+.weighting__area {
+  float: left;
+  padding: .5em;
+
+  font-size: .75em;
+  font-weight: bolder;
+  color: rgba(255, 255, 255, .75);
+
+  transition: width .33s ease-in;
+}
+
+.weighting__area:last-child {
+  text-align: right;
+}
+
+.weighting__area--coursework { background: #969696; }
+.weighting__area--exam { background: #B5B5B5; }
+
+footer {
+  margin-top: 5em;
+  
+  color: #ABABAB;
+  text-align: right;
+}
+
+footer a {
+  color: inherit;
+}

@@ -5,6 +5,7 @@ const express = require('express'),
   errorHandler = require('errorhandler'),
   routes = require('./routes'),
   bodyParser = require('body-parser'),
+  expressHandlebars = require('express-handlebars'),
   UserMethods = require('./dbMethods/userMethods'),
   UnitMethods = require('./dbMethods/unitMethods'),
   RecommendationMethods = require('./dbMethods/recommendationMethods'),
@@ -18,6 +19,18 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use(bodyParser.json()) // parse application/json
+
+app.set('views', __dirname + '/views');
+
+app.use(express.static(__dirname + '/public'));
+
+const expressHandlebarsOptions = {
+  layoutsDir: __dirname + '/views/layouts',
+  defaultLayout: 'main',
+  extname: '.hbs'
+};
+app.engine('hbs', expressHandlebars(expressHandlebarsOptions));
+app.set('view engine', 'hbs');
 
 const methods = {
   users: new UserMethods(db),
