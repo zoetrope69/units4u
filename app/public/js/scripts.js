@@ -36,21 +36,29 @@ const displayRecommendations = (result) => {
 
   const unit = recommendation.unit;
 
-  const review = recommendation.reviews[0];
-  const score = review.sentiment * review.summary.split(' ').length;
-
   // wrap any keywords in summary with a <mark> tag to highlight them
   unit.summary = unit.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
   unit.title = unit.title.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
-  review.summary = review.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
+
+  const reviews = recommendation.reviews;
+
+  for (let i = 0; i < reviews.length; i++) {
+    const review = reviews[i];
+    review.score = review.sentiment * review.summary.split(' ').length;
+    review.summary = review.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
+  }
 
   // output to page
 
   let output = '';
 
   output += `
-    <h2>${unit.title} (<small>${unit.code}</small>)</h2>
-    <p>${unit.summary}</p>
+    <div class="column">
+      <h1>${unit.title} (<small>${unit.code}</small>)</h1>
+      <p>${unit.summary}</p>
+    </div>
+
+    <div class="column">
 
     <div class="weighting">
   `;
@@ -74,10 +82,35 @@ const displayRecommendations = (result) => {
   output += `
     </div>
 
-    <h3>Review</h3>
-    <blockquote>${review.summary}</blockquote>
-    <img src="images/${score}.png" />
-    <p>Sentiment: ${review.sentiment} <small>(${score})</small></p>
+    <h2>Reviews</h2>
+  `;
+
+  if (reviews.length < 1) {
+    output += `<p>No reviews</p>`;
+  }
+
+  for (let i = 0; i < reviews.length; i++) {
+
+    const review = reviews[i];
+    const greenHue = 100;
+    const colourCalc = (greenHue / 2) + (greenHue * review.score) / 4; // eslint-disable-line no-magic-numbers
+
+    output += `
+    <div class="review" style="color: hsl(${colourCalc}, 48%, 48%)">
+      <div class="review__emoji">
+        <img src="images/${review.score}.png" />
+      </div>
+      <blockquote class="review__summary">
+        <p class="review__sentiment">Sentiment: ${review.sentiment} <small>(${review.score})</small></p>
+        ${review.summary}
+      </blockquote>
+    </div>
+    `;
+
+  }
+
+  output += `
+    </div>
   `;
 
   outputEl.innerHTML = output;

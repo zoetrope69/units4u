@@ -21,13 +21,40 @@ body {
 }
 
 main {
-  max-width: 40em;
+  max-width: 80em;
   margin: 0 auto;
 }
 
-main > h1 {
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column:first-child {
+  padding-right: 2em;
+}
+
+.column:last-child {
+  padding-left: 2em;
+  padding-top: 1.5em;
+}
+
+.column > h1 {
   margin-bottom: .25em;
   text-align: center;
+}
+
+.column > h1 {
+  color: #4E4E4E;
+}
+
+.column > h2 {
+  color: #5A5A5A;
+}
+
+.column > p{
+  line-height: 1.5em;
+  color: grey;
 }
 
 .students {
@@ -35,7 +62,6 @@ main > h1 {
   margin: 0 0 1em;
 
   list-style: none;
-  text-align: center;
 }
 
 .students > li {
@@ -74,15 +100,6 @@ main > h1 {
   outline: none;
 }
 
-.output h3 {
-  color: #5A5A5A;
-}
-
-.output p{
-  line-height: 1.5em;
-  color: grey;
-}
-
 .output mark {
   background: rgba(255, 255, 0, .5);
   box-shadow: 0 0 0 3px rgba(255, 255, 0, .5);
@@ -92,14 +109,6 @@ main > h1 {
   text-align: center;
   font-size: 3em;
   color: #D6D6D6;
-}
-
-blockquote {
-  padding-left: 1em;
-  margin-left: 1em;
-
-  color: #3F51B5;
-  border-left: 5px solid #A6ACCE;
 }
 
 .weighting {
@@ -126,13 +135,67 @@ blockquote {
 .weighting__area--coursework { background: #969696; }
 .weighting__area--exam { background: #B5B5B5; }
 
+.review {
+  overflow: hidden; /* clearfix */
+  padding: .25em 0 1em;
+
+  color: #3F51B5;
+}
+
+.review__emoji {
+  float: left;
+  width: 10%;
+}
+
+.review__emoji img {
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.review__summary {
+  float: left;
+  width: 90%;
+  margin: 0;
+  padding: .5em 0;
+  padding-left: 1em;
+
+  border-left: 5px solid currentColor;
+  border-radius: 5px;
+}
+
+.review__summary small {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.review__sentiment {
+  color: inherit;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+.review__sentiment__score {
+  background: currentColor;
+  border-radius: 5px;
+}
+
 footer {
   margin-top: 5em;
-  
+
   color: #ABABAB;
   text-align: right;
 }
 
 footer a {
   color: inherit;
+}
+
+@media (max-width: 60em) {
+  .column,
+  .column:first-child,
+  .column:last-child {
+    width: 100%;
+    padding: 0 1em;
+  }
 }
