@@ -62,9 +62,6 @@ const displayRecommendations = (result) => {
 const handleKeywordInput = (event) => {
   const keyword = event.target.value || defaultKeyword; // default to keyword
 
-  const popSound = new Audio('sounds/pop-sound.wav');
-  popSound.play();
-
   loadRecommendation(keyword)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
