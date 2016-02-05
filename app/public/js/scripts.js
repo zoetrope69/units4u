@@ -63,7 +63,7 @@ const displayRecommendations = (result) => {
 }
 
 const handleKeywordInput = (event) => {
-  const keyword = event.target.value || defaultKeyword; // default to keyword
+  const keyword = event.target.value.trim() || defaultKeyword; // default to keyword
 
   loadRecommendation(keyword)
     .then(displayRecommendations)
@@ -71,7 +71,6 @@ const handleKeywordInput = (event) => {
 };
 
 const load = () => {
-
   const keywordInputEl = document.querySelector('.keyword__input');
 
   loadRecommendation(defaultKeyword)
