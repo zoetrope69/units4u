@@ -3,7 +3,7 @@ const defaultKeyword = 'geometry';
 const loadRecommendation = (keyword) => new Promise((resolve, reject) => {
   keyword = keyword || ''; // default to an empty string
 
-  const uri = 'http://localhost:3000/api/recommendation?keyword=' + keyword;
+  const uri = `http://localhost:${EXPRESS_PORT}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
   fetch(uri)
     .then((response) => response.json())
     .then((result) => resolve(result))
@@ -71,6 +71,7 @@ const handleKeywordInput = (event) => {
 };
 
 const load = () => {
+
   const keywordInputEl = document.querySelector('.keyword__input');
 
   loadRecommendation(defaultKeyword)

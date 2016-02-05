@@ -15,7 +15,7 @@ function setup (app, methods) {
 
   // client
 
-  app.get('/', (req, res) => res.render('home'));
+  app.get('/', (req, res) => res.render('home', { EXPRESS_PORT: process.env.EXPRESS_PORT }));
 
 }
 
