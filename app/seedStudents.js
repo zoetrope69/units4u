@@ -14,11 +14,12 @@ const amountOfUnitsInaYear = 3;
 
 let benHarrisHasBeenCreated = false;
 
-function removeReview (i) {
-  const index = reviews.indexOf(i);
-
-  if (index > -1) { // eslint-disable-line no-magic-numbers
-    reviews.splice(index, 1);
+function removeReview (id) {
+  for (let i = 0; i < reviews.length; i++) {
+    const review = reviews[i];
+    if (review.id === id) {
+      reviews.splice(i, 1);
+    }
   }
 }
 
@@ -37,47 +38,25 @@ function seedStudent () {
   const studentReviews = [];
   let unitAmount = amountOfUnitsInaYear * student.year;
 
-  while (unitAmount) {
+  while (unitAmount > 0) {
     const randNo = randomNumber(0, reviews.length);
     const review = reviews[randNo];
 
-    // if we dont have any review picked yet
-    if (studentReviews.length < 1) {
+    // if we dont have any review picked yet OR if we dont already have this unit
+    if (studentUnits.length < 1 || studentUnits.indexOf(review.unit) < 0) {
       review.sentiment = sentiment(review.summary).comparative;
 
       const minGrade = 40;
       const maxGrade = 90;
       review.grade = randomNumber(minGrade, maxGrade);
 
-      studentReviews.push(review);
+      studentReviews.push(review); // add it to their units
       studentUnits.push(review.unit);
       removeReview(review.id);
-
-      --unitAmount;
     }
 
-    for (let i = 0; i < studentReviews.length; i++) {
-      const studentUnit = studentReviews[i];
-
-      // if we dont already have this unit
-      if (studentUnit.unit !== review.unit) {
-
-        review.sentiment = sentiment(review.summary).comparative;
-
-        const minGrade = 40;
-        const maxGrade = 90;
-        review.grade = randomNumber(minGrade, maxGrade);
-
-        studentReviews.push(review); // add it to their units
-        studentUnits.push(review.unit);
-        removeReview(review.id);
-
-        // reduce the amount of units we need and break out to the enxt loop
-        --unitAmount;
-        break;
-      }
-    }
-
+    // reduce the amount of units we need and break out to the enxt loop
+    unitAmount--;
   }
 
   student.reviews = studentReviews;
