@@ -34,11 +34,14 @@ const displayRecommendations = (result) => {
   const keyword = recommendation.keyword;
 
   const unit = recommendation.unit;
-  // wrap keywords in summary with a <mark> tag to highlight them
-  unit.summary = unit.summary.split(keyword).join(`<mark>${keyword}</mark>`);
 
   const review = recommendation.reviews[0];
   const score = review.sentiment * review.summary.split(' ').length;
+
+  // wrap any keywords in summary with a <mark> tag to highlight them
+  unit.summary = unit.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
+  unit.title = unit.title.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
+  review.summary = review.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
 
   // append results
   outputEl.innerHTML = `

@@ -21,9 +21,11 @@ const RecommendationMethods = function (db) {
   function getRecommendations (keyword, callback) {
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
-      WHERE Unit.summary CONTAINS "${keyword}"
-      RETURN DISTINCT Unit, r
-      ORDER BY r.sentiment DESC
+      WHERE Unit.summary =~ '(?i).*${keyword}.*'
+        OR Unit.title =~ '(?i).*${keyword}.*'
+        OR r.summary =~ '(?i).*${keyword}.*'
+      RETURN Unit, r
+        ORDER BY r.sentiment DESC
     `;
 
     db.cypher({ query }, (err, recommendations) => {
