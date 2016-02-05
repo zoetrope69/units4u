@@ -47,3 +47,7 @@ section for experiment with our different tech and algorithms
 # /resources
 
 currently we're using this folder to dump data that'll we'll process in the future
+
+# credit
+
+using the wonderful [twemoji emoji set](https://github.com/twitter/twemoji)
