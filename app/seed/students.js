@@ -46,9 +46,19 @@ function seedStudent () {
     if (studentUnits.length < 1 || studentUnits.indexOf(review.unit) < 0) {
       review.sentiment = sentiment(review.summary).comparative;
 
+      // 0.1 - 0.5 chance of sentiment to be correlated to grade
+      const randNo = Math.random();
+      const isItCorrelated = (randNo >= 0.1 && randNo < 0.5);
+
       const minGrade = 40;
-      const maxGrade = 90;
-      review.grade = randomNumber(minGrade, maxGrade);
+      const maxGrade = 80;
+      let grade = randomNumber(minGrade, maxGrade);
+
+      if (isItCorrelated) {
+        grade += Math.sign(review.sentiment) * 10;
+      }
+
+      review.grade = grade;
 
       studentReviews.push(review); // add it to their units
       studentUnits.push(review.unit);
