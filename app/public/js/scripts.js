@@ -120,26 +120,39 @@ const displayRecommendations = (result) => {
     `;
   }
 
+  output += `
+
+    <div class="output__jobs"></div>
+
+    </div>
+
+  `;
+
+  outputEl.innerHTML = output;
+
+  const jobsEl = document.querySelector('.output__jobs');
+
+  let jobsOutput = '';
+
   const jobsUri = `${HOST}/api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
   fetch(jobsUri)
     .then((response) => response.json())
     .then((result) => {
-      console.log('job result', result);
 
       const jobs = result.jobs;
 
-      output += `
+      jobsOutput += `
         <h2>Jobs</h2>
       `;
 
       if (jobs.length < 1) {
-        output += `<p>No jobs</p>`;
+        jobsOutput += `<p>No jobs</p>`;
       }
 
       for (let i = 0; i < jobs.length; i++) {
         const job = jobs[i];
 
-        output += `
+        jobsOutput += `
         <${job.url ? 'a href="' + job.url + '"' : 'div'} class="job">
           <h3 class="job__title">${job.title}</h3>
           <span class="job__company">${job.company}</span>
@@ -150,11 +163,12 @@ const displayRecommendations = (result) => {
         `;
       }
 
-      output += `
+      jobsOutput += `
       </div>
       `;
 
-      outputEl.innerHTML = output;
+      jobsEl.innerHTML = jobsOutput;
+
     })
     .catch((error) => console.log(error));
 
