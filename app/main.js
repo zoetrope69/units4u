@@ -13,7 +13,7 @@ const express = require('express'),
   db = require('./db');
 
 const app = express(),
-  port = process.env.EXPRESS_PORT;
+  port = process.env.PORT;
 
 if (process.env.NODE_ENV === 'development') {
   app.use(errorHandler({ dumpExceptions: true, showStack: true }));
