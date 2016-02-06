@@ -15,8 +15,7 @@ function setup (app, methods) {
   app.get('/api/jobs', methods.jobs.getJobsAPI);
 
   // client
-
-  app.get('/', (req, res) => res.render('home', { HOST: process.env.HOST }));
+  app.get('/', (req, res) => res.render('home', { DEV: process.env.NODE_ENV === 'development', HOST: process.env.HOST }));
 }
 
 exports.setup = setup;

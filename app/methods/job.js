@@ -12,8 +12,6 @@ const JobMethods = function () {
 
     keywords = JSON.parse(keywords);
 
-    console.log(keywords);
-
     getJobs({ keywords, location, amount }, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)

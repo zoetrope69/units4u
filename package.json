@@ -4,9 +4,10 @@
   "description": "a university unit recommender system for the web research unit",
   "main": "app/main.js",
   "scripts": {
-    "start": "node app",
+    "start": "npm run build && node app",
     "lint": "eslint -c .eslintrc app experiments",
-    "test": "npm run lint && mocha test/ --reporter landing"
+    "test": "npm run lint && mocha test/ --reporter landing",
+    "build": "babel app/public/js/scripts.js -o app/public/js/scripts.build.js --minified --no-comments --compact"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,8 @@
     "wordsworth": "^0.1.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
     "nodehun": "^2.0.8",
     "speakeasy-nlp": "^0.2.2"
   }

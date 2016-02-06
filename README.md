@@ -38,6 +38,10 @@ our linter will also pick up things like this as well
 
 linting is done with eslint, you can install it your ide. running `npm run lint` will run the linter command line.
 
+# deployment
+
+make sure you build the latest clientside script to ES5 using `npm run build`, add it to the repo for now and push up
+
 # /experiments
 
 section for experiment with our different tech and algorithms
