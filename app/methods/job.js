@@ -6,11 +6,15 @@ const JobMethods = function () {
   const errorCodes = require('../lib/ErrorCodes');
 
   function getJobsAPI (req, res) {
-    const keyword = req.query.keyword || ''; // default to empty string
+    let keywords = req.query.keywords || []; // default to empty string
     const location = req.query.location || ''; // default to empty string
     const amount = req.query.amount;
 
-    getJobs({ keywords: [keyword], location, amount }, (err, results) => {
+    keywords = JSON.parse(keywords);
+
+    console.log(keywords);
+
+    getJobs({ keywords, location, amount }, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err);
@@ -27,15 +31,11 @@ const JobMethods = function () {
     options.keywords = options.keywords || [];
     options.location = options.location || '';
     options.country = options.country || 'gb';
-    options.amount = options.amount || 1;
+    options.amount = options.amount || 200;
 
     // if there isn't any keywords error out
     if (options.keywords.length < 1) {
       return callback('Need at least one keyword', null);
-    }
-
-    if (options.location.length <= 0) {
-      return callback('Need to set a location', null);
     }
 
     const query = {
@@ -43,7 +43,7 @@ const JobMethods = function () {
       format: 'json',
       publisher: process.env.INDEED_PUBLISHER_ID,
       radius: 200,
-      q: options.keywords.join(' '),
+      q: options.keywords.join(', '),
       l: options.location,
       co: options.country,
       limit: options.amount,

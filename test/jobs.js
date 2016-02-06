@@ -8,30 +8,10 @@ const expect = require('chai').expect;
 describe('getJobs', () => {
   it('should error if no keywords are sent', () => {
 
-    // no keywords
-    const options = {
-      location: 'Portsmouth'
-    };
-
-    getJobs(options, (err, jobs) => {
+    getJobs({}, (err, jobs) => {
       expect(err).to.exist;
       expect(jobs).to.not.exist;
       expect(err).to.equal('Need at least one keyword');
-    });
-
-  });
-
-  it('should error if no location is sent', () => {
-
-    // no location
-    const options = {
-      keywords: ['php', 'js', 'html', 'js']
-    };
-
-    getJobs(options, (err, jobs) => {
-      expect(err).to.exist;
-      expect(jobs).to.not.exist;
-      expect(err).to.equal('Need to set a location');
     });
 
   });

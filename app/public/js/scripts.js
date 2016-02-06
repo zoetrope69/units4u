@@ -1,18 +1,14 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
-const loadData = (keyword) => new Promise((resolve, reject) => {
+const loadRecommendations = (keyword) => new Promise((resolve, reject) => {
   keyword = keyword || ''; // default to an empty string
 
-  const promises = [];
-
   const reccommendationUri = `${HOST}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
-  promises.push(fetch(reccommendationUri).then((response) => response.json()));
-
-  const jobsUri = `${HOST}/api/jobs?keyword=${keyword}&location=portsmouth&amount=3`; // eslint-disable-line no-undef
-  promises.push(fetch(jobsUri).then((response) => response.json()));
-
-  Promise.all(promises).then(resolve, reject);
+  fetch(reccommendationUri)
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
 });
 
 const displayRecommendations = (result) => {
@@ -20,8 +16,7 @@ const displayRecommendations = (result) => {
     return console.log(result.err);
   }
 
-  const recommendations = result[0].recommendations;
-  const jobs = result[1].jobs;
+  const recommendations = result.recommendations;
 
   const outputEl = document.querySelector('.output');
 
@@ -41,6 +36,8 @@ const displayRecommendations = (result) => {
   const keyword = recommendation.keyword;
 
   const unit = recommendation.unit;
+
+  const jobsKeywords = JSON.stringify(unit.title.toLowerCase().split(' '));
 
   // wrap any keywords in summary with a <mark> tag to highlight them
   unit.summary = unit.summary.replace(new RegExp(keyword, 'gi'), '<mark>$&</mark>');
@@ -123,39 +120,51 @@ const displayRecommendations = (result) => {
     `;
   }
 
-  output += `
-    <h2>Jobs</h2>
-  `;
+  const jobsUri = `${HOST}/api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
+  fetch(jobsUri)
+    .then((response) => response.json())
+    .then((result) => {
+      console.log('job result', result);
 
-  if (jobs.length < 1) {
-    output += `<p>No jobs</p>`;
-  }
+      const jobs = result.jobs;
 
-  for (let i = 0; i < jobs.length; i++) {
-    const job = jobs[i];
+      output += `
+        <h2>Jobs</h2>
+      `;
 
-    output += `
-    <${job.url ? 'a href="' + job.url + '"' : 'div'} class="job">
-      <h3 class="job__title">${job.title}</h3>
-      <span class="job__company">${job.company}</span>
-      <span class="job__location">(${job.location})</span>
-      <span class="job__date" title="${job.date.full}">Posted ${job.date.relative}</span>
-      <p class="job__summary">${job.summary}</p>
-    </${job.url ? 'a' : 'div'}>
-    `;
-  }
+      if (jobs.length < 1) {
+        output += `<p>No jobs</p>`;
+      }
 
-  output += `
-  </div>
-  `;
+      for (let i = 0; i < jobs.length; i++) {
+        const job = jobs[i];
 
-  outputEl.innerHTML = output;
+        output += `
+        <${job.url ? 'a href="' + job.url + '"' : 'div'} class="job">
+          <h3 class="job__title">${job.title}</h3>
+          <span class="job__company">${job.company}</span>
+          <span class="job__location">(${job.location})</span>
+          <span class="job__date" title="${job.date.full}">Posted ${job.date.relative}</span>
+          <p class="job__summary">${job.summary}</p>
+        </${job.url ? 'a' : 'div'}>
+        `;
+      }
+
+      output += `
+      </div>
+      `;
+
+      outputEl.innerHTML = output;
+    })
+    .catch((error) => console.log(error));
+
+
 }
 
 const handleKeywordInput = (event) => {
   const keyword = event.target.value.trim() || defaultKeyword; // default to keyword
 
-  loadData(keyword)
+  loadRecommendations(keyword)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 };
@@ -163,7 +172,7 @@ const handleKeywordInput = (event) => {
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
 
-  loadData(defaultKeyword)
+  loadRecommendations(defaultKeyword)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 
