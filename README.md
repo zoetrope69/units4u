@@ -13,8 +13,6 @@ make sure you're using a **node version 4 or above** for es6 (es2015) features
 2. `npm install`
 3. Install and start neo4j
 4. copy the `.env-sample file` to `.env` and add details (username and password for neo4j, [indeed api publisher api key](http://www.indeed.co.uk/publisher)).
-5. [Optional] `node resources/correctReviews` - correct spellings in reviews.json
-6. `node app/seed` - Seed the database
 7. [Optional] `node app/test` - Test it's working
 
 ## neo4j
@@ -26,7 +24,7 @@ to drop the database you can use the cipher command: `MATCH (n) DETACH DELETE n`
 # run
 
 1. `neo4j start` - start neo4j
-2. `npm start`
+2. `npm start` - will seed db automatically if not seeded
 
 # code styleguide
 

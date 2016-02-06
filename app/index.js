@@ -12,7 +12,8 @@ const express = require('express'),
   RecommendationMethods = require('./methods/recommendation'),
   JobMethods = require('./methods/job'),
 
-  db = require('./db');
+  db = require('./db'),
+  seed = require('./seed');
 
 const app = express(),
   port = process.env.PORT;
@@ -42,10 +43,36 @@ const methods = {
   jobs: new JobMethods()
 }
 
-function start () {
-  routes.setup(app, methods);
+function serve () {
   app.listen(port);
   console.log(`Express server listening on port ${port} in ${app.settings.env} mode.`);
+}
+
+function start () {
+  routes.setup(app, methods);
+
+  // check to see if database is seeded
+  db.cypher({ query: 'MATCH n RETURN n LIMIT 1' }, (err, results) => {
+    if (err) {
+      if (err.code === 'ECONNREFUSED') {
+        console.log(`Can't connect to Neo4j at ${process.env.NEO4J_URL}, is it running?`);
+      }
+      return console.log(err);
+    }
+
+    // seed database if no results at all
+    if (process.env.NODE_ENV === 'development' || results.length < 1) {
+      seed(() => {
+        serve();
+      });
+    } else {
+      // if already seeded just serve up
+      console.log('Database seeded');
+      serve();
+    }
+
+  });
+
 }
 
 exports.start = start;

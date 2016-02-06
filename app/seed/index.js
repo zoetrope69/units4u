@@ -4,31 +4,38 @@ require('dotenv').config();
 const db = require('../db');
 const spelling = require('./spelling');
 
-console.log('Correcting spelling of review summaries...');
+const seed = function (callback) {
 
-spelling(() => {
-  console.log('Corrected spelling of review summaries\n');
+  console.log('Correcting spelling of review summaries...');
 
-  console.log('Dropping database...');
+  spelling(() => {
+    console.log('Corrected spelling of review summaries\n');
 
-  db.cypher({ query: 'MATCH (n) DETACH DELETE n' }, () => {
-    console.log('Database dropped\n');
+    console.log('Dropping database...');
 
-    console.log('Seeding database...\n');
+    db.cypher({ query: 'MATCH (n) DETACH DELETE n' }, () => {
+      console.log('Database dropped\n');
 
-    console.log('Seeding units...');
+      console.log('Seeding database...\n');
 
-    const seedUnits = require('./units');
-    seedUnits(() => {
-      console.log('Units seeded\n');
+      console.log('Seeding units...');
 
-      console.log('Seeding students...');
-      const seedStudents = require('./students');
-      seedStudents(() => {
-        console.log('Students seeded\n');
+      const seedUnits = require('./units');
+      seedUnits(() => {
+        console.log('Units seeded\n');
 
-        console.log('Database seeded!');
+        console.log('Seeding students...');
+        const seedStudents = require('./students');
+        seedStudents(() => {
+          console.log('Students seeded\n');
+
+          console.log('Database seeded!');
+          callback();
+        });
       });
     });
   });
-});
+
+}
+
+module.exports = seed;
