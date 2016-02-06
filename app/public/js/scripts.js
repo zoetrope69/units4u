@@ -6,10 +6,10 @@ const loadData = (keyword) => new Promise((resolve, reject) => {
 
   const promises = [];
 
-  const reccommendationUri = `http://localhost:${PORT}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
+  const reccommendationUri = `${HOST}/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
   promises.push(fetch(reccommendationUri).then((response) => response.json()));
 
-  const jobsUri = `http://localhost:${PORT}/api/jobs?keyword=${keyword}&location=portsmouth&amount=3`; // eslint-disable-line no-undef
+  const jobsUri = `${HOST}/api/jobs?keyword=${keyword}&location=portsmouth&amount=3`; // eslint-disable-line no-undef
   promises.push(fetch(jobsUri).then((response) => response.json()));
 
   Promise.all(promises).then(resolve, reject);

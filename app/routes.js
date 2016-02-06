@@ -17,7 +17,7 @@ function setup (app, methods) {
 
   // client
 
-  app.get('/', (req, res) => res.render('home', { PORT: process.env.PORT }));
+  app.get('/', (req, res) => res.render('home', { HOST: process.env.HOST }));
 
 }
 
