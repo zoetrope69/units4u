@@ -102,8 +102,6 @@ const displayRecommendations = (result) => {
 
     let reviewImagePath = review.score;
 
-    review.score = 0;
-
     if (review.score === 0) {
       reviewImagePath = `0.${Math.floor(Math.random() * 8) + 1}`;
     }
