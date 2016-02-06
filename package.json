@@ -7,7 +7,7 @@
     "start": "npm run build && node app",
     "lint": "eslint -c .eslintrc app experiments",
     "test": "npm run lint && mocha test/ --reporter landing",
-    "build": "babel app/public/js/scripts.js -o app/public/js/scripts.build.js --minified --no-comments --compact"
+    "build": "babel app/public/js/fetch.js app/public/js/scripts.js -o app/public/js/scripts.build.js --minified --no-comments --compact"
   },
   "repository": {
     "type": "git",
