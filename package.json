@@ -5,10 +5,8 @@
   "main": "app/main.js",
   "scripts": {
     "start": "node app",
-    "seed": "node app/seed",
     "lint": "eslint -c .eslintrc app experiments",
-    "test": "npm run lint && mocha test/ --reporter landing",
-    "postinstall": "npm run seed"
+    "test": "npm run lint && mocha test/ --reporter landing"
   },
   "repository": {
     "type": "git",
