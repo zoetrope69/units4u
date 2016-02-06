@@ -129,10 +129,13 @@ const displayRecommendations = (result) => {
     const job = jobs[i];
 
     output += `
-    <div class="jobs">
-      <h3>${job.title}</h3>
-      <p>${job.summary}</p>
-    </div>
+    <${job.url ? 'a href="' + job.url + '"' : 'div'} class="job">
+      <h3 class="job__title">${job.title}</h3>
+      <span class="job__company">${job.company}</span>
+      <span class="job__location">(${job.location})</span>
+      <span class="job__date" title="${job.date.full}">Posted ${job.date.relative}</span>
+      <p class="job__summary">${job.summary}</p>
+    </${job.url ? 'a' : 'div'}>
     `;
   }
 

@@ -67,12 +67,19 @@ const JobMethods = function () {
 
       const results = jobs.map((job) => {
         // strip out any filthy html
-        const description = job.snippet.replace(/<\/?[^>]+(>|$)/g, '');
+        const summary = job.snippet.replace(/<\/?[^>]+(>|$)/g, '');
 
         return {
           id: job.jobkey[0],
           title: job.jobtitle,
-          summary: description
+          company: job.company,
+          location: job.formattedLocation,
+          date: {
+            full: job.date,
+            relative: job.formattedRelativeTime
+          },
+          summary,
+          url: job.url
         };
       });
 

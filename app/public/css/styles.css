@@ -181,6 +181,53 @@ h3.review__sentiment {
   border-radius: 5px;
 }
 
+.jobs {
+  overflow: hidden; /* clearfix */
+}
+
+.job {
+  float: right;
+  width: 97.5%;
+  padding: .25em 1em;
+  margin-bottom: 1em;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+  background: #E6E6F7;
+  background: linear-gradient(to right, #E6E6F7, white);
+
+  transition: transform .33s;
+  transform: translateZ(0);
+  animation: none;
+}
+
+.job:hover {
+  transform: translateX(-2.5%);
+}
+
+.job:nth-child(3n + 1) { -webkit-filter:  hue-rotate(90deg); }
+.job:nth-child(3n + 2) { -webkit-filter: hue-rotate(180deg); }
+
+.job__title {
+  color: #5A5A8A;
+  margin-bottom: .25em;
+}
+
+.job__company,
+.job__location,
+.job__date {
+  color: #9DA4CC;
+}
+
+.job__date {
+  font-size: .85em;
+}
+
+.job__summary {
+  color: #636AAD;
+}
+
 footer {
   float: left;
   margin-top: 5em;
