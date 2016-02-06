@@ -100,10 +100,18 @@ const displayRecommendations = (result) => {
     const greenHue = 100;
     const colourCalc = (greenHue / 2) + (greenHue * review.score) / 4;
 
+    let reviewImagePath = review.score;
+
+    review.score = 0;
+
+    if (review.score === 0) {
+      reviewImagePath = `0.${Math.floor(Math.random() * 8) + 1}`;
+    }
+
     output += `
     <div class="review" style="color: hsl(${colourCalc}, 48%, 48%)">
       <div class="review__emoji">
-        <img src="images/${review.score}.png" />
+        <img src="images/${reviewImagePath}.png" />
       </div>
       <blockquote class="review__summary">
         <h3 class="review__sentiment">
