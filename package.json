@@ -5,6 +5,7 @@
   "main": "app/main.js",
   "scripts": {
     "start": "node app/main.js",
+    "seed": "node app/seed.js",
     "lint": "eslint -c .eslintrc app experiments",
     "test": "npm run lint && mocha test/ --reporter landing"
   },
