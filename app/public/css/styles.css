@@ -124,6 +124,7 @@ main {
   float: left;
   padding: .5em;
 
+  white-space: nowrap;
   font-size: .75em;
   font-weight: bolder;
   color: rgba(255, 255, 255, .75);
