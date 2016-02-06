@@ -16,11 +16,13 @@
 }
 
 body {
+  margin: 0 1em;
   overflow-y: scroll; /* force scroll bar */
   font-family: sans-serif;
 }
 
 main {
+  overflow: hidden; /* clearfix */
   max-width: 80em;
   margin: 0 auto;
 }
@@ -145,7 +147,7 @@ main {
 
 .review__emoji {
   float: left;
-  width: 10%;
+  width: 15%;
 }
 
 .review__emoji img {
@@ -156,7 +158,7 @@ main {
 
 .review__summary {
   float: left;
-  width: 90%;
+  width: 85%;
   margin: 0;
   padding: .5em 0;
   padding-left: 1em;
@@ -230,10 +232,11 @@ h3.review__sentiment {
 
 footer {
   float: left;
-  margin-top: 5em;
-
+  margin: 2em auto;
+  width: 100%;
+  
   color: #ABABAB;
-  text-align: right;
+  text-align: center;
 }
 
 footer a {
@@ -245,6 +248,6 @@ footer a {
   .column:first-child,
   .column:last-child {
     width: 100%;
-    padding: 0 1em;
+    padding: 0;
   }
 }
