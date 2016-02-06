@@ -1,10 +1,9 @@
 'use strict'
-const db = require('./db');
-const units = require('../resources/units.json').units;
-const unitMethods = require('./dbMethods/unitMethods')(db);
+const db = require('../db');
+const units = require(__dirname + '/../../resources/units.json').units;
+const unitMethods = require('../methods/unit')(db);
 
 const seedUnits = (callback) => {
-
   let unitsCount = units.length;
 
   for (let i = 0; i < units.length; i++) {
@@ -23,7 +22,6 @@ const seedUnits = (callback) => {
       }
     });
   }
-
 }
 
 module.exports = seedUnits;

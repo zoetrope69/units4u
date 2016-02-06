@@ -1,11 +1,12 @@
 'use strict';
 require('dotenv').config();
-const db = require('./db');
-const correctReviews = require('./correctReviews');
+
+const db = require('../db');
+const spelling = require('./spelling');
 
 console.log('Correcting spelling of review summaries...');
 
-correctReviews(() => {
+spelling(() => {
   console.log('Corrected spelling of review summaries\n');
 
   console.log('Dropping database...');
@@ -17,19 +18,17 @@ correctReviews(() => {
 
     console.log('Seeding units...');
 
-    const seedUnits = require('./seedUnits');
+    const seedUnits = require('./units');
     seedUnits(() => {
       console.log('Units seeded\n');
 
       console.log('Seeding students...');
-      const seedStudents = require('./seedStudents');
+      const seedStudents = require('./students');
       seedStudents(() => {
         console.log('Students seeded\n');
 
         console.log('Database seeded!');
       });
     });
-
   });
-
 });

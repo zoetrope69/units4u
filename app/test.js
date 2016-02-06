@@ -1,11 +1,10 @@
 require('dotenv').config();
 const db = require('./db');
-const userMethods = require('./dbMethods/userMethods')(db);
-const unitMethods = require('./dbMethods/unitMethods')(db);
-const recommendationMethods = require('./dbMethods/recommendationMethods')(db);
-const correctSpelling = require('./spelling');
-const sentiment = require('speakeasy-nlp').sentiment.analyze;
-const jobs = require('./jobs');
+const userMethods = require('./methods/user')(db);
+const unitMethods = require('./methods/unit')(db);
+const recommendationMethods = require('./methods/recommendation')(db);
+const correctSpelling = require('./methods/spelling');
+const sentiment = require('sentiment');
 
 recommendationMethods.getRecommendations('geometry', (err, res) => {
   if (err) {
@@ -41,18 +40,4 @@ correctSpelling(summary, (correctedSummary) => {
   console.log('original sentiment: ', sentiment(summary));
   console.log('corrected sentiment: ', sentiment(correctedSummary));
 
-});
-
-// example jobs get
-jobs.search({
-  amount: 1000,
-  country: 'gb',
-  location: 'London, UK',
-  keywords: ['php', 'developer', 'html', 'css']
-}, (err, results) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  console.log(results);
 });

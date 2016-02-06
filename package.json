@@ -4,8 +4,8 @@
   "description": "a university unit recommender system for the web research unit",
   "main": "app/main.js",
   "scripts": {
-    "start": "node app/main.js",
-    "seed": "node app/seed.js",
+    "start": "node app",
+    "seed": "node app/seed",
     "lint": "eslint -c .eslintrc app experiments",
     "test": "npm run lint && mocha test/ --reporter landing",
     "postinstall": "npm run seed"

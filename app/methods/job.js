@@ -1,7 +1,7 @@
 'use strict'
 const request = require('request');
 
-const JobsMethods = function () {
+const JobMethods = function () {
 
   const errorCodes = require('../lib/ErrorCodes');
 
@@ -9,11 +9,13 @@ const JobsMethods = function () {
     const keyword = req.query.keyword || ''; // default to empty string
     const location = req.query.location || ''; // default to empty string
     const amount = req.query.amount;
+
     getJobs({ keywords: [keyword], location, amount }, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err);
       }
+
       // Return jobs
       res.send({
         'jobs': results
@@ -22,7 +24,6 @@ const JobsMethods = function () {
   }
 
   function getJobs (options, callback) {
-
     options.keywords = options.keywords || [];
     options.location = options.location || '';
     options.country = options.country || 'gb';
@@ -65,7 +66,6 @@ const JobsMethods = function () {
       const jobs = JSON.parse(body).results;
 
       const results = jobs.map((job) => {
-
         // strip out any filthy html
         const description = job.snippet.replace(/<\/?[^>]+(>|$)/g, '');
 
@@ -78,7 +78,6 @@ const JobsMethods = function () {
 
       return callback(null, results);
     })
-
   }
 
   return {
@@ -88,4 +87,4 @@ const JobsMethods = function () {
 
 };
 
-module.exports = JobsMethods;
+module.exports = JobMethods;

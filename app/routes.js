@@ -1,7 +1,6 @@
 'use strict'
 
 function setup (app, methods) {
-
   // api
 
   app.put('/api/units', methods.units.addUnitAPI);
@@ -18,7 +17,6 @@ function setup (app, methods) {
   // client
 
   app.get('/', (req, res) => res.render('home', { HOST: process.env.HOST }));
-
 }
 
 exports.setup = setup;

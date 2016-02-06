@@ -1,7 +1,7 @@
 /* eslint-disable no-magic-numbers, no-undef, no-unused-vars */
 require('dotenv').config(); // pull in environment variables from .env
 
-const jobs = require('../app/dbMethods/jobsMethods');
+const jobs = require('../app/methods/job');
 const getJobs = jobs().getJobs;
 const expect = require('chai').expect;
 

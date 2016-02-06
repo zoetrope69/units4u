@@ -6,11 +6,13 @@ const RecommendationMethods = function (db) {
 
   function getRecommendationsAPI (req, res) {
     const keyword = req.query.keyword || ''; // default to empty string
+
     getRecommendations(keyword, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
       }
+
       // Return recommendations
       res.send({
         'recommendations': results
@@ -43,7 +45,6 @@ const RecommendationMethods = function (db) {
       });
 
       if (recommendations.length > 0) {
-
         const newRecommendations = [];
 
         newRecommendations.push(recommendations[0]);
@@ -59,11 +60,9 @@ const RecommendationMethods = function (db) {
               break;
             }
           }
-
         }
 
         recommendations = newRecommendations;
-
       }
 
       callback(null, recommendations);

@@ -73,7 +73,6 @@ function addToTotal (results, type, score) {
 }
 
 function processWords (words, callback) {
-
   const results = {
     'nodehun': 0,
     'wordsworth': 0
@@ -96,6 +95,5 @@ function processWords (words, callback) {
     }, (reason) => {
       console.log(reason);
     });
-
   }
 }

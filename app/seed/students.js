@@ -1,9 +1,9 @@
 'use strict';
 const casual = require('casual');
-const reviews = require('../resources/correctedReviews.json').reviews;
+const db = require('../db');
+const userMethods = require('../methods/user')(db);
 const sentiment = require('sentiment');
-const db = require('./db');
-const userMethods = require('./dbMethods/userMethods')(db);
+const reviews = require(__dirname + '/../../resources/correctedReviews.json').reviews;
 
 function randomNumber (min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
@@ -68,12 +68,10 @@ function seedStudent () {
 const amountOfStudents = Math.ceil(reviews.length / (amountOfUniYears * amountOfUnitsInaYear));
 
 const seedStudents = (callback) => {
-
   let usersCount = amountOfStudents;
   let reviewsTotal = 0;
 
   for (let i = 0; i < amountOfStudents; i++) {
-
     const student = seedStudent();
 
     userMethods.addUser(student, (err, res) => {
@@ -106,10 +104,8 @@ const seedStudents = (callback) => {
           }
         });
       }
-
     });
   }
-
 }
 
 module.exports = seedStudents;

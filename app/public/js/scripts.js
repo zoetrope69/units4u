@@ -96,7 +96,6 @@ const displayRecommendations = (result) => {
   }
 
   for (let i = 0; i < reviews.length; i++) {
-
     const review = reviews[i];
     const greenHue = 100;
     const colourCalc = (greenHue / 2) + (greenHue * review.score) / 4;
@@ -116,7 +115,6 @@ const displayRecommendations = (result) => {
       </blockquote>
     </div>
     `;
-
   }
 
   output += `
@@ -128,7 +126,6 @@ const displayRecommendations = (result) => {
   }
 
   for (let i = 0; i < jobs.length; i++) {
-
     const job = jobs[i];
 
     output += `
@@ -137,7 +134,6 @@ const displayRecommendations = (result) => {
       <p>${job.summary}</p>
     </div>
     `;
-
   }
 
   output += `

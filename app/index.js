@@ -3,13 +3,15 @@ require('dotenv').config(); // pull in environment variables from .env
 
 const express = require('express'),
   errorHandler = require('errorhandler'),
-  routes = require('./routes'),
   bodyParser = require('body-parser'),
   expressHandlebars = require('express-handlebars'),
-  UserMethods = require('./dbMethods/userMethods'),
-  UnitMethods = require('./dbMethods/unitMethods'),
-  RecommendationMethods = require('./dbMethods/recommendationMethods'),
-  JobsMethods = require('./dbMethods/jobsMethods'),
+
+  routes = require('./routes'),
+  UserMethods = require('./methods/user'),
+  UnitMethods = require('./methods/unit'),
+  RecommendationMethods = require('./methods/recommendation'),
+  JobMethods = require('./methods/job'),
+
   db = require('./db');
 
 const app = express(),
@@ -37,7 +39,7 @@ const methods = {
   users: new UserMethods(db),
   units: new UnitMethods(db),
   recommendations: new RecommendationMethods(db),
-  jobs: new JobsMethods()
+  jobs: new JobMethods()
 }
 
 function start () {

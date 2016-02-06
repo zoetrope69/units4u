@@ -2,8 +2,9 @@
 const spellingChecker = require('wordsworth').getInstance();
 
 const correctSpelling = (string, callback) => {
-  const seed = __dirname + '/../resources/dictionaries/seed.txt';
-  const training = __dirname + '/../resources/dictionaries/training.txt';
+  const dictionariesPath = __dirname + '/../../resources/dictionaries/';
+  const seed = dictionariesPath + 'seed.txt';
+  const training = dictionariesPath + 'training.txt';
 
   spellingChecker.initialize(seed, training, () => {
     const words = string.split(' ');
@@ -21,7 +22,6 @@ const correctSpelling = (string, callback) => {
 
     callback(words.join(' '));
   });
-
 };
 
 module.exports = correctSpelling;

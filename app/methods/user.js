@@ -20,10 +20,12 @@ const UserMethods = function (db) {
   **/
   function addUserAPI (req, res) {
     const userData = req.body;
+
     if (!userData.hasOwnProperty('name') || !userData.name.length > 0) {
       res.status(errorCodes.server.code);
       return res.send(errorCodes.server.message);
     }
+
     addUser(userData, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
@@ -34,7 +36,7 @@ const UserMethods = function (db) {
       res.send({
         'id': result.n._id
       });
-    })
+    });
   }
 
   function addUser (user, callback) {
@@ -57,11 +59,14 @@ const UserMethods = function (db) {
       res.status(errorCodes.request.code);
       return res.send(errorCodes.request.message);
     }
+
     getUser(req.params.username, (err, results) => {
       if (err) {
         return console.log('error:', err.message.errors);
       }
+
       const result = results[0];
+
       // Return ID number and a time reference.
       res.send({
         'id': result.p._id,
@@ -91,13 +96,16 @@ const UserMethods = function (db) {
       res.status(errorCodes.request.code);
       return res.send(errorCodes.request.message);
     }
+
     const userData = req.body;
+
     addReview(req.params.name, userData.review, (err) => {
       if (err) {
         console.log(err);
         res.status(errorCodes.server.code);
         return res.send(errorCodes.server.message);
       }
+
       res.send('ok');
     });
 
@@ -110,6 +118,7 @@ const UserMethods = function (db) {
       MATCH (a:Person { name: "${name}" }), (u:Unit { code: "${review.unit}" })
       CREATE (a)-[:REVIEWED {sentiment: ${review.sentiment}, summary: "${review.summary}", grade: ${review.grade}} ]->(u)
     `;
+
     db.cypher({ query }, callback);
   }
 
