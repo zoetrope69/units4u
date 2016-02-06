@@ -61,13 +61,12 @@ function start () {
     }
 
     // seed database if no results at all
-    if (process.env.NODE_ENV === 'development' || results.length < 1) {
+    if (process.env.NEO4J_SEED === 'true' || results.length < 1) {
       seed(() => {
         serve();
       });
     } else {
       // if already seeded just serve up
-      console.log('Database seeded');
       serve();
     }
 
