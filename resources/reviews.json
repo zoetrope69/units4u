@@ -879,6 +879,681 @@
       "id": 173,
       "unit": "MATH39001",
       "summary": "Some of the algorithms and other techniques in this course are also used in Discrete Mathematics MATH20902 so anyone going from that course to this should be in good stead."
+    },
+    {
+      "id": 174,
+      "unit": "MATH31022",
+      "summary": "This course is touted as the most difficult (pure) offered by the school. There are some challenging new concepts to get your head around and a lot of material to learn"
+    },
+    {
+      "id": 175,
+      "unit": "MATH31022",
+      "summary": "However the lecturer is arguably one of the best at the university, focusing on where he knows students struggle, and explains things in a clear and thorough way, and is very approachable during tutorials. Classic chalk and talk."
+    },
+    {
+      "id": 176,
+      "unit": "MATH31022",
+      "summary": "Tough exam, every question taken straight from the lecture notes/example sheets, but the lecturer can tell who is replicating from memory and who actually understands the material."
+    },
+    {
+      "id": 177,
+      "unit": "MATH31022",
+      "summary": "A pure course with some highlights to do with prime number theory, all fascinating and relevant material. Definitely manageable provided you keep on top of the work, and don’t let yourself get too far behind."
+    },
+    {
+      "id": 178,
+      "unit": "MATH31022",
+      "summary": "Available as a 15-credit version, which makes the 10-credit version seem a bit easier. Extra lectures and problems classes specifically for these students, and as few people take this option almost all students who do the higher credit version do well."
+    },
+    {
+      "id": 179,
+      "unit": "MATH31072",
+      "summary": "A different style of course to Introduction to Topology MATH31051, however still a lot of definitions. Enjoyable nonetheless."
+    },
+    {
+      "id": 180,
+      "unit": "MATH31072",
+      "summary": "There are not as many proofs on this course as in other pure courses, in fact it is the applications that are most important."
+    },
+    {
+      "id": 181,
+      "unit": "MATH31072",
+      "summary": "The course is built around proving that any surface can be identified with one of 3 constructions (based on sphere, projective plane, torus), and to this end examples are key."
+    },
+    {
+      "id": 182,
+      "unit": "MATH31072",
+      "summary": "The material does get a bit heavy towards the end, although this just means it takes a bit more work to understand."
+    },
+    {
+      "id": 183,
+      "unit": "MATH31072",
+      "summary": "A 15-credit version of the course is available, consists of three extra topics which are designed to interest students, for example a discussion of the Four Colour Theorem."
+    },
+    {
+      "id": 184,
+      "unit": "MATH31082",
+      "summary": "The lecturer is the same as for Introduction to Geometry MATH20222, and so all the comments on the lecturer there hold. It is worth noting again that his enthusiasm for the course is somewhat infectious."
+    },
+    {
+      "id": 185,
+      "unit": "MATH31082",
+      "summary": "Despite being a pure course, there are very few proofs, in fact most students consider it as an applied course in disguise."
+    },
+    {
+      "id": 186,
+      "unit": "MATH31082",
+      "summary": "Some quite abstract content which the lecturer helps visualise by moving it to examples you can picture, for example the sphere. Working through the problem sheets is key."
+    },
+    {
+      "id": 187,
+      "unit": "MATH31082",
+      "summary": "Content of the course is interesting, but will require extra work at home due to the lecturer occasionally leaving examples/definitions half finished."
+    },
+    {
+      "id": 188,
+      "unit": "MATH31082",
+      "summary": "Lecturer hands out a programme of examination in the final week which outlines the material which students need to know for the exam."
+    },
+    {
+      "id": 189,
+      "unit": "MATH31082",
+      "summary": "There is a 15-credit version of the course available, with a double lecture towards the end of the course to go through relevant examinable material."
+    },
+    {
+      "id": 190,
+      "unit": "MATH32012",
+      "summary": "As mentioned earlier (see Coding Theory MATH32031) section, a very good lecturer who is clear and precise, using the traditional chalk and talk method."
+    },
+    {
+      "id": 191,
+      "unit": "MATH32012",
+      "summary": "The problem sheets are really good, with optional questions that not even the lecturer knows the answer to, purely to challenge students."
+    },
+    {
+      "id": 192,
+      "unit": "MATH32012",
+      "summary": "Follows directly on from Algebraic Structures 2, focusing on the polynomial ring results."
+    },
+    {
+      "id": 193,
+      "unit": "MATH32012",
+      "summary": "Students doing this course alongside Introduction to Algebraic Geometry MATH32062 (see below) will find the final few weeks of the course easier as there is a fair amount of overlap."
+    },
+    {
+      "id": 194,
+      "unit": "MATH32012",
+      "summary": "The take-home coursework usually contains one or two questions that are very difficult, sometimes even requiring knowledge of other courses. The exam is a mixture of computational questions and proofs, usually with one or two harder parts which will challenge all students."
+    },
+    {
+      "id": 195,
+      "unit": "MATH32062",
+      "summary": "This course is taught better than Combinatorics and Graph Theory MATH39001 despite it being the same lecturer."
+    },
+    {
+      "id": 196,
+      "unit": "MATH32062",
+      "summary": "The content itself combines geometry and algebra, and this course and Commutative Algebra MATH32012 (see above) go well together."
+    },
+    {
+      "id": 197,
+      "unit": "MATH32062",
+      "summary": "Chalk and talk with some slides to demonstrate the geometrical ideas. A heart shaped graph is displayed on Valentines Day."
+    },
+    {
+      "id": 198,
+      "unit": "MATH32062",
+      "summary": "A lot of proofs are required, however these follow in a similar pattern to proofs on previous algebra courses, and the lecturer tells you which are non-examinable."
+    },
+    {
+      "id": 199,
+      "unit": "MATH32112",
+      "summary": "The lecturer is not the most approachable, however if asked a good question he will give a good answer!"
+    },
+    {
+      "id": 200,
+      "unit": "MATH32112",
+      "summary": "A relatively dry course, very few examples and a lot of theory, requires work at home to understand what is actually going on."
+    },
+    {
+      "id": 201,
+      "unit": "MATH32112",
+      "summary": "There is a lot of material and it is covered quickly, however this is to accommodate the 15-credit material and some extra notes at the end."
+    },
+    {
+      "id": 202,
+      "unit": "MATH32112",
+      "summary": "Knowing the proofs and definitions is vital for the exam, which isn’t too bad if you’ve learned the material."
+    },
+    {
+      "id": 203,
+      "unit": "MATH32112",
+      "summary": "There is a 15-credit version available, which consists of an extra section of the notes which is covered in lectures (though he doesn’t say until after completing the section that it is not for 10-credit students). As it is covered in lectures there is less work at home for this than many other 15-credit courses"
+    },
+    {
+      "id": 204,
+      "unit": "MATH34032",
+      "summary": "A good, approachable and enthusiastic lecturer, despite going through the notes quickly due to a vast amount of material."
+    },
+    {
+      "id": 205,
+      "unit": "MATH34032",
+      "summary": "Method based course, requirements include being able to solve differential equations easily, and good knowledge of integration."
+    },
+    {
+      "id": 206,
+      "unit": "MATH34032",
+      "summary": "Most students say the example classes good, although the problem sheets themselves are very long."
+    },
+    {
+      "id": 207,
+      "unit": "MATH34032",
+      "summary": "There is some overlap (though not much) with Wave Motion MATH35012."
+    },
+    {
+      "id": 208,
+      "unit": "MATH35012",
+      "summary": "A course that is given in a similar style to Viscous Fluid Flow MATH35001. Lecturer is enthusiastic and interesting, which in turn makes you want to learn more about the course."
+    },
+    {
+      "id": 209,
+      "unit": "MATH35012",
+      "summary": "Content includes ocean waves, elastic strings, and sound waves. To take this course you must be confident with solving differential equations, previous fluid courses useful not essential."
+    },
+    {
+      "id": 210,
+      "unit": "MATH35012",
+      "summary": "Problem sheets and example classes are good, lecturer willing to keep explaining until it finally clicks."
+    },
+    {
+      "id": 211,
+      "unit": "MATH35012",
+      "summary": "The coursework is challenging, designed to make you actually learn the material rather than just copy out results."
+    },
+    {
+      "id": 212,
+      "unit": "MATH35032",
+      "summary": "The beginning of the course is very well thought out and structured, although the later sections don’t have typed notes and the handwritten ones available are a little difficult to follow initially."
+    },
+    {
+      "id": 213,
+      "unit": "MATH35032",
+      "summary": "The lecturer is very enthusiastic and sometimes illustrates points with interesting examples."
+    },
+    {
+      "id": 214,
+      "unit": "MATH35032",
+      "summary": "Differential equations and linear algebra (in particular matrix reduction and manipulation) are vital, so either look at this in advance or be willing to learn."
+    },
+    {
+      "id": 215,
+      "unit": "MATH35032",
+      "summary": "There is a lot of content, sometimes a bit rushed at the end, although it is well delivered."
+    },
+    {
+      "id": 216,
+      "unit": "MATH35032",
+      "summary": "Lecturer posts relevant problems to exam in final weeks, although all the problems are useful in their own way."
+    },
+    {
+      "id": 217,
+      "unit": "MATH37012",
+      "summary": "The lecturer has received mixed reviews, however it has been commented that the lectures are boring, and as a result you sometimes miss something important."
+    },
+    {
+      "id": 218,
+      "unit": "MATH37012",
+      "summary": "No online notes, and the problem sheets are quite complicated and time consuming."
+    },
+    {
+      "id": 219,
+      "unit": "MATH37012",
+      "summary": "The course is recommended to anyone interested in probability theory."
+    },
+    {
+      "id": 220,
+      "unit": "MATH37012",
+      "summary": "There is some overlap with Random Models MATH20712, however this is not a prerequisite."
+    },
+    {
+      "id": 221,
+      "unit": "MATH38032",
+      "summary": "Lecture notes are brief slide notes, and it is difficult to follow the lectures so writing up your own notes is the most challenging part."
+    },
+    {
+      "id": 222,
+      "unit": "MATH38032",
+      "summary": "All marks come from the examination, which is very tough, and during exam time lecturer will not help those who haven’t turned up to tutorials."
+    },
+    {
+      "id": 223,
+      "unit": "MATH38032",
+      "summary": "Available as a 15-credit course unit, extra lectures and topics covered. There is also a coursework introduced worth 20% of the mark."
+    },
+    {
+      "id": 224,
+      "unit": "MATH38052",
+      "summary": "An interesting course with not too much material compared to other courses."
+    },
+    {
+      "id": 225,
+      "unit": "MATH38052",
+      "summary": "Introduces a new way of thinking about statistical analysis."
+    },
+    {
+      "id": 226,
+      "unit": "MATH38052",
+      "summary": "The exams are very similar year after year, which makes revision a bit easier."
+    },
+    {
+      "id": 227,
+      "unit": "MATH38052",
+      "summary": "Available as a 15-credit version, which adds an extra set of topics which aim to familiarise students with the methodology and applications of some standard techniques in modelling and analysing survival data."
+    },
+    {
+      "id": 228,
+      "unit": "MATH36022",
+      "summary": "The lecturer explains the material very well, and is popular with the majority of students on the course."
+    },
+    {
+      "id": 229,
+      "unit": "MATH36022",
+      "summary": "Builds upon Numerical Analysis 1, with an emphasis on methods and a few proofs."
+    },
+    {
+      "id": 230,
+      "unit": "MATH36022",
+      "summary": "Not many problems on the example sheets, but what is on the sheets is difficult, both conceptually and computationally."
+    },
+    {
+      "id": 231,
+      "unit": "MATH36022",
+      "summary": "Having said that the example classes are very useful."
+    },
+    {
+      "id": 232,
+      "unit": "MATH36032",
+      "summary": "Three reports spread out over the semester, but these are difficult and time consuming, so do not take this course as an easy option."
+    },
+    {
+      "id": 233,
+      "unit": "MATH36032",
+      "summary": "Very frustrating as it sometimes seems like a lot of the useful material hasn’t been given to you, but the majority of it will be covered in lectures."
+    },
+    {
+      "id": 234,
+      "unit": "MATH36032",
+      "summary": "Most of the course time will be spent in the computer rooms where the lecturer and postgraduate students will help with problems about the coursework."
+    },
+    {
+      "id": 235,
+      "unit": "MATH36032",
+      "summary": "The assignments themselves vary dramatically, requires time to think of the right approach, though the lecturer does cover all relevant material."
+    },
+    {
+      "id": 236,
+      "unit": "MATH36032",
+      "summary": "Being able to use LaTeX (or similar) is beneficial, however by the end of the course you will have learned this, which is helpful for those going on to do a third/ fourth year project."
+    },
+    {
+      "id": 237,
+      "unit": "MATH39012",
+      "summary": "Good lecturer, approachable and willing to answer questions."
+    },
+    {
+      "id": 238,
+      "unit": "MATH39012",
+      "summary": "Lectures dull, dictation from slides or over head projector (depending on the room)."
+    },
+    {
+      "id": 239,
+      "unit": "MATH39012",
+      "summary": "General consensus is that the online notes are great, however some students found the course difficult while others found it easy."
+    },
+    {
+      "id": 240,
+      "unit": "MATH39012",
+      "summary": "Example sheets are useful but the solutions can be difficult to follow."
+    },
+    {
+      "id": 241,
+      "unit": "MATH39032",
+      "summary": "This is a great follow on from Introduction to Financial Mathematics MATH20912, however this is not a prerequisite."
+    },
+    {
+      "id": 242,
+      "unit": "MATH39032",
+      "summary": "Lecturer is a ‘master of his field’, willing to answer any questions and the lectures are detailed, even if the lecture notes are just the same as the online notes."
+    },
+    {
+      "id": 243,
+      "unit": "MATH39032",
+      "summary": "As the lecturer is an applied mathematician, there are certain overlaps in methodology to the fluid mechanics courses, however this isn’t a hindrance to students who are unfamiliar with these."
+    },
+    {
+      "id": 244,
+      "unit": "MATH39032",
+      "summary": "The examples classes begin with the lecturer going through a relevant past exam problem, the rest is just a case of asking if you want help, which is only useful if you’ve done the problems beforehand."
+    },
+    {
+      "id": 245,
+      "unit": "MATH39032",
+      "summary": "A good course unit for those into financial maths or those wanting something different."
+    },
+    {
+      "id": 246,
+      "unit": "MATH42041",
+      "summary": "Excellent online notes, very detailed and easy to understand."
+    },
+    {
+      "id": 247,
+      "unit": "MATH42041",
+      "summary": "A lot of material however, so it’s best to stay on top of it."
+    },
+    {
+      "id": 248,
+      "unit": "MATH42041",
+      "summary": "Lecturer is approachable, always available in his office to speak to students."
+    },
+    {
+      "id": 249,
+      "unit": "MATH42041",
+      "summary": "Coursework consists of problems to take home throughout the semester."
+    },
+    {
+      "id": 250,
+      "unit": "MATH42061",
+      "summary": "Coursework is two sets of problems throughout the semester to be done at home. Deadlines usually in October and December."
+    },
+    {
+      "id": 251,
+      "unit": "MATH42061",
+      "summary": "Good knowledge of Group Theory is necessary is this is built upon in the first few weeks."
+    },
+    {
+      "id": 252,
+      "unit": "MATH43051",
+      "summary": "Coursework is two take-home tests, worth 10% each."
+    },
+    {
+      "id": 253,
+      "unit": "MATH43051",
+      "summary": "Lecturer is widely respected, very friendly and understanding of where students struggle."
+    },
+    {
+      "id": 254,
+      "unit": "MATH43051",
+      "summary": "Knowledge of predicate logic is useful at the beginning, however the relevant material from this is covered in the lectures assuming no prior knowledge."
+    },
+    {
+      "id": 255,
+      "unit": "MATH44041",
+      "summary": "Lecturer is nationally well renowned, and eager to help students with problems."
+    },
+    {
+      "id": 256,
+      "unit": "MATH44041",
+      "summary": "The course assumes no prior knowledge, however students with the ability to picture physical scenarios will have an advantage."
+    },
+    {
+      "id": 257,
+      "unit": "MATH44041",
+      "summary": "Dynamical systems theory is the mathematical theory of time-varying systems, used in the modelling of a wide range of physical, biological, engineering, economic and other phenomena."
+    },
+    {
+      "id": 258,
+      "unit": "MATH45061",
+      "summary": "There is a lot of material to cover in the course, and so about half of the tutorial classes will instead be devoted to extra lecture time."
+    },
+    {
+      "id": 259,
+      "unit": "MATH45061",
+      "summary": "No knowledge of previous fluid or solid mechanics courses is assumed, however the thought processes learned in these will be beneficial."
+    },
+    {
+      "id": 260,
+      "unit": "MATH45061",
+      "summary": "The course starts from fundamental assumptions and builds upon these to derive all the theory that is assumed in other applied courses."
+    },
+    {
+      "id": 261,
+      "unit": "MATH45061",
+      "summary": "Arguably the most difficult applied course, due to the amount of material and the fact that a lot of it is theoretic. However, the lecturer is more than willing to go over students problems until they get the idea. A thoroughly enjoyable course for those who it interests."
+    },
+    {
+      "id": 262,
+      "unit": "MATH45061",
+      "summary": "While the exam and coursework are hard, they are marked fairly based on understanding of the methods as opposed to getting the numbers right. That is, a computational slip won’t cost you many (if any) marks."
+    },
+    {
+      "id": 263,
+      "unit": "MATH47101",
+      "summary": "It is strongly advised that students who wish to take this course also have taken Foundations of Modern Probability MATH20722 at some point in their academic career."
+    },
+    {
+      "id": 264,
+      "unit": "MATH47101",
+      "summary": "An interesting course, despite the fact there is a lot of content"
+    },
+    {
+      "id": 265,
+      "unit": "MATH47101",
+      "summary": "The course is made more difficult by the fact that it is 100 % examination and so it is difficult (though not impossible) to score very high marks."
+    },
+    {
+      "id": 266,
+      "unit": "MATH48011",
+      "summary": "Students tend to find the linear models section of the course easier, though this was a level three course in its own right a few years ago."
+    },
+    {
+      "id": 267,
+      "unit": "MATH48011",
+      "summary": "Fair exams, though you need to be on top of a lot of methods to do well."
+    },
+    {
+      "id": 268,
+      "unit": "MATH46101",
+      "summary": "Lecturers answer questions when asked, and help students work through problems."
+    },
+    {
+      "id": 269,
+      "unit": "MATH46101",
+      "summary": "the course is based on developing techniques to solve linear systems, least squares problems and eigenvalue problems."
+    },
+    {
+      "id": 270,
+      "unit": "MATH46101",
+      "summary": "The end of the course is said to be more interesting because you see some applications of the methods, for example in correcting blurred images for tomography etc."
+    },
+    {
+      "id": 271,
+      "unit": "MATH46101",
+      "summary": "Students are shown how to use MATLAB to help solve these types of problems, and as such there is some overlap with Problem Solving by Computer MATH36032, although neither is required for the other."
+    },
+    {
+      "id": 272,
+      "unit": "MATH49111",
+      "summary": "Two projects, one worth 40% and the other worth 50%, along with weekly courseworks for the remaining 10%"
+    },
+    {
+      "id": 273,
+      "unit": "MATH49111",
+      "summary": "The course covers the techniques required to develop C++ programs that solve mathematical and scientific problems. C++ is a tool used in all areas of maths, though it is most commonly associated with applied maths when performing simulations."
+    },
+    {
+      "id": 274,
+      "unit": "MATH49111",
+      "summary": "Any students looking to do research into applied maths and want a head start are advised to consider this course, as the ability to construct programs is vital in postgraduate studies in certain fields"
+    },
+    {
+      "id": 275,
+      "unit": "MATH41112",
+      "summary": "Good lecturer, provides good notes/examples/solutions."
+    },
+    {
+      "id": 276,
+      "unit": "MATH41112",
+      "summary": "However as this is a ‘reading course’, there is only one lecture a week, the rest of the material is left to student."
+    },
+    {
+      "id": 277,
+      "unit": "MATH41112",
+      "summary": "The fact that the course is 100% examination is not helped by the fact that there are a lot of results to remember."
+    },
+    {
+      "id": 278,
+      "unit": "MATH42122",
+      "summary": "The lecturer is very popular with his students, although does occasionally wander off onto irrelevant points."
+    },
+    {
+      "id": 279,
+      "unit": "MATH42122",
+      "summary": "It has been commented that the coursework is good in hindsight, that is, helps you revise for the exam."
+    },
+    {
+      "id": 280,
+      "unit": "MATH42122",
+      "summary": "The exams follow a similar structure to one another, although you are required to remember a large number of results."
+    },
+    {
+      "id": 281,
+      "unit": "MATH43042",
+      "summary": "There are two take home tests (one in week 5 and one in week 10), each one worth 10%."
+    },
+    {
+      "id": 282,
+      "unit": "MATH43042",
+      "summary": "Students are advised to have basic knowledge of predicate logic, however this can be learned as and when it’s necessary"
+    },
+    {
+      "id": 283,
+      "unit": "MATH43042",
+      "summary": "Students who take this course tend to enjoy it, however be aware that is (as the name would suggest) very theorem-proof based."
+    },
+    {
+      "id": 284,
+      "unit": "MATH45132",
+      "summary": "The course is largely self-contained, however students who have taken Viscous Fluid Flow MATH35001 may find themselves at an advantage for some of the course."
+    },
+    {
+      "id": 286,
+      "unit": "MATH45132",
+      "summary": "The exam tends to be more based on applications of the results derived in lectures, however some of the smaller derivations can be asked."
+    },
+    {
+      "id": 287,
+      "unit": "MATH45132",
+      "summary": "A useful course for students who want to go on to further study in fields such as reactiondiffusion systems."
+    },
+    {
+      "id": 288,
+      "unit": "MATH45122",
+      "summary": "There are no prerequisites to this course however there is some overlap with Wave Motion MATH35012 and students who enjoyed this course are recommended to try this."
+    },
+    {
+      "id": 289,
+      "unit": "MATH45122",
+      "summary": "Again the focus of this course is more on applying results and using physical intuition as opposed to deriving these results."
+    },
+    {
+      "id": 290,
+      "unit": "MATH47112",
+      "summary": "The course starts from the basic ideas from Probability 2, and builds up to giving students the understanding of Brownian motion and diffusion processes."
+    },
+    {
+      "id": 291,
+      "unit": "MATH47112",
+      "summary": "These perform a key role in financial mathematics, so students with an interest in following this route should consider taking this course."
+    },
+    {
+      "id": 292,
+      "unit": "MATH48082",
+      "summary": "There is some overlap with Generalised Linear Models MATH38052."
+    },
+    {
+      "id": 293,
+      "unit": "MATH48082",
+      "summary": "Again this is a course useful to students who have an interest in moving into some form of statistical analysis post degree, as it helps students understand the possible pitfalls of experimental data"
+    },
+    {
+      "id": 294,
+      "unit": "MATH48122",
+      "summary": "The courseworks are every other week, and students are advised to use the tutorials to ask questions about these."
+    },
+    {
+      "id": 295,
+      "unit": "MATH48122",
+      "summary": "By the end of the course you should have knowledge of how computers help statistical computations, and how you may use computers to apply algorithms to certain problems."
+    },
+    {
+      "id": 296,
+      "unit": "MATH48122",
+      "summary": "A methods based course as opposed to proving the underlying theory."
+    },
+    {
+      "id": 297,
+      "unit": "MATH48132",
+      "summary": "This course unit is naturally related to courses on statistical modelling, for example Generalized Linear Models MATH38052."
+    },
+    {
+      "id": 298,
+      "unit": "MATH48132",
+      "summary": "Students should be familiar with R before the course begins, however this is not strictly necessary."
+    },
+    {
+      "id": 299,
+      "unit": "MATH49102",
+      "summary": "The lecturer is well respected and very prompt at replying to emails."
+    },
+    {
+      "id": 300,
+      "unit": "MATH49102",
+      "summary": "Students who have studied finance before, in particular Mathematical Modelling in Finance MATH39032 will find some of the material familiar, even if it is in a different light."
+    },
+    {
+      "id": 301,
+      "unit": "MATH40082",
+      "summary": "Assessment from the course comes from a series of reports. The dates for submission, length and weighting of reports are given at the beginning of the semester"
+    },
+    {
+      "id": 302,
+      "unit": "MATH40082",
+      "summary": "The material covers a range of topics, and requires students to write a series of computer programs to solve a specified problem."
+    },
+    {
+      "id": 303,
+      "unit": "MATH40082",
+      "summary": "Despite the fact there is no exam the course is quite time consuming and so this shouldn’t be taken as an easy way out of exams."
+    },
+    {
+      "id": 304,
+      "unit": "MATH46052",
+      "summary": "The lecturer is an expert in this field and very passionate about the course which makes you want to do well."
+    },
+    {
+      "id": 305,
+      "unit": "MATH46052",
+      "summary": "Material in the course is hard and there is a lot of it, but as it is level four this is to be expected."
+    },
+    {
+      "id": 306,
+      "unit": "MATH46052",
+      "summary": "Difficult to score high marks as the exam and coursework are marked to a high and precise standard."
+    },
+    {
+      "id": 307,
+      "unit": "MATH46132",
+      "summary": "Builds upon the prerequisite course and so it is essential to revise this before taking the course."
+    },
+    {
+      "id": 308,
+      "unit": "MATH46132",
+      "summary": "MATLAB is used to demonstrate problems and methods in the course, however it is not required to know about programming to take this course."
+    },
+    {
+      "id": 309,
+      "unit": "MATH46132",
+      "summary": "Sometimes the course visits some of the experiments that take place throughout the university, which is unique among maths courses, and a nice opportunity to take."
     }
   ]
 }

@@ -303,6 +303,318 @@
       "summary": "A graph consists of a set of vertices with a set of edges connecting some pairs vertices. Depending on the context, the edges may represent a mathematical relation, two people knowing each other or roads connecting towns, etc. The graph theory part of the course deals with networks, structure of graphs, and extremal problems involving graphs.\nThe combinatorial half of this course is concerned with enumeration, that is, given a family of problems P(n), n a natural number, find a(n), the number of solutions of P(n) for each such n. The basic device is the generating function, a function F(t) that can be found directly from a description of the problem and for which there exists an expansion in the form F(t) = sum {a(n)gn(t); n a natural number}. Generating functions are also used to prove a family of counting formulae to prove combinatorial identities and obtain asymptotic formulae for a(n).",
       "coursework": 20,
       "exam": 80
+    },
+    {
+      "id": "MATH31002",
+      "name": "Linear Analysis",
+      "lecturer": "Dr. N. Sidorov",
+      "summary": "This course unit deals with a coherent and elegant collection of results in analysis. The aim of this course is to provide an introduction to the theory of infinite dimensional linear spaces, which is not only an important tool, but is also a central topic in modern mathematics.\nThis area has many applications to other areas in Pure and Applied Mathematics such as Dynamical Systems, C* algebras, Quantum Physics, Numerical Analysis, etc.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH31022",
+      "name": "Analytic Number Theory",
+      "lecturer": "Dr. M.D. Coleman",
+      "summary": "We start by giving two proofs of the infinitude of primes. The methods are elementary but poor in that they do not tell us the truth of how many primes there are. Stronger tools are introduced, improving the results until we can indicate, at least in outline, a proof of the Prime Number Theorem.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH31072",
+      "name": "Algebraic Topology",
+      "lecturer": "Dr H. Suess",
+      "summary": "The basic method of Algebraic Topology is to associate an algebraic object to each topological space so that homeomorphic spaces have isomorphic algebraic objects. These algebraic objects are then topological invariants and so can be used to distinguish topological spaces. The fundamental group introduced in MATH31051 is such an algebraic object. This course unit introduces the homology groups.\nIn order to provide motivation for homology theory, the first part of the course unit discusses the classification theorem of closed surfaces using a combinatorial method of proof via simplicial surfaces. Roughly speaking the theorem states that every closed surface can be built up out of the sphere, the torus and the projective plane. Non-homeomorphic surfaces are distinguished using two key topological invariants: the Euler characteristic and orientability.\nThe second part then generalizes the idea of a simplicial surface to the idea of a simplicial complex and then generalizes this further to a Î'-set (in order to simplify calculations). This enables us to introduce a wide class of topological spaces called polyhedra which can be represented by a Î'-set. This representation can then be used to define the homology groups of the polyhedron. The Euler characteristic and orientability type of a surface are determined by the homology groups. These powerful invariants have many attractive applications.",
+      "coursework": 15,
+      "exam": 85
+    },
+    {
+      "id": "MATH31082",
+      "name": "Riemannian Geometry",
+      "lecturer": "Dr. H. Khudaverdian",
+      "summary": "Basis ideas of Riemannian geometry such as Riemannian metric, covariant differentiation, geodesics and curvature belong to the core of mathematical knowledge and are widely used in applications that range from general relativity in physics to mechanics and engineering. Besides that, this subject is one of the most beautiful in mathematics, containing such gems as Gaussâ€'s Theorema Egregium and the Gaussâ€'Bonnet Theorem providing a link with the topology of surfaces.The course introduces these ideas, building on the course unit MATH20222 Introduction to Geometryand is complementary to the course unit MATH31061 Differentiable Manifolds (it is not required but is beneficial to take this course).",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH32012",
+      "name": "Commutative Algebra",
+      "lecturer": "Dr. Y. Bazlov",
+      "summary": "The central theme of this course is factorisation (theory and practice) in commutative rings; rings of polynomials are our main examples but there are others, such as rings of algebraic integers.\nPolynomials are familiar objects which play a part in virtually every branch of mathematics. Historically, the study of solutions of polynomial equations (algebraic geometry and number theory) and the study of symmetries of polynomials (invariant theory) were a major source of inspiration for the vast expansion of algebra in the 19th and 20th centuries.\nIn this course the algebra of polynomials in n variables over a field of coefficients is the basic object of study. The course covers fairly recent advances which have important applications to computer algebra and computational algebraic geometry (Gröbner bases - an extension of the Euclidean division algorithm to polynomials in 2 or more variables), together with a selection of more classical material.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH32062",
+      "name": "Introduction to Algebraic Geometry",
+      "lecturer": "Dr. G. Megyesi",
+      "summary": "Algebraic geometry studies objects called varieties defined by polynomial equations. A very simple example is the hyperbola defined by the equation xy = 1 in the plane. There is a way of associating rings to varieties, and then the geometric properties can be studied using algebra, for example points correspond to maximal ideals, or the geometry of the variety can give information about certain algebraic properties of the ring. Algebraic geometry originated in nineteenth century Italy, but it is still a very active area of research. It has close connections with algebra, number theory, topology, differential geometry and complex analysis.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH32112",
+      "name": "Lie Algebras",
+      "lecturer": "Prof. A. Premet",
+      "summary": "The course unit will deal with finite-dimensional Lie algebras, that is, with anticommutative algebras satisfying the Jacobi identity. These algebras have various applications in representation theory, mathematical physics, geometry, engineering and computer graphics. Lie theory is currently a very active area of research and provides many interesting examples and patterns to other branches of mathematics.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH34032",
+      "name": "Green’s Functions, Integral Equations and the Calculus of Variations",
+      "lecturer": "Dr. S. Holman",
+      "summary": "This is a methods based course, focusing on the theory and application of Green's functions in applied mathematics. Green's functions enable the solution to a variety of interesting and important problems. In particular one can set up solutions to ordinary and partial differential equations of general type in integral form by the use of a Green's function. In more difficult problems, such as scattering from an object, integral equations result. In this course we will show how Green's functions are defined, why they are important and then show their application to various problems in applied mathematics. In particular we will exhibit how they may be used to understand wave propagation on a string, potential flow on bounded domains, wave propagation and scattering from an object and how one can construct an acoustic 'cloak' in order to render regions invisible from acoustic waves (and thus construct theoretical 'domains of silence').",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH35012",
+      "name": "Wave Motion",
+      "lecturer": "Dr. R. Hewitt",
+      "summary": "Wave motion occurs in the oceans, atmosphere and in the earth. Problems of wave production and transmission, of wave harnessing or shielding, and of detection will always be of interest. This is a large and important subject area which this course unit can only begin to study, nevertheless this beginning will contain ideas and techniques applicable to a broad range of wave motion.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH35032",
+      "name": "Mathematical Biology",
+      "lecturer": "Dr. M. Muldoon",
+      "summary": "The life sciences are arguably the greatest scientific adventure of the age. Over the last few decades a series of revolutions in experimental technique have made it possible to ask very detailed questions about how life works, ranging from the smallest, sub-cellular scales up through the organisation of tissues and the functioning of the brain and, on the very largest scales, the evolution of species and ecosystems. Mathematics has so far played a small, but honourable part in this development, especially by providing simple models designed to illuminate principles and test broad hypotheses.\nThe mathematics required for biology is not generally all that hard or deep (though there are exceptions: some of the most exciting recent work in phylogenetics requires tools from algebraic geometry), but as the sketches above suggest the range of tools is extremely broad. The point is that modern mathematical biology is genuinely applied maths: its techniques are chosen to suit the biological problems, not the traditional disciplinary subdivisions. Although some previous acquaintance with graph theory and probability would be helpful, this course is meant to be self-contained and will only assume knowledge of differential equations.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH37012",
+      "name": "Markov Processes",
+      "lecturer": "Dr. J. Bagley",
+      "summary": "Markov chains are stochastic processes with the special property of 'given the present, the future is independent of the past'. Many real-life situations can be modelled by such processes and this course is concerned with their mathematical analysis. It by-passes the measure-theoretic considerations necessary for the development of a general theory of stochastic processes.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH38032",
+      "name": "Time Series Analysis",
+      "lecturer": "Gr. G. Boshnakov",
+      "summary": "This course unit covers a variety of concepts and models useful for empirical analysis of time series data.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH38052",
+      "name": "Generalised Linear Models",
+      "lecturer": "Dr. J. Yuan",
+      "summary": "As an important modelling strategy Linear Models is concerned with investigating whether, and how, one or more so-called explanatory variables, such as age, sex, blood pressure, etc., influence a response variable, such as a patient's diagnosis, by taking random variations of data into account. In Linear Models, linear regression technique and Normal distribution are used to explore the possible linear relation between a continuous response and one or more explanatory variables. In this course unit we depart from linearity and normality, the very strict limitation in Linear Models. We study the extension of linearity to non-linearity and normality to a commonly encountered distribution family, called the exponential family of distributions. This extension forms Generalized Linear Models (GLM). The GLM, on the one hand, unifies linear and non-linear models in terms of statistical modelling. On the other hand, it can be used to analyze discrete data, including binary, binomial, counted and categorical data that arise very often in biomedical and industrial applications.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH36022",
+      "name": "Numerical Analysis 2",
+      "lecturer": "Dr. C. Powell",
+      "summary": "This module introduces numerical methods for approximating functions and data, evaluating integrals and solving ordinary differential equations. It continues the introduction to numerical analysis begun in MATH20602. It provides theoretical analysis of the problems along with algorithms for their solution. Insight into the algorithms will be given through MATLAB illustrations, but the course does not require any programming.",
+      "coursework": 80,
+      "exam": 20
+    },
+    {
+      "id": "MATH36032",
+      "name": "Problem Solving by Computer",
+      "lecturer": "Dr Huang",
+      "summary": "This module is concerned with using a modern computer software package for solving mathematical problems and hence it involves a reasonable amount of computer programming. The student will be given a thorough introduction to the capabilities of the state of the art software package MATLAB, covering numeric, symbolic (with the Symbolic Math Toolbox) and graphical features. Although MATLAB is the chosen course software, the emphasis will be given to principles that are not specific to any particular package. Basic principles of technical writing will also be taught, and the student will apply these to the written projects, which must be produced using a wordprocessing/typesetting package.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH39012",
+      "name": "Mathematical Programming",
+      "lecturer": "Mr. M. Tso",
+      "summary": "Mathematical programming techniques seek to optimize a function in Rn subject to given constraints. Such techniques have found widespread application in operational research, science, engineering, economics and business. Whilst the origins of the subject are often traced to Dantzig's discovery of the simplex algorithm for linear programming in 1947, the conceptual framework is far wider.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH39032",
+      "name": "Mathematical Modelling in Finance",
+      "lecturer": "Prof. P. Duck",
+      "summary": "This course unit is primarily concerned with the valuation of financial instruments known as derivatives. To achieve this, a mathematical model is developed and then solved for different types of problems. No previous background in finance is necessary. It is shown that mathematical methods can be powerful tools in solving financial problems once suitable models have been devised.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH42041",
+      "name": "Noncommutative Algebra",
+      "lecturer": "Prof. T. Stafford",
+      "summary": "Nature is inherently noncommutative---just try putting on your shoes and socks in the wrong order---and noncommutative structures are increasingly important throughout mathematics and physics. In this course, we will examine in detail some of the most important noncommutative algebras that appear 'in nature' and prove some of the basic structure theorems about noncommutative rings. One of the most fundamental such algebras is the quaternions---if you ignore the fact that it is not commutative, then this is a field that is 4-dimensional as a real vector space! Famously when Hamilton discovered it in the 19-th century he carved its formulae on a bridge lest he forget them. Another is the Weyl algebra---sometimes called the 'algebra of quantum mechanics' since its structure encodes the Uncertainty Principle, and sometimes called a ring of differential operators since it encodes the algebraic aspects of differential equations.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH42061",
+      "name": "Representation Theory",
+      "lecturer": "Prof. P. Symonds",
+      "summary": "In the second and third year course units on group theory we have seen that abstract groups are quite complicated objects. One of the most fruitful approaches to studying these objects is to embed them into groups of matrices (to 'represent' the elements of an abstract group by matrices). The advantage of this approach lies in the fact that matrices are concrete objects, and explicit calculations can easily be performed. Even more importantly, the powerful methods of linear algebra can be applied to matrices. The course is devoted to representations of finite groups by matrices with entries in the field of complex numbers.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH43051",
+      "name": "Model Theory",
+      "lecturer": "Prof M. Prest",
+      "summary": "Model theory deals with those properties of mathematical structures which can be expressed using formulae of the predicate calculus. One theme is the investigation of the class of those structures which are the models of a set of sentences from predicate calculus. Another theme is the analysis of definability in individual structures and the use of elementary extensions to produce non-standard elements (such as infinitesimals in extensions of the set of real numbers).",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH44041",
+      "name": "Applied Dynamical Systems",
+      "lecturer": "Prof. P. Glendinning",
+      "summary": "Dynamical systems theory is the mathematical theory of time-varying systems; it is used in the modelling of a wide range of physical, biological, engineering, economic and other phenomena. This module presents a broad introduction to the area, with emphasis on those aspects important in the modelling and simulation of systems. General dynamical systems are described, along with the most basic sorts of behaviour that they can show. The dynamical systems most commonly encountered in applications are formed from sets of differential equations, and these are described, including some practical aspects of their simulation. The most regular kinds of behaviour---equilibrium and periodic---are the most easy to analyze theoretically; linearization about such trajectories are discussed (for periodic behaviour this is done using the PoincarÃ© map.)\nMuch more complex behaviours, including chaos, may be found; these are described by means of their attractors. The linearization approach can be extended to these, and leads to the concept of Lyapunov exponents.\nIn applications it is often important to know how the observed behaviour changes with changes in the system parameters; such changes can often be sudden, but frequently conform to one of a relatively small number of scenarios: the study of these forms the subject of bifurcation theory. The simplest bifurcations are discussed.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH45061",
+      "name": "Continuum Mechanics",
+      "lecturer": "Dr. A. Hazel",
+      "summary": "This unit describes the fundamental theory of continuum mechanics in a unified mathematical framework. The unit will cover theories of nonlinear and linear elasticity together with those of compressible and incompressible fluid mechanics.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH47101",
+      "name": "Stochastic Calculus",
+      "lecturer": "Prof. G. Peskir",
+      "summary": "The stochastic integral (Ito's integral) with respect to a continuous semimartingale is introduced and its properties are studied. The fundamental theorem of stochastic calculus (Ito's formula) is proved and its utility is demonstrated by various examples. Stochastic differential equations driven by a Wiener process are studied.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH48011",
+      "name": "Linear Models with Nonparametric Regression",
+      "lecturer": "Prof. J. Pan",
+      "summary": "In many areas of science, technology, social science and medicine one often wishes to explore the relationship between one observable random response and a number of 'factors' which may influence simultaneously the response. The techniques developed to study such relationships fall in three broad categories:\nRegression Analysis where the influence of the factors is quantitative;\nAnalysis of Variance where each factor's influence is qualitative; and\nAnalysis of Covariance where both qualitative and quantitative factors are present.\nHowever, these three valuable techniques can be studied together as special cases of a unified theory of Linear Models. The course starts with a study of estimation and hypothesis testing in the general linear problem. Once the principles and techniques are established practical applications in the three types of analysis are examined in greater detail.\nNonparametric regression provides a very flexible approach to exploring the relationship between a response and an associated covariate but without having to specify a parametric model. The different techniques available are essentially based on forms of local averaging controlled by the value of a smoothing parameter. In this part of the module we will study a few different techniques, along with their statistical properties. We will also look briefly at how such estimators can be used in more inferential procedures.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH46101",
+      "name": "Numerical Linear Algebra",
+      "lecturer": "Prof. N. Higham and Prof. F. Tisseur",
+      "summary": "This module treats the main classes of problems in numerical linear algebra: linear systems, least square problems, and eigenvalue problems, covering both dense and sparse matrices. It provides analysis of the problems along with algorithms for their solution. It also introduces MATLAB as tool for expressing and implementing algorithms and describes some of the key ideas used in developing high-performance linear algebra codes (blocking, BLAS). Applications will be introduced throughout the module.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH49111",
+      "name": "Scientific Computing",
+      "lecturer": "Dr. C. Johnson",
+      "summary": "This course covers the techniques required to develop C++ programs that solve mathematical and scientific problems.\nAs well as covering the rudiments of C++ (which will be taught with no assumed prior knowledge) the course will also outline the basic techniques used in scientific programming, such as discretisation of equations, numerical error and code validation.\nThe material is examined primarily through two programming projects, chosen from a list of mathematical topics, which investigate particular algorithms or techniques in more depth. The projects will be assessed by a written report and a demonstration/oral description of the code.\nMuch of this course is taught in practical computer labs, which limits the number of places available.",
+      "coursework": 100,
+      "exam": 0
+    },
+    {
+      "id": "MATH41112",
+      "name": "Ergodic Theory",
+      "lecturer": "Dr. C. Walkden",
+      "summary": "Dynamical systems is the study of iterating a given map. That is, we take X to be some mathematical space (for example, an interval, a circle, or perhaps something more complicated) and a map T from X to itself. We then take a point x in X and repeatedly apply T, obtaining the sequence of points {x, T(x), T(T(x)), ...}; this is called the orbit of x.\nThese orbits are generally very complicated. For example, two points x and y that start very close to each other may have very different orbits; this is known as sensitive dependence on initial conditions and is the one of the motivations for what has popularly become known as Chaos Theory.\nA general dynamical system may be so chaotic that it is impossible to describe every orbit. Instead, we could attempt to describe what a typical orbit looks like; this is the basis of Ergodic Theory. To make 'typical' precise, we need to use measure theory, and a self-contained introduction to this will be given.\nWe will see that ergodic theory allows us to prove several interesting and surprising results in other areas of mathematics, particularly in number theory. Here is one example: Consider the sequence 1,2,4,8,16,32,...,2n, and consider the sequence of leftmost (or leading)\ndigits: 1,2,4,8,1,3,... How often does the digit 7, say, appear in this sequence? We will use ergodic theory to prove that about 5.8% of the digits in the above sequence are 7s (the precise answer is log 8/7).\nOne highlight of the course is Birkhoff's Ergodic Theorem. This beautiful theorem says that (under appropriate hypotheses!) the proportion of time that a typical orbit spends in some region of X is equal to the measure (area/volume) of the region. We shall then apply this result to our examples, deriving some interesting and useful corollaries.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH42122",
+      "name": "Galois Theory",
+      "lecturer": "Prof. R. St¨ohr",
+      "summary": "Galois theory is one of the most spectacular mathematical theories. It establishes a beautiful connection between the theory of polynomial equations and group theory. In fact, many fundamental notions of group theory originate in the work of Galois. For example, why are some groups called 'soluble'? Because they correspond to the equations which can be solved! (Solving here means there is a formula involving algebraic operations and extracting roots of various degrees that expresses the roots of the polynomial in terms of the coefficients.) Galois theory explains why we can solve quadratic, cubic and quartic equations, but no formulae exist for equations of degree greater than 4. In modern language, Galois theory deals with 'field extensions', and the central topic is the 'Galois correspondence' between extensions and groups. Galois theory is a role model for mathematical theories dealing with 'solubility' of a wide range of problems.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH43042",
+      "name": "Godel’s Theorems",
+      "lecturer": "Dr. M. Tressl",
+      "summary": "Can a computer be programmed to generate all true statements of mathematics and no false ones? An extraordinary result, proved by Kurt Godel in 1931, shows that even if we restrict ourselves to the most fundamental part of mathematics, namely statements about the natural numbers, the answer to the above question is no. Moreover Godel's method is such that given any 'mechanical procedure' for generating true statements about the natural numbers we are actually able to construct a true statement about the natural numbers which will not be generated by that procedure. Later results have shown that such statements can always be chosen to have the simple logical form of an assertion that a particular polynomial equation has no solution over the integers.\nGodel's work stands as one of the great landmarks of 20th century thought and has a significance which reaches well beyond mathematics. The course unit will be centred on proofs of Godel's two incompleteness theorems and will examine some of their principal applications.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH45132",
+      "name": "Stability Theory",
+      "lecturer": "Dr. J. Daou",
+      "summary": "Many physical systems can become unstable in the sense that small disturbances superimposed on their basic state can amplify and significantly alter their initial state. In this course we introduce the basic theoretical and physical methodology required to understand and predict instability in a variety of situations with focus on hydrodynamic instabilities and on instabilities in reaction-diffusion systems.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH45122",
+      "name": "Transport Phenomena and Conservation Law",
+      "lecturer": "Dr R. Assier",
+      "summary": "Transport phenomena and conservation laws are ubiquitous and are a crucial element in all models of physical systems. As material is transported waves may form and the course starts with some examples of linear wave propagation. The effects of non-linearity are very important and lead to wave expansion, wave steepening and shock formation, at which there are discontinuous jumps in the solutions. It is shown how these can be modelled using jump conditions at propagating discontinuities and how diffusion and/or dispersion competes against wave steepening to create diffuse non-linear wave fronts and solitons. The formation of non-linear waves will be demonstrated using simple experiments during the lectures. The mathematical theory underlying these systems will be explained in detail, using many examples ranging from gas dynamics and shallow water flows, to granular, two-phase and traffic flows.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH47112",
+      "name": "Brownian Motion",
+      "lecturer": "Dr. D. Denisov",
+      "summary": "Brownian motion is the most important stochastic process. It was observed by Brown in 1828 and explained by Einstein in 1905. A more accurate model based on work of Langevin from 1908 was introduced by Ornstein and Uhlenbeck in 1930. The assumption of stationary independent increments made by Einstein in 1905 has had a profound influence on the development of probability theory in the 20th century. The course unit presents basic facts and ideas of Brownian motion paying particular attention to the issues of dynamics.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH48082",
+      "name": "Design and Analysis of Experiments",
+      "lecturer": "Dr. A. Donev",
+      "summary": "Experiments are carried out by researchers in many fields including biology, medicine, chemistry, physics, engineering and agriculture. In such experiments the results are affected both by the choice of factors to study and experimental error (such as measurement error or inherent randomness between experimental units). Choosing a good experimental design ensures that the aim of the study where it is used is achieved. Moreover, the statistical analysis of data collected from such designed experiments is simple, easier to interpret and the experimental resources are spent most efficiently. The main principles for designing and analyzing experiments will be introduced. Various standard experimental designs and the analysis of data obtained using them are covered. Criteria for optimality of experimental designs will be introduced. Methods for constructing nonstandard designs when the model is linear or nonlinear in the parameters will be presented.",
+      "coursework": 7,
+      "exam": 93
+    },
+    {
+      "id": "MATH48122",
+      "name": "Markov Chain Monte Carlo",
+      "lecturer": "Dr. C. Charalambous",
+      "summary": "Since the late 1980's MCMC has been widely used in statistics and the range of its applications are ever increasing. This course will introduce MCMC methodology, in particular, the Metropolis-Hastings algorithm which is the basis for all MCMC. The implementation of MCMC will be discussed in detail with numerous examples.",
+      "coursework": 50,
+      "exam": 50
+    },
+    {
+      "id": "MATH48132",
+      "name": "Longitudinal Data Analysis",
+      "lecturer": "Prof. J. Pan",
+      "summary": "In longitudinal studies, repeated measurements are made on subjects over time and responses within a subject are likely to be correlated, although responses between subjects may be independent. Data such as these are very common in practice, for example, in quality control in industry, panel data analysis in economics, growth curve analysis in biology and agriculture, randomized controlled trials in medicine and public health, etc. Longitudinal data therefore combine elements of multivariate and time series data. However, they differ from classical multivariate data in that the time series aspect of the data typical imparts a much more highly structured pattern of interdependence among measurements than for standard multivariate data sets; and they differ from classical time series data in consisting of a large number of short series, one from each subject, rather than a single long series. When modelling such data, these characteristics have to be taken into account. Otherwise, it is very likely that statistical inferences are severely biased.\nThe primary objective of longitudinal data analysis is to study how a response variable is related to explanatory variables of interest and how its expectation varies over time, by taking into account the within-subject correlation. The second objective is to quantify random variations in different sources and to characterize the within-subject correlation structures, which plays an important role in longitudinal and clustered data analysis arising in many areas.",
+      "coursework": 20,
+      "exam": 80
+    },
+    {
+      "id": "MATH49102",
+      "name": "Stochastic Modelling in Finance",
+      "lecturer": "Dr X. Jin",
+      "summary": "Derivative securities (such as options) depend on the values of primary securities (such as stock or bond prices). During the last thirty years trading in derivative securities have undergone a tremendous development, and nowadays derivative securities are traded on markets all over the world in large numbers. The purpose of the course is to exhibit basic features of advanced financial derivatives, starting with basic model specifications, introducing the concept of arbitrage, and ending with a risk-neutral valuation formula and its analysis.",
+      "coursework": 0,
+      "exam": 100
+    },
+    {
+      "id": "MATH40082",
+      "name": "Computational Finance",
+      "lecturer": "Dr. P. Johnson",
+      "summary": "The course will be continually assessed via a series of miniprojects. The project material will cover a range of topics including the solution of nonlinear ODE's, SDEs, lattice (tree) methods, to the solution of the nonlinear partial differential equations, and will require students to write a series of computer programs to solve a specified problem.",
+      "coursework": 100,
+      "exam": 0
+    },
+    {
+      "id": "MATH46052",
+      "name": "Approximation Theory and Finite Element Analysis",
+      "lecturer": "Prof. D. Silvester",
+      "summary": "This course unit covers the theory of approximation and applications to the numerical solution of linear elliptic partial differential equations (PDEs) using finite element approximation methods. Such methods are universally used to solve practical problems associated with physical phenomena in complex geometries. The emphasis is on assessing the accuracy of the approximation using a priori and a posteriori error estimation techniques. Practical issues will be illustrated with MATLAB using the IFISS software toolbox.",
+      "coursework": 25,
+      "exam": 75
+    },
+    {
+      "id": "MATH46132",
+      "name": "Numerical Optimisation and Inverse Problems",
+      "lecturer": "Dr. O. Dorn",
+      "summary": "This course unit develops the theory and practice of numerical methods for nonlinear optimization with and without constraints, covering methods suitable for both small and large-scale problems and discussing available software. The subject is of considerable importance in scientific, industrial and economic problems, and the ideas and methods of solution have been stimulated by practical applications.\nOptimization problems as discussed in this course are encountered by many practicians working in financial mathematics, industrial mathematics or in mathematical economics. For example, one often needs to infer the material properties of an object from some physical measurement. Often the measurements are taken exterior to the object and we wish to identify variable material properties on the inside: in industrial and medical imaging, one applies ultra sound, X-rays or an electromagnetic field to an object, makes measurements on the outside and then attempts to form an image of the inside. These problems are examples of so-called 'inverse problems' and are typically ill-posed in the sense that the mapping taking data to images is discontinuous, and numerically reconstruction algorithms tend to be unstable unless one makes sufficient assumptions, such as smoothness, about the image. As discretized inverse problems are ill-conditioned, we have to constrain the solution using extra (a priori) information and the usual compromise results in an optimization problem that trades off fitting the data against satisfying the constraints given by the a priori information. Numerical optimisation techniques are often used to solve such problems.\nThe course will be illustrated by practical examples including visits to experimental groups in the University, and will include numerical examples illustrated by MATLAB programs.",
+      "coursework": 25,
+      "exam": 75
     }
   ]
 }
