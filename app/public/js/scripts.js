@@ -4,7 +4,7 @@ const defaultKeyword = 'geometry';
 const loadRecommendations = (keyword) => new Promise((resolve, reject) => {
   keyword = keyword || ''; // default to an empty string
 
-  const reccommendationUri = `/api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
+  const reccommendationUri = `api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
     .then((response) => response.json())
     .then(resolve)
