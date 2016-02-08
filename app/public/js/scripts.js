@@ -134,7 +134,7 @@ const displayRecommendations = (result) => {
 
   let jobsOutput = '';
 
-  const jobsUri = `/api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
+  const jobsUri = `api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
   fetch(jobsUri)
     .then((response) => response.json())
     .then((result) => {
