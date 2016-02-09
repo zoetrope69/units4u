@@ -1,10 +1,11 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
-const loadRecommendations = (keyword) => new Promise((resolve, reject) => {
+const loadRecommendations = (keyword, work) => new Promise((resolve, reject) => {
+
   keyword = keyword || ''; // default to an empty string
 
-  const reccommendationUri = `api/recommendation?keyword=${keyword}`; // eslint-disable-line no-undef
+  const reccommendationUri = `api/recommendation?keyword=${keyword}&work=${work}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
     .then((response) => response.json())
     .then(resolve)
@@ -177,21 +178,33 @@ const displayRecommendations = (result) => {
 
 const handleKeywordInput = (event) => {
   const keyword = event.target.value.trim() || defaultKeyword; // default to keyword
+  let work = 'exam';
 
-  loadRecommendations(keyword)
+  const workType = document.getElementsByName('workType');
+  for (let i = 0, length = workType.length; i < length; i++) {
+    if (workType[i].checked) {
+      work = workType[i].value;
+      break;
+    }
+  }
+
+  loadRecommendations(keyword, work)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 };
 
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
+  const radioInputEl = document.querySelectorAll('.work__input');
+  const work = 'either';
 
-  loadRecommendations(defaultKeyword)
+  loadRecommendations(defaultKeyword, work)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 
   keywordInputEl.placeholder = defaultKeyword;
   keywordInputEl.addEventListener('input', handleKeywordInput, false);
+  radioInputEl.addEventListener('change', handleKeywordInput, false);
 };
 
 window.onload = load;

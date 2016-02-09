@@ -6,8 +6,9 @@ const RecommendationMethods = function (db) {
 
   function getRecommendationsAPI (req, res) {
     const keyword = req.query.keyword || ''; // default to empty string
+    const work = req.query.work || ''; // default to empty string
 
-    getRecommendations(keyword, (err, results) => {
+    getRecommendations(keyword, work, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
@@ -20,12 +21,19 @@ const RecommendationMethods = function (db) {
     });
   }
 
-  function getRecommendations (keyword, callback) {
+  function getRecommendations (keyword, work, callback) {
+    let typeOfWork = '';
+    if (work === 'exam') {
+      typeOfWork = 'AND Unit.exam >= 50';
+    } else if (work === 'cw') {
+      typeOfWork = 'AND Unit.coursework >= 50';
+    }
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
       WHERE Unit.summary =~ '(?i).*${keyword}.*'
         OR Unit.title =~ '(?i).*${keyword}.*'
         OR r.summary =~ '(?i).*${keyword}.*'
+        ${typeOfWork}
       RETURN DISTINCT Unit, r
         ORDER BY r.sentiment desc, Unit.title
     `;
