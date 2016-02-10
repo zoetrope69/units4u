@@ -27,10 +27,12 @@ const RecommendationMethods = function (db) {
     const assessmentWeighting = assessment ? `AND Unit.${assessment} > 50` : '';
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
-      WHERE Unit.summary =~ '(?i).*${keyword}.*'
+      WHERE (
+        Unit.summary =~ '(?i).*${keyword}.*'
         OR Unit.title =~ '(?i).*${keyword}.*'
         OR r.summary =~ '(?i).*${keyword}.*'
-        ${assessmentWeighting}
+      )
+      ${assessmentWeighting}
       RETURN DISTINCT Unit, r
         ORDER BY r.sentiment ${sentiment === 'loved' ? 'DESC' : 'ASC'}, Unit.title
     `;
