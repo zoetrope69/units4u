@@ -1,13 +1,13 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
-const loadRecommendations = (keyword, work) => new Promise((resolve, reject) => {
+const loadRecommendations = (keyword, assessment) => new Promise((resolve, reject) => {
 
   // default arguments to if not passed in
   keyword = keyword || defaultKeyword;
-  work = work || '';
+  assessment = assessment || '';
 
-  const reccommendationUri = `/api/recommendation?keyword=${keyword}&work=${work}`; // eslint-disable-line no-undef
+  const reccommendationUri = `/api/recommendation?keyword=${keyword}&assessment=${assessment}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
     .then((response) => response.json())
     .then(resolve)
@@ -171,26 +171,24 @@ const displayRecommendations = (result) => {
       `;
 
       jobsEl.innerHTML = jobsOutput;
-
     })
     .catch((error) => console.log(error));
-
-
 }
 
 const handleInput = () => {
   const keyword = document.querySelector('.keyword__input').value.trim();
-  const work = document.querySelector('input[name="workType"]:checked').value;
+  const assessment = document.querySelector('input[name="assessment"]:checked').value;
 
-  loadRecommendations(keyword, work)
+  loadRecommendations(keyword, assessment)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 };
 
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
-  const radioInputEls = document.querySelectorAll('.work__input');
+  const assessmentInputEls = document.querySelectorAll('.assessment__input');
 
+  // load default recommendations
   loadRecommendations()
     .then(displayRecommendations)
     .catch((err) => console.log(err));
@@ -198,9 +196,9 @@ const load = () => {
   keywordInputEl.placeholder = defaultKeyword;
   keywordInputEl.addEventListener('input', handleInput, false);
 
-  for (let i = 0; i < radioInputEls.length; i++) {
-    const radioInputEl = radioInputEls[i];
-    radioInputEl.addEventListener('change', handleInput, false);
+  for (let i = 0; i < assessmentInputEls.length; i++) {
+    const assessmentInputEl = assessmentInputEls[i];
+    assessmentInputEl.addEventListener('change', handleInput, false);
   }
 };
 
