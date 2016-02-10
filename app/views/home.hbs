@@ -1,23 +1,49 @@
 <main>
 
-  <h1>Recommender Systems <br /> Based on Natural Language</h1>
+  <header>
 
-  <ul class="students">
-    <li>up645368@myport.ac.uk</li>
-    <li>up663652@myport.ac.uk</li>
-    <li>up665219@myport.ac.uk</li>
-  </ul>
+    <h1>Recommender Systems <br /> Based on Natural Language</h1>
 
-  <div class="keyword">
-    <p class="keyword__instructions">Enter keywords to refine search:</p>
-    <input class="keyword__input" type="text" />
+    <ul class="students">
+      <li>up645368@myport.ac.uk</li>
+      <li>up663652@myport.ac.uk</li>
+      <li>up665219@myport.ac.uk</li>
+    </ul>
+
+  </header>
+
+  <div class="row">
+
+    <div class="summary">
+      <h2>Hey there!</h2>
+      <p>Currently you'll be seeing the top unit based on the filters selected. Feel free to play with these and see what comes back.</p>
+      <p> It should be noted these units are based on <a href="http://www.maths.manchester.ac.uk/media/eps/schoolofmathematics/study/undergraduate/informationforcurrentstudents/Course-Unit-Feedback.pdf">University of Manchester's Mathematics Course Unit Feedback for 2015</a>, so <strong>make your keyword/phrase relevant to maths!</strong></p>
+      <p>The jobs recieved, which are based on the unit, are pulled from <a href="http://www.indeed.com/">Indeed</a>. Maybe you'll find the perfect Maths job?..</p>
+      <p>Cheers for looking, why not <a href="https://github.com/zaccolley/units4u">grab the code on the GitHub</a> or <a href="https://docs.google.com/document/d/1oy942wvf2_ky_KW5UOGM7cLmYUq7qCcSS8G49cOBxKk">read the paper</a> this demo was created for!<p/>
+    </div>
+
+    <div class="inputs">
+      <div class="keyword">
+        <p class="input__instructions">Enter a keyword or phrase matched in units/reviews:</p>
+        <input class="keyword__input" type="text" />
+      </div>
+
+      <div class="assessment">
+        <p class="input__instructions">What weighting of exam to coursework do your prefer?</p>
+
+        <input class="assessment__input" type="radio" name="assessment" id="assessment--either" value="" checked />
+        <label for="assessment--either">I dont mind!</label>
+
+        <input class="assessment__input" type="radio" name="assessment" id="assessment--exam" value="exam" />
+        <label for="assessment--exam">I like exams more!</label>
+
+        <input class="assessment__input" type="radio" name="assessment" id="assessment--cw" value="cw" />
+        <label for="assessment--cw">I like coursework more!</label>
+      </div>
+    </div>
+
   </div>
 
   <section class="output"></section>
-
-  <footer>
-    <a href="https://github.com/zaccolley/units4u">Grab the code</a> |
-    <a href="https://docs.google.com/document/d/1oy942wvf2_ky_KW5UOGM7cLmYUq7qCcSS8G49cOBxKk">Read the paper</a>
-  </footer>
 
 </main>
