@@ -11,9 +11,17 @@
   <div class="keyword">
     <p class="keyword__instructions">Enter keywords to refine search:</p>
     <input class="keyword__input" type="text" />
-    <input class="work__input" type="radio" name="workType" value="either" checked="checked">I dont mind!</input>
-    <input class="work__input" type="radio" name="workType" value="exam">I like exams more!</input>
-    <input class="work__input" type="radio" name="workType" value="cw" >I like coursework more!</input>
+  </div>
+
+  <div class="workTypes">
+    <input class="work__input" type="radio" name="workType" id="workType--either" value="" checked />
+    <label for="workType--either">I dont mind!</label>
+
+    <input class="work__input" type="radio" name="workType" id="workType--exam" value="exam" />
+    <label for="workType--exam">I like exams more!</label>
+
+    <input class="work__input" type="radio" name="workType" id="workType--cw" value="cw" />
+    <label for="workType--cw">I like coursework more!</label>
   </div>
 
   <section class="output"></section>
