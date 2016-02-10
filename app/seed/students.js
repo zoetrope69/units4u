@@ -3,6 +3,7 @@ const casual = require('casual');
 const db = require('../db');
 const userMethods = require('../methods/user')(db);
 const sentiment = require('sentiment');
+const customWords = require('../lib/WordOverrides.json');
 const reviews = require(__dirname + '/../../resources/correctedReviews.json').reviews;
 
 function randomNumber (min, max) {
@@ -44,7 +45,7 @@ function seedStudent () {
 
     // if we dont have any review picked yet OR if we dont already have this unit
     if (studentUnits.length < 1 || studentUnits.indexOf(review.unit) < 0) {
-      review.sentiment = sentiment(review.summary).comparative;
+      review.sentiment = sentiment(review.summary, customWords).comparative;
 
       // 0.1 - 0.5 chance of sentiment to be correlated to grade
       const randNo = Math.random();
