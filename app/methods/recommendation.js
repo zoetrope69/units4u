@@ -35,8 +35,6 @@ const RecommendationMethods = function (db) {
         ORDER BY r.sentiment ${sentiment === 'loved' ? 'DESC' : 'ASC'}, Unit.title
     `;
 
-    console.log(query);
-
     db.cypher({ query }, (err, recommendations) => {
       if (err) {
         return callback(err.message.errors);
