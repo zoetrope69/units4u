@@ -7,7 +7,7 @@ const loadRecommendations = (keyword, assessment) => new Promise((resolve, rejec
   keyword = keyword || defaultKeyword;
   assessment = assessment || '';
 
-  const reccommendationUri = `/api/recommendation?keyword=${keyword}&assessment=${assessment}`; // eslint-disable-line no-undef
+  const reccommendationUri = `api/recommendation?keyword=${keyword}&assessment=${assessment}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
     .then((response) => response.json())
     .then(resolve)
@@ -134,7 +134,7 @@ const displayRecommendations = (result) => {
 
   let jobsOutput = '';
 
-  const jobsUri = `/api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
+  const jobsUri = `api/jobs?keywords=${jobsKeywords}&amount=3`; // eslint-disable-line no-undef
   fetch(jobsUri)
     .then((response) => response.json())
     .then((result) => {
