@@ -1,6 +1,25 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
+function debounce (func, wait, immediate) {
+  let timeout;
+  return () => {
+    const context = this, args = arguments; // eslint-disable-line consistent-this
+    const later = () => {
+      timeout = null;
+      if (!immediate) {
+        func.apply(context, args);
+      }
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) {
+      func.apply(context, args);
+    }
+  }
+}
+
 const loadRecommendations = (keyword, assessment, sentiment) => new Promise((resolve, reject) => {
 
   // default arguments to if not passed in
@@ -169,7 +188,7 @@ const displayRecommendations = (result) => {
     .catch((error) => console.log(error));
 }
 
-const handleInput = () => {
+const handleInput = debounce(() => {
   const keyword = document.querySelector('.filter__keyword').value.trim();
   const assessment = document.querySelector('input[name="assessment"]:checked').value;
   const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
@@ -177,7 +196,7 @@ const handleInput = () => {
   loadRecommendations(keyword, assessment, sentiment)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
-};
+}, 150);
 
 const load = () => {
   const keywordInputEl = document.querySelector('.filter__keyword');
