@@ -3,7 +3,9 @@ const defaultKeyword = 'geometry';
 
 const loadRecommendations = (keyword, work) => new Promise((resolve, reject) => {
 
-  keyword = keyword || ''; // default to an empty string
+  // default arguments to if not passed in
+  keyword = keyword || defaultKeyword;
+  work = work || '';
 
   const reccommendationUri = `/api/recommendation?keyword=${keyword}&work=${work}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
@@ -176,17 +178,9 @@ const displayRecommendations = (result) => {
 
 }
 
-const handleKeywordInput = (event) => {
-  const keyword = event.target.value.trim() || defaultKeyword; // default to keyword
-  let work = 'exam';
-
-  const workType = document.getElementsByName('workType');
-  for (let i = 0, length = workType.length; i < length; i++) {
-    if (workType[i].checked) {
-      work = workType[i].value;
-      break;
-    }
-  }
+const handleInput = () => {
+  const keyword = document.querySelector('.keyword__input').value.trim();
+  const work = document.querySelector('input[name="workType"]:checked').value;
 
   loadRecommendations(keyword, work)
     .then(displayRecommendations)
@@ -195,16 +189,19 @@ const handleKeywordInput = (event) => {
 
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
-  const radioInputEl = document.querySelectorAll('.work__input');
-  const work = 'either';
+  const radioInputEls = document.querySelectorAll('.work__input');
 
-  loadRecommendations(defaultKeyword, work)
+  loadRecommendations()
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 
   keywordInputEl.placeholder = defaultKeyword;
-  keywordInputEl.addEventListener('input', handleKeywordInput, false);
-  radioInputEl.addEventListener('change', handleKeywordInput, false);
+  keywordInputEl.addEventListener('input', handleInput, false);
+
+  for (let i = 0; i < radioInputEls.length; i++) {
+    const radioInputEl = radioInputEls[i];
+    radioInputEl.addEventListener('change', handleInput, false);
+  }
 };
 
 window.onload = load;
