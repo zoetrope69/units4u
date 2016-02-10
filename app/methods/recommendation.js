@@ -24,7 +24,7 @@ const RecommendationMethods = function (db) {
   }
 
   function getRecommendations (keyword, assessment, sentiment, callback) {
-    const assessmentWeighting = assessment ? `Unit.${assessment},` : '';
+    const assessmentWeighting = assessment ? `Unit.${assessment} DESC,` : '';
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
       WHERE
