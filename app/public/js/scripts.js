@@ -170,7 +170,7 @@ const displayRecommendations = (result) => {
 }
 
 const handleInput = () => {
-  const keyword = document.querySelector('.keyword__input').value.trim();
+  const keyword = document.querySelector('.filter__keyword').value.trim();
   const assessment = document.querySelector('input[name="assessment"]:checked').value;
   const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
 
@@ -180,9 +180,9 @@ const handleInput = () => {
 };
 
 const load = () => {
-  const keywordInputEl = document.querySelector('.keyword__input');
-  const assessmentInputEls = document.querySelectorAll('.assessment__input');
-  const sentimentInputEls = document.querySelectorAll('.sentiment__input');
+  const keywordInputEl = document.querySelector('.filter__keyword');
+  const assessmentInputEls = document.querySelectorAll('.filter__assessment');
+  const sentimentInputEls = document.querySelectorAll('.filter__sentiment');
 
   // load default recommendations
   loadRecommendations()

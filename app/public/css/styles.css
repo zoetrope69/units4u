@@ -51,7 +51,7 @@ header .students > li {
 header .students > li::after { content: ', '; }
 
 .summary,
-.inputs {
+.filters {
   float: left;
   width: 50%;
 }
@@ -81,7 +81,7 @@ header .students > li::after { content: ', '; }
   opacity: .75;
 }
 
-.input__instructions {
+.filter__instructions {
   width: 100%;
   margin: 1em 0 .5em;
 
@@ -90,11 +90,11 @@ header .students > li::after { content: ', '; }
   color: #717171;
 }
 
-.inputs {
+.filters {
   padding-top: 2em;
 }
 
-.keyword__input {
+.filter__keyword {
   width: 100%;
   padding: .25em;
 
@@ -108,7 +108,7 @@ header .students > li::after { content: ', '; }
   transition: border-color .33s ease-out;
 }
 
-.keyword__input:focus {
+.filter__keyword:focus {
   border-color: #F4AE36;
   outline: none;
 }
@@ -170,11 +170,11 @@ input[type="radio"] + label:hover {
   overflow: hidden; /* clearfix */
 }
 
-.assessment__input + label {
+.filter__assessment + label {
   width: 33.33%;
 }
 
-.sentiment__input + label {
+.filter__sentiment + label {
   width: 50%;
 }
 
@@ -375,7 +375,7 @@ h3.review__sentiment {
 
 @media (max-width: 60em) {
   .summary,
-  .inputs,
+  .filters,
   .output{
     width: 100%;
     padding: 0;
