@@ -24,17 +24,18 @@ const RecommendationMethods = function (db) {
   }
 
   function getRecommendations (keyword, assessment, sentiment, callback) {
-    const assessmentWeighting = assessment ? `AND Unit.${assessment} > 50` : '';
+    const assessmentWeighting = assessment ? `Unit.${assessment},` : '';
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
-      WHERE (
+      WHERE
         Unit.summary =~ '(?i).*${keyword}.*'
         OR Unit.title =~ '(?i).*${keyword}.*'
         OR r.summary =~ '(?i).*${keyword}.*'
-      )
-      ${assessmentWeighting}
       RETURN DISTINCT Unit, r
-        ORDER BY r.sentiment ${sentiment === 'loved' ? 'DESC' : 'ASC'}, Unit.title
+      ORDER BY
+        ${assessmentWeighting}
+        r.sentiment ${sentiment === 'loved' ? 'DESC' : 'ASC'},
+        Unit.title
     `;
 
     db.cypher({ query }, (err, recommendations) => {
