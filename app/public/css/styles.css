@@ -101,18 +101,17 @@ header .students > li::after { content: ', '; }
   outline: none;
 }
 
-.assessment {
+input[type="radio"] {
   overflow: hidden; /* clearfix */
   padding: 1em 0;
 }
 
-.assessment__input {
+input[type="radio"] {
   display: none;
 }
 
-.assessment__input + label {
+input[type="radio"] + label {
   float: left;
-  width: 33.33%;
   padding: .5em 0;
 
   text-align: center;
@@ -124,30 +123,43 @@ header .students > li::after { content: ', '; }
   transition: background .15s, color .15s;
 }
 
-.assessment__input:first-of-type + label {
+input[type="radio"]:first-of-type + label {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-left: 2px solid;
 }
 
-.assessment__input:last-of-type + label {
+input[type="radio"]:last-of-type + label {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.assessment__input:checked + label {
+input[type="radio"]:checked + label {
   color: white;
 
   background: #2E388C;
 }
 
-.assessment__input + label:hover {
+input[type="radio"] + label:hover {
   color: white;
 
   background: #2E388C;
   border-color: #2E388C;
 
   cursor: pointer;
+}
+
+.assessment,
+.sentiment {
+  overflow: hidden; /* clearfix */
+}
+
+.assessment__input + label {
+  width: 33.33%;
+}
+
+.sentiment__input + label {
+  width: 50%;
 }
 
 .output {

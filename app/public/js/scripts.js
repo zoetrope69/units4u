@@ -1,13 +1,14 @@
 'use strict';
 const defaultKeyword = 'geometry';
 
-const loadRecommendations = (keyword, assessment) => new Promise((resolve, reject) => {
+const loadRecommendations = (keyword, assessment, sentiment) => new Promise((resolve, reject) => {
 
   // default arguments to if not passed in
   keyword = keyword || defaultKeyword;
   assessment = assessment || '';
+  sentiment = sentiment || '';
 
-  const reccommendationUri = `api/recommendation?keyword=${keyword}&assessment=${assessment}`; // eslint-disable-line no-undef
+  const reccommendationUri = `api/recommendation?keyword=${keyword}&assessment=${assessment}&sentiment=${sentiment}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
     .then((response) => response.json())
     .then(resolve)
@@ -171,8 +172,9 @@ const displayRecommendations = (result) => {
 const handleInput = () => {
   const keyword = document.querySelector('.keyword__input').value.trim();
   const assessment = document.querySelector('input[name="assessment"]:checked').value;
+  const sentiment = document.querySelector('input[name="sentiment"]:checked').value;
 
-  loadRecommendations(keyword, assessment)
+  loadRecommendations(keyword, assessment, sentiment)
     .then(displayRecommendations)
     .catch((err) => console.log(err));
 };
@@ -180,6 +182,7 @@ const handleInput = () => {
 const load = () => {
   const keywordInputEl = document.querySelector('.keyword__input');
   const assessmentInputEls = document.querySelectorAll('.assessment__input');
+  const sentimentInputEls = document.querySelectorAll('.sentiment__input');
 
   // load default recommendations
   loadRecommendations()
@@ -192,6 +195,11 @@ const load = () => {
   for (let i = 0; i < assessmentInputEls.length; i++) {
     const assessmentInputEl = assessmentInputEls[i];
     assessmentInputEl.addEventListener('change', handleInput, false);
+  }
+
+  for (let i = 0; i < sentimentInputEls.length; i++) {
+    const sentimentInputEl = sentimentInputEls[i];
+    sentimentInputEl.addEventListener('change', handleInput, false);
   }
 };
 

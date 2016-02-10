@@ -5,10 +5,12 @@ const RecommendationMethods = function (db) {
   const errorCodes = require('../lib/ErrorCodes');
 
   function getRecommendationsAPI (req, res) {
-    const keyword = req.query.keyword || ''; // default to empty string
-    const assessment = req.query.assessment || ''; // default to empty string
+    // default to empty strings
+    const keyword = req.query.keyword || '';
+    const assessment = req.query.assessment || '';
+    const sentiment = req.query.sentiment || '';
 
-    getRecommendations(keyword, assessment, (err, results) => {
+    getRecommendations(keyword, assessment, sentiment, (err, results) => {
       if (err) {
         res.status(errorCodes.server.code)
         return res.send(errorCodes.server.message + ': ' + err.message.errors);
@@ -21,7 +23,7 @@ const RecommendationMethods = function (db) {
     });
   }
 
-  function getRecommendations (keyword, assessment, callback) {
+  function getRecommendations (keyword, assessment, sentiment, callback) {
     const assessmentWeighting = assessment ? `AND Unit.${assessment} > 50` : '';
     const query = `
       MATCH (Person)-[r:REVIEWED]->(Unit)
@@ -30,8 +32,10 @@ const RecommendationMethods = function (db) {
         OR r.summary =~ '(?i).*${keyword}.*'
         ${assessmentWeighting}
       RETURN DISTINCT Unit, r
-        ORDER BY r.sentiment desc, Unit.title
+        ORDER BY r.sentiment ${sentiment === 'loved' ? 'DESC' : 'ASC'}, Unit.title
     `;
+
+    console.log(query);
 
     db.cypher({ query }, (err, recommendations) => {
       if (err) {
