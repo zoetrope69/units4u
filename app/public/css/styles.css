@@ -61,21 +61,33 @@ header .students > li::after { content: ', '; }
 }
 
 .summary h2 {
-  color: #3f51b5;
+  color: #505050;
 }
 
-.summary h3 {
+.summary p {
   color: #383838;
   line-height: 1.25em;
 }
 
+.summary p a {
+  color: #2E388C;
+  font-weight: bold;
+  text-decoration: none;
+
+  transition: opacity .15s;
+}
+
+.summary p a:hover {
+  opacity: .75;
+}
+
 .input__instructions {
   width: 100%;
-  margin: .5em 0;
+  margin: 1em 0 .5em;
 
   font-weight: bolder;
   text-align: center;
-  color: #2E388C;
+  color: #717171;
 }
 
 .inputs {
@@ -89,15 +101,15 @@ header .students > li::after { content: ', '; }
   font-size: 2em;
 
   text-align: center;
-  border: 2px solid #D8D8D8;
+  border: 2px solid #FFDDA5;
   border-radius: 5px;
-  color: #2E388C;
+  color: #F4AE36;
 
   transition: border-color .33s ease-out;
 }
 
 .keyword__input:focus {
-  border-color: #2E388C;
+  border-color: #F4AE36;
   outline: none;
 }
 
@@ -120,6 +132,10 @@ input[type="radio"] + label {
   border: 2px solid #2E388C;
   border-left: 0;
 
+  background-repeat: no-repeat;
+  background-size: auto 60%;
+  background-position: 5% center;
+
   transition: background .15s, color .15s;
 }
 
@@ -137,13 +153,13 @@ input[type="radio"]:last-of-type + label {
 input[type="radio"]:checked + label {
   color: white;
 
-  background: #2E388C;
+  background-color: #2E388C;
 }
 
 input[type="radio"] + label:hover {
   color: white;
 
-  background: #2E388C;
+  background-color: #2E388C;
   border-color: #2E388C;
 
   cursor: pointer;
@@ -160,6 +176,38 @@ input[type="radio"] + label:hover {
 
 .sentiment__input + label {
   width: 50%;
+}
+
+input[type="radio"] + label[for="sentiment--loved"] {
+  color: #67B53F;
+  border-color: #67B53F;
+  background-image: url('../images/8.png');
+}
+
+input[type="radio"]:checked + label[for="sentiment--loved"] {
+  background-color: #67B53F;
+  color: white;
+}
+
+input[type="radio"] + label[for="sentiment--loved"]:hover {
+  background-color: #67B53F;
+  color: white;
+}
+
+input[type="radio"] + label[for="sentiment--hated"] {
+  color: #F44336;
+  border-color: #F44336;
+  background-image: url('../images/-8.png');
+}
+
+input[type="radio"]:checked + label[for="sentiment--hated"] {
+  background-color: #F44336;
+  color: white;
+}
+
+input[type="radio"] + label[for="sentiment--hated"]:hover {
+  background-color: #F44336;
+  color: white;
 }
 
 .output {
@@ -198,8 +246,8 @@ input[type="radio"] + label:hover {
 }
 
 .output mark {
-  background: rgba(255, 255, 0, .5);
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, .5);
+  background: rgba(255, 161, 0, .5);
+  box-shadow: 0 0 0 2px rgba(255, 161, 0, .5);
 }
 
 .output .no-recommendations {
