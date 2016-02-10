@@ -6,7 +6,7 @@ const loadRecommendations = (keyword, assessment, sentiment) => new Promise((res
   // default arguments to if not passed in
   keyword = keyword || defaultKeyword;
   assessment = assessment || '';
-  sentiment = sentiment || '';
+  sentiment = sentiment || 'loved';
 
   const reccommendationUri = `api/recommendation?keyword=${keyword}&assessment=${assessment}&sentiment=${sentiment}`; // eslint-disable-line no-undef
   fetch(reccommendationUri)
