@@ -59,7 +59,9 @@ const displayRecommendations = (result) => {
   let output = '';
 
   output += `
-  <div class="column">
+
+    <p class="output__intro">OK, based on the filters, here's what we've got:</p>
+
     <h1>${unit.title} (<small>${unit.code}</small>)</h1>
     <p>${unit.summary}</p>
 
@@ -84,11 +86,8 @@ const displayRecommendations = (result) => {
 
   output += `
     </div>
-  </div>
 
-  <div class="column">
-
-    <h2>Reviews</h2>
+    <h2>Reviews for <q>${unit.title}</q></h2>
   `;
 
   if (reviews.length < 1) {
@@ -127,8 +126,6 @@ const displayRecommendations = (result) => {
 
     <div class="output__jobs"></div>
 
-    </div>
-
   `;
 
   outputEl.innerHTML = output;
@@ -145,7 +142,7 @@ const displayRecommendations = (result) => {
       const jobs = result.jobs;
 
       jobsOutput += `
-        <h2>Jobs</h2>
+        <h2>Jobs for <q>${unit.title}</q></h2>
       `;
 
       if (jobs.length < 1) {
@@ -165,10 +162,6 @@ const displayRecommendations = (result) => {
         </${job.url ? 'a' : 'div'}>
         `;
       }
-
-      jobsOutput += `
-      </div>
-      `;
 
       jobsEl.innerHTML = jobsOutput;
     })
