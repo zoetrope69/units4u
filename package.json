@@ -7,7 +7,7 @@
     "start": "node app",
     "lint": "eslint -c .eslintrc app experiments",
     "test": "npm run lint && mocha test/ --reporter landing",
-    "build": "babel app/public/js/fetch.js app/public/js/scripts.js -o app/public/js/scripts.build.js --minified --no-comments --compact",
+    "build": "babel app/public/js/polyfill.js app/public/js/fetch.js app/public/js/scripts.js -o app/public/js/scripts.build.js --minified --no-comments --compact",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -21,20 +21,21 @@
   "homepage": "https://github.com/zaccolley/units4u",
   "engine": "node >= 4.0.0",
   "dependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.3.13",
     "body-parser": "^1.14.2",
     "casual": "^1.5.1",
     "chai": "^3.4.1",
     "dotenv": "^2.0.0",
     "errorhandler": "^1.4.3",
     "eslint": "^1.10.3",
-    "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
+    "express": "^4.13.4",
     "neo4j": "^2.0.0-RC2",
     "request": "^2.67.0",
     "sentiment": "^1.0.5",
-    "wordsworth": "^0.1.0",
-    "babel-cli": "^6.4.5",
-    "babel-preset-es2015": "^6.3.13"
+    "wordsworth": "^0.1.0"
   },
   "devDependencies": {
     "nodehun": "^2.0.8",
