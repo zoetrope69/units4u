@@ -1,5 +1,7 @@
 # units4u
-a university unit recommender system for the web research unit
+:+1::performing_arts::-1: a university unit recommender system based on natural language (sentiment)
+
+_for the second sprint of our web research unit, you can [read our paper](https://docs.google.com/document/d/1oy942wvf2_ky_KW5UOGM7cLmYUq7qCcSS8G49cOBxKk) or go [look at the demo site](https://units4u.herokuapp.com/) (note it's on heroku so may take some time to boot)_
 
 [![Build Status](https://travis-ci.org/zaccolley/units4u.svg?branch=master)](https://travis-ci.org/zaccolley/units4u)
 
